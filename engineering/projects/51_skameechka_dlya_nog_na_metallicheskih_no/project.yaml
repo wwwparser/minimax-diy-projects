@@ -1,0 +1,51 @@
+# 51. Скамеечка для ног на металлических ножках: щит ЛДСП 800х300х16 на 4 стальных мебельных ножках 100 мм.
+# Щит лежит поверх ножек: at.z = 100 (высота ножек), итоговая высота 100+16=116 мм — сходится с шапкой текста.
+project:
+  id: 51_skameechka_dlya_nog_na_metallicheskih_no
+  name: "Скамеечка для ног на металлических ножках"
+  category: wood+metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Подставка для ног у дивана или рабочего стола: щит ЛДСП и четыре стальные ножки.
+    Отметить места ножек в 50 мм от углов. Прикрутить 4 ножки саморезами 25 мм.
+    Наклеить войлок на ножки.
+
+stock:
+  - id: sheet_chipboard
+    name: "Щит мебельный ЛДСП 800х300х16 дуб светлый"
+    material: chipboard
+    type: sheet
+    thickness: 16
+    length: 800
+    width: 300
+    sku: "634980"
+
+parts:
+  - id: seat
+    name: Сиденье (щит)
+    stock: sheet_chipboard
+    length: 800
+    orient: XYZ
+    at: [0, 0, 100]
+
+hardware:
+  - id: legs
+    type: furniture_leg
+    qty: 4
+    mounts: [seat]
+    sku: "692958"
+    name: "Ножка мебельная стальная 30х100 мм чёрная"
+    screws: {diameter: 3.5, length: 25}
+
+steps:
+  - {title: "Разметка и крепление ножек", add: [seat], joints: []}
+
+claims:
+  - {kind: overall, value: [800, 300, 116], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Войлочные накладки на ножки не имеют отдельного артикула в исходной смете и не моделируются (нет позиции для finish/hardware под них)."
+  - "Места ножек «в 50 мм от углов» из текста не заданы координатами вручную — движок сам расставляет 4 опоры furniture_leg под щитом (mounts: [seat]), это не влияет на проверяемую геометрию."
+
+constraints: {budget: 3000}

@@ -1,0 +1,133 @@
+# Поднос: дно из 3 досок 20x95x450 бок о бок, снизу 2 стяжные планки, по периметру бортик из
+# раскладки 20x5 на клей и саморезы 25 мм (углы в стусле 45°), 2 ручки-скобы на торцах, масло.
+project:
+  id: 15_servirovochnyy_podnos_s_ruchkami
+  name: "Сервировочный поднос с ручками"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать 3 доски 20x95 по 450 мм, соединить снизу двумя планками. Бортики из раскладки на клей и
+    мелкие саморезы 25 мм, углы в стусле 45°. Прикрутить ручки-скобы к торцам. Отшлифовать и пропитать
+    льняным маслом.
+
+stock:
+  - id: board95
+    name: "Доска сосна 20х95"
+    material: pine
+    type: board
+    section: 20x95
+    length: 2000
+    kerf: 1.5
+    sku: "102345"
+  - id: raskladka
+    name: "Раскладка 20х5"
+    material: pine
+    type: bar
+    section: 5x20
+    length: 2500
+    kerf: 1.5
+    sku: "612193"
+
+parts:
+  - id: bottom_a
+    name: "Доска дна 1"
+    stock: board95
+    length: 450
+    orient: XYZ
+    at: [0, 0, 0]
+  - id: bottom_b
+    name: "Доска дна 2"
+    stock: board95
+    length: 450
+    orient: XYZ
+    at: [0, 95, 0]
+  - id: bottom_c
+    name: "Доска дна 3"
+    stock: board95
+    length: 450
+    orient: XYZ
+    at: [0, 190, 0]
+  - id: batten1
+    name: "Стяжная планка 1 (снизу)"
+    stock: board95
+    length: 285
+    width: 40
+    orient: YXZ
+    at: [60, 0, -20]
+  - id: batten2
+    name: "Стяжная планка 2 (снизу)"
+    stock: board95
+    length: 285
+    width: 40
+    orient: YXZ
+    at: [390, 0, -20]
+  - id: rim_front
+    name: "Бортик передний"
+    stock: raskladka
+    length: 450
+    orient: XZY
+    at: [0, -5, 0]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+  - id: rim_back
+    name: "Бортик задний"
+    stock: raskladka
+    length: 450
+    orient: XZY
+    at: [0, 285, 0]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+  - id: rim_left
+    name: "Бортик левый"
+    stock: raskladka
+    length: 285
+    orient: YZX
+    at: [-5, 0, 0]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+  - id: rim_right
+    name: "Бортик правый"
+    stock: raskladka
+    length: 285
+    orient: YZX
+    at: [450, 0, 0]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+
+joints:
+  - {id: bat1_a, type: screw, part_a: batten1, part_b: bottom_a, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: bat1_b, type: screw, part_a: batten1, part_b: bottom_b, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: bat1_c, type: screw, part_a: batten1, part_b: bottom_c, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: bat2_a, type: screw, part_a: batten2, part_b: bottom_a, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: bat2_b, type: screw, part_a: batten2, part_b: bottom_b, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: bat2_c, type: screw, part_a: batten2, part_b: bottom_c, fastener: {type: wood_screw, diameter: 3.5}, count: 1, along: X}
+  - {id: rim_front_glue, type: glue, part_a: rim_front, part_b: bottom_a}
+  - {id: rim_front_screw, type: screw, part_a: rim_front, part_b: bottom_a, fastener: {type: wood_screw, diameter: 3.0, length: 25}, count: 3, along: X}
+  - {id: rim_back_glue, type: glue, part_a: rim_back, part_b: bottom_c}
+  - {id: rim_back_screw, type: screw, part_a: rim_back, part_b: bottom_c, fastener: {type: wood_screw, diameter: 3.0, length: 25}, count: 3, along: X}
+  - {id: rim_left_glue, type: glue, part_a: rim_left, part_b: bottom_a}
+  - {id: rim_left_screw, type: screw, part_a: rim_left, part_b: bottom_a, fastener: {type: wood_screw, diameter: 3.0, length: 25}, count: 1, along: Y}
+  - {id: rim_right_glue, type: glue, part_a: rim_right, part_b: bottom_c}
+  - {id: rim_right_screw, type: screw, part_a: rim_right, part_b: bottom_c, fastener: {type: wood_screw, diameter: 3.0, length: 25}, count: 1, along: Y}
+
+hardware:
+  - {id: handles, type: handle, qty: 2, mounts: [bottom_a, bottom_c], name: "Ручка-скоба РС-140 дерево", sku: "107016",
+     screws: {type: wood_screw, diameter: 3.5, length: 16}}
+
+finishes:
+  - {id: f1, type: oil, parts: [bottom_a, bottom_b, bottom_c, rim_front, rim_back, rim_left, rim_right], coats: 2}
+
+steps:
+  - {title: "Нарезать доски дна", add: [bottom_a, bottom_b, bottom_c], joints: []}
+  - {title: "Соединить дно снизу двумя планками", add: [batten1, batten2], joints: [bat1_a, bat1_b, bat1_c, bat2_a, bat2_b, bat2_c]}
+  - {title: "Бортики из раскладки на клей и саморезы, углы 45°", add: [rim_front, rim_back, rim_left, rim_right],
+     joints: [rim_front_glue, rim_front_screw, rim_back_glue, rim_back_screw, rim_left_glue, rim_left_screw, rim_right_glue, rim_right_screw]}
+  - {title: "Прикрутить ручки-скобы к торцам", add: [], joints: []}
+  - {title: "Отшлифовать и пропитать маслом", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [450, 20, 285], source: "шапка текста (450x300 мм)", tolerance: 20}
+
+ambiguities:
+  - "Шапка текста даёт 450×300 мм, три доски 95 мм дают ширину 285 мм (не 300) — небольшое расхождение оставлено движку."
+  - "Сечение стяжных планок снизу не задано текстом — принято 40x20 мм из обрезков доски 95 мм."
+  - "Высота бортика принята равной толщине дна (20 мм, по ширине раскладки) — заподлицо с дном, а не выступающим бортом; в тексте высота борта не указана."
+
+constraints: {budget: 3000}

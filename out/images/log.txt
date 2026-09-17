@@ -1,0 +1,81 @@
+12:37:34 закрепляю вкладку ChatGPT за сессией minimax-images: {'ok': True, 'session': 'minimax-images', 'tabId': 2080510407, 'url': '', 'windowId': 2080510219}
+12:37:44 [1] Скворечник из строганой доски: illustration, poster, howto
+12:38:53   нет картинки (illustration), попытка 1: ''
+12:40:14 [1] Скворечник из строганой доски: poster, howto
+12:43:28   нет картинки (poster), попытка 1: ''
+12:45:15 [1] Скворечник из строганой доски: howto
+12:56:35 [11] Настенная вешалка с деревянными колышками: illustration, poster, howto
+12:58:52   ошибка RuntimeError: в чате WEB:34496280-e7bf-42f9-ac7d-1232b0e9914e нет отправленного запроса; повтор через 30 с
+12:59:13 [11] Настенная вешалка с деревянными колышками: illustration, poster, howto
+13:00:03   OK 11_illustration.png 2251 КБ
+13:01:15   OK 11_poster.png 2743 КБ
+13:02:13   OK 11_howto.png 2114 КБ
+13:02:13 [20] Высокая грядка-короб 1×1 м: illustration, poster, howto
+13:03:03   OK 20_illustration.png 2920 КБ
+13:04:14   OK 20_poster.png 3318 КБ
+13:05:05   нет картинки (howto), попытка 1: 'Нам очень жаль, но созданное нами изображение может нарушать наши правила размещения контента. Если вы считаете, что произошла ошибка, попробуйте еще раз или от'
+13:05:05   лимит генерации — пауза 30 мин
+13:11:25 [20] Высокая грядка-короб 1×1 м: howto
+13:12:31   OK 20_howto.png 2369 КБ
+13:12:31 [26] Подвесные качели-доска: illustration, poster, howto
+13:13:36   OK 26_illustration.png 2367 КБ
+13:14:30   OK 26_poster.png 3196 КБ
+13:15:23   OK 26_howto.png 2405 КБ
+13:15:23 [27] Ящик для инструментов с ручкой: illustration, poster, howto
+13:16:30   OK 27_illustration.png 2429 КБ
+13:17:42   OK 27_poster.png 2844 КБ
+13:19:07   OK 27_howto.png 2298 КБ
+13:19:07 [28] Перфопанель для инструмента из фанеры: illustration, poster, howto
+13:20:15   OK 28_illustration.png 2341 КБ
+13:21:25   OK 28_poster.png 3047 КБ
+13:22:17   OK 28_howto.png 2289 КБ
+13:22:17 [35] Табурет-стремянка: illustration, poster, howto
+13:23:23   OK 35_illustration.png 2221 КБ
+13:24:32   OK 35_poster.png 2762 КБ
+13:25:56   OK 35_howto.png 2111 КБ
+13:25:56 [48] Полка лофт на стальном уголке: illustration, poster, howto
+13:26:41   OK 48_illustration.png 2130 КБ
+13:27:50   OK 48_poster.png 3028 КБ
+13:28:42   OK 48_howto.png 2421 КБ
+13:28:42 [49] Этажерка на резьбовых шпильках: illustration, poster, howto
+13:29:32   OK 49_illustration.png 2403 КБ
+13:30:25   OK 49_poster.png 2993 КБ
+13:31:17   OK 49_howto.png 2261 КБ
+13:31:17 [54] Настенный кронштейн для кашпо из стальной полосы: illustration, poster, howto
+13:32:06   OK 54_illustration.png 2763 КБ
+13:33:15   OK 54_poster.png 3040 КБ
+13:34:07   OK 54_howto.png 2520 КБ
+13:34:07 [2] Синичник: illustration, poster, howto
+13:35:13   OK 02_illustration.png 2340 КБ
+13:37:20   ошибка RuntimeError: в чате 6aabc223-9314-83ed-91be-c119da81d382 нет отправленного запроса; повтор через 30 с
+13:37:50 [2] Синичник: poster, howto
+13:39:57   OK 02_poster.png 3023 КБ
+13:40:47   OK 02_howto.png 2354 КБ
+13:40:47 [3] Кормушка-платформа на верёвках: illustration, poster, howto
+13:41:51   OK 03_illustration.png 2231 КБ
+13:42:58   OK 03_poster.png 2856 КБ
+13:44:55   OK 03_howto.png 2082 КБ
+13:44:55 [4] Кормушка-домик с двускатной крышей: illustration, poster, howto
+13:45:58   OK 04_illustration.png 2299 КБ
+13:46:50   OK 04_poster.png 2881 КБ
+13:47:02   ошибка RuntimeError: кнопка отправки не найдена; повтор через 30 с
+13:47:32 [4] Кормушка-домик с двускатной крышей: howto
+13:48:52   OK 04_howto.png 1978 КБ
+13:48:52 [5] Табурет из доски и бруска: illustration, poster, howto
+13:49:56   OK 05_illustration.png 2521 КБ
+13:51:52   OK 05_poster.png 2853 КБ
+13:52:57   OK 05_howto.png 2338 КБ
+13:52:57 [6] Табурет-ступенька: illustration, poster, howto
+13:54:01   OK 06_illustration.png 2254 КБ
+13:54:52   OK 06_poster.png 3092 КБ
+13:55:59   OK 06_howto.png 2419 КБ
+13:55:59 [7] Обувница на две полки: illustration, poster, howto
+13:56:47   OK 07_illustration.png 2212 КБ
+13:58:09 [7] Обувница на две полки: poster, howto
+14:25:31 [7] Обувница на две полки: poster, howto
+14:27:04   OK 07_poster.png 2812 КБ
+14:27:16   ошибка RuntimeError: кнопка отправки не найдена; повтор через 2 мин
+14:29:16 [7] Обувница на две полки: howto
+14:30:50   OK 07_howto.png 2031 КБ
+14:30:50 [8] Подвесная полка на канате: illustration, poster, howto
+14:32:19   ChatGPT: too_many_requests — «Слишком много запросовВы отправляете запросы слишком часто. Доступ к вашим диалогам временно ограничен в целях защиты да»; пауза 25 мин

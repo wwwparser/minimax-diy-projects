@@ -1,0 +1,74 @@
+# Органайзер для садового инвентаря: доска 20x145x1000 на стене, 5 пар колышков (шкантов 12x50) под инструмент.
+project:
+  id: 29_organayzer_dlya_sadovogo_inventarya
+  name: "Органайзер для садового инвентаря"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить доску 1000 мм. Разметить 5 пар отверстий, расстояние в паре 60 мм. Перьевым 12 мм засверлить
+    под углом вверх, посадить шканты 12x50 на клей. Пропитать антисептиком. Прикрутить к стене на дюбели.
+
+stock:
+  - id: board145
+    name: "Доска 20x145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+
+parts:
+  - id: board
+    name: Доска-органайзер
+    stock: board145
+    length: 1000
+    orient: XZY   # длина по X, ширина (145) вверх по Z, толщина (20) к стене по Y
+    at: [0, 0, 0]
+    features:
+      - {type: hole, diameter: 12, face: top, position: {along_length: 70,  along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 130, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 270, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 330, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 470, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 530, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 670, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 730, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 870, along_width: 100}}
+      - {type: hole, diameter: 12, face: top, position: {along_length: 930, along_width: 100}}
+
+joints: []
+
+hardware:
+  - id: pegs
+    type: other
+    qty: 10
+    size: "12x50"
+    sku: "640685"
+    name: "Шкант мебельный 12x50 мм (колышки для инвентаря)"
+    mounts: [board]
+  - id: wall_dowels
+    type: wall_dowel
+    qty: 4
+    sku: "687547"
+    name: "Дюбель универсальный Hard-Fix 6x30 мм с шурупом"
+    mounts: [board]
+    screws_per_unit: 0
+
+finishes:
+  - {id: antiseptic1, type: antiseptic, parts: [board], coats: 1, sku: "1098347"}
+
+steps:
+  - {title: "Разметка и засверловка отверстий, посадка шкантов на клей", add: [board], joints: []}
+  - {title: "Крепление доски к стене на дюбели", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [1000, 145], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Шканты 12x50 смоделированы как hardware (mounts на доску), а не как отдельные parts: это некапитальные вставные колышки, а не несущие детали каркаса; в каталоге Петровича нет деревянных шкантов как товара — ожидаема ошибка bom.not_in_catalog для арт.640685."
+  - "Засверловка «под углом вверх» не воспроизведена геометрически (движок проверяет позиции отверстий на грани, не наклон) — на проверку это не влияет."
+  - "Количество дюбелей для крепления к стене текстом не названо явно — взято 4 шт как реалистичное для доски 1000 мм."
+
+constraints: {budget: 3000}

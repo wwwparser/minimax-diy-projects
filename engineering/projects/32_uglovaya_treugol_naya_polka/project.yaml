@@ -1,0 +1,89 @@
+# Угловая треугольная полка: 2 яруса из фанеры 505х505, разрезанной по диагонали, на опорных планках бруска 20х30.
+project:
+  id: 32_uglovaya_treugol_naya_polka
+  name: "Угловая треугольная полка"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Распилить фанеру 505х505 по диагонали - две полки. Из бруска 20х30 нарезать опорные планки по двум стенам.
+    Прикрутить планки к стенам на дюбели, проверив уровень. Положить полки и закрепить саморезами 32 мм сверху.
+    Кромку фанеры покрыть лаком.
+
+stock:
+  - id: ply12
+    name: "Фанера ФК 12х505х505"
+    material: birch_plywood
+    type: sheet
+    thickness: 12
+    length: 505
+    width: 505
+    grain: any
+    sku: "634466"
+  - id: bar2030
+    name: "Брусок сухой строганый 20х30х2000"
+    material: pine
+    type: bar
+    section: 20x30
+    length: 2000
+    kerf: 1.5
+    sku: "626001"
+
+parts:
+  - id: shelf1
+    name: Полка нижнего яруса (треугольник)
+    stock: ply12
+    length: 505
+    width: 505
+    orient: XYZ
+    at: [0, 0, 800]
+    shape: {type: polygon, points: [[0, 0], [505, 0], [0, 505]]}
+  - id: shelf2
+    name: Полка верхнего яруса (треугольник)
+    stock: ply12
+    length: 505
+    width: 505
+    orient: XYZ
+    at: [0, 0, 1200]
+    shape: {type: polygon, points: [[0, 0], [505, 0], [0, 505]]}
+  - id: rail_x
+    name: Опорная планка вдоль стены X
+    stock: bar2030
+    qty: 2
+    length: 505
+    instances:
+      - {at: [0, 0, 770], orient: XZY}
+      - {at: [0, 0, 1170], orient: XZY}
+  - id: rail_y
+    name: Опорная планка вдоль стены Y
+    stock: bar2030
+    qty: 2
+    length: 485
+    instances:
+      - {at: [0, 20, 770], orient: YZX}
+      - {at: [0, 20, 1170], orient: YZX}
+
+joints:
+  - {id: shelf1_rail_x, type: screw, part_a: shelf1, part_b: "rail_x#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: shelf1_rail_y, type: screw, part_a: shelf1, part_b: "rail_y#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: shelf2_rail_x, type: screw, part_a: shelf2, part_b: "rail_x#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: shelf2_rail_y, type: screw, part_a: shelf2, part_b: "rail_y#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 8, mounts: ["rail_x#1", "rail_x#2", "rail_y#1", "rail_y#2"], screws_per_unit: 1, name: "Дюбель универсальный Hard-Fix 6x30 мм с шурупом", sku: "687547"}
+
+finishes:
+  - {id: f1, type: varnish_aerosol, parts: [shelf1, shelf2], coats: 1}
+
+steps:
+  - {title: "Опорные планки нижнего яруса на стены", add: [rail_x, rail_y], joints: []}
+  - {title: "Нижняя полка", add: [shelf1], joints: [shelf1_rail_x, shelf1_rail_y]}
+  - {title: "Верхняя полка", add: [shelf2], joints: [shelf2_rail_x, shelf2_rail_y]}
+
+claims:
+  - {kind: overall, value: [505, 505], source: "шапка текста: катеты 505 мм, 2 яруса", tolerance: 5}
+
+ambiguities:
+  - "Высота установки ярусов и длина/зазор опорных планок у второй стены (485 мм, чтобы не пересекались в углу) в тексте не заданы — взяты произвольно."
+
+constraints: {budget: 3000}

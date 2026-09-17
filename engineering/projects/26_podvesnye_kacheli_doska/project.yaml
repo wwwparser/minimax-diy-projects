@@ -1,0 +1,69 @@
+# Подвесные качели-доска: 1 доска 500х95х45 (обрезок от доски 45х95х3000), 4 отверстия перьевые 15мм
+# под канат d12, антисептик. Канат — верёвочная подвеска, жёсткую геометрию не задаём (joint type hang).
+# Оси: X - длина доски (500), Y - ширина (95), Z - толщина (45).
+project:
+  id: podvesnye_kacheli_doska_026
+  name: "Подвесные качели-доска"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить 500 мм от доски 45х95 (остаток пойдёт на другие проекты). Скруглить все кромки шкуркой.
+    Перьевым сверлом 15 мм просверлить 4 отверстия в 40 мм от торцов. Пропитать антисептиком.
+    Продеть канат, снизу завязать надёжные узлы, наверху закрепить на суку двойной петлёй.
+
+stock:
+  - id: board4595
+    name: "Доска сухая строганая 45х95х3000"
+    material: pine
+    type: board
+    section: 45x95
+    length: 3000
+    kerf: 1.5
+    sku: "1224118"
+  - id: jute12
+    name: "Канат крученый джутовый d12"
+    material: jute
+    type: rope
+    diameter: 12
+    length: 1000
+    sku: "103166"
+
+parts:
+  - id: seat
+    name: Сиденье
+    stock: board4595
+    length: 500
+    orient: XYZ
+    at: [0, 0, 0]
+    features:
+      - {type: hole, diameter: 15, position: {along_length: 40, along_width: 20}}
+      - {type: hole, diameter: 15, position: {along_length: 40, along_width: 75}}
+      - {type: hole, diameter: 15, position: {along_length: 460, along_width: 20}}
+      - {type: hole, diameter: 15, position: {along_length: 460, along_width: 75}}
+  - id: swing_rope
+    name: "Джутовый канат d12 (подвес)"
+    stock: jute12
+    length: 8000
+
+joints:
+  - {id: rope_hang, type: hang, part_a: swing_rope, part_b: seat}
+
+finishes:
+  - {id: f1, type: antiseptic, parts: [seat], coats: 1, sku: "1098347"}
+
+steps:
+  - {title: "Отпилить сиденье 500 мм, скруглить кромки шкуркой", add: [seat], joints: []}
+  - {title: "Просверлить 4 отверстия под канат перьевым 15 мм", add: [], joints: []}
+  - {title: "Пропитать антисептиком", add: [], joints: []}
+  - {title: "Продеть канат, завязать узлы снизу, закрепить наверху двойной петлёй", add: [swing_rope], joints: [rope_hang]}
+
+claims:
+  - {kind: overall, value: [500, 95, 45], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Остаток доски 45х95х3000 после отпила 500 мм (2500 мм) идёт на другие проекты — в смету и раскрой этого проекта включена только 1 доска, остаток не моделируется отдельной деталью."
+  - "Крепление каната наверху («на суку двойной петлёй») — вне модели (сук/ветка не является деталью проекта), верёвка смоделирована как part без жёсткой геометрии (joint type hang к сиденью)."
+  - "Расстояние между парой отверстий у каждого торца текстом не задано — принято симметрично по ширине 95 мм (20 и 75 мм от кромки)."
+
+constraints: {budget: 3000}

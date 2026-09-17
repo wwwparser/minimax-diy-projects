@@ -1,0 +1,84 @@
+# Скворечник из доски 20×145×2000. Короб на саморезах, крыша на карточной петле.
+project:
+  id: 01_skvorechnik_iz_stroganoy_doski
+  name: "Скворечник из строганой доски"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать доску 20×145 в стусле: перед/зад 300, бока 280, дно 110, крыша 200 мм. Коронкой 50 мм
+    высверлить леток в передней стенке на 5 см ниже верха, ниже — отверстие 8 мм под жёрдочку.
+    Собрать короб на саморезы 32 мм, предварительно засверлив 3 мм. Крышу посадить на карточную
+    петлю. Повесить на высоте 3-5 м летком на восток или юг.
+
+stock:
+  - {id: pine_board, name: "Доска сосна 20×145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+
+parts:
+  - id: front
+    name: Передняя стенка
+    stock: pine_board
+    length: 300
+    orient: ZXY
+    at: [0, 0, 0]
+    features:
+      - {type: hole_saw, diameter: 50, position: {along_length: 50_from_end, along_width: center}}
+      - {type: hole, diameter: 8, position: {along_length: 90_from_end, along_width: center}}
+  - id: back
+    name: Задняя стенка
+    stock: pine_board
+    length: 300
+    orient: ZXY
+    at: [0, 165, 0]
+  - id: side
+    name: Боковая стенка
+    stock: pine_board
+    qty: 2
+    length: 280
+    instances:
+      - {at: [0, 20, 0], orient: ZYX}
+      - {at: [125, 20, 0], orient: ZYX}
+  - id: bottom
+    name: Дно
+    stock: pine_board
+    length: 145
+    width: 105
+    orient: YXZ
+    at: [20, 20, 0]
+  - id: roof
+    name: Крыша
+    stock: pine_board
+    length: 200
+    orient: YXZ
+    at: [0, -15, 300]
+
+joints:
+  - {id: bottom_left,  type: screw, part_a: "side#1", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom_right, type: screw, part_a: "side#2", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: front_left,   type: screw, part_a: front, part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: front_right,  type: screw, part_a: front, part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: back_left,    type: screw, part_a: back,  part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: back_right,   type: screw, part_a: back,  part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: roof_rest,    type: rest,  part_a: roof,  part_b: front}
+  - {id: roof_hinge,   type: hinge, part_a: roof,  part_b: back, hardware: roof_hinge}
+
+hardware:
+  - {id: roof_hinge, type: butt_hinge, size: "25", qty: 1}
+
+steps:
+  - {title: "Боковины и дно", add: [side, bottom], joints: [bottom_left, bottom_right]}
+  - {title: "Передняя стенка", add: [front], joints: [front_left, front_right]}
+  - {title: "Задняя стенка", add: [back], joints: [back_left, back_right]}
+  - {title: "Крыша на петле", add: [roof], joints: [roof_rest, roof_hinge]}
+
+claims:
+  - {kind: overall, value: [150, 150, 300], source: "шапка текста", tolerance: 5}
+  - {kind: part_dim, target: bottom, value: [145, 110], source: "шаги текста"}
+
+ambiguities:
+  - "Шапка текста заявляет дно 150×150, но доска 20×145 после сборки короба (две боковины по 20 мм) даёт дно максимум 105×145 мм — размер из шапки физически не влезает в ширину доски."
+  - "В шагах указано «дно 110 мм» — тоже не совпадает с реально влезающими 105 мм (145-2×20); оставлено как конфликт в claims, а не подогнано."
+  - "Жёрдочка (шкант под леток) в тексте не описана как отдельная деталь — отверстие 8 мм сделано, сама жёрдочка не смоделирована (нет круглого шканта в каталоге)."
+  - "Саморезы 51 мм из сметы предназначены для навески скворечника на столб — это не часть сборки короба, поэтому в joints не участвуют."
+
+constraints: {budget: 3000}

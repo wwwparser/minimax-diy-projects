@@ -1,0 +1,88 @@
+# Перфопанель для инструмента из фанеры: лист 750х750х6 на сетке отверстий 6мм (шаг 50х50), сзади рамка
+# из бруска 20х30 (отступ от стены), повешена на дюбели. Колышки - шканты 6х30 в те же отверстия сетки.
+# Оси: X,Y - плоскость панели (750х750), Z - высота; Y - расстояние от стены (0 - стена, наружу +Y).
+project:
+  id: perfopanel_dlya_instrumenta_iz_fanery_028
+  name: "Перфопанель для инструмента из фанеры"
+  category: wood+ply
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить квадрат 750х750 из листа фанеры 6 мм. Разметить сетку 50х50 мм, просверлить отверстия 6 мм
+    (подложить обрезок доски снизу). Сзади прикрутить рамку из бруска 20х30 — отступ от стены для крючков.
+    Повесить на дюбели с шурупами. Колышки — шканты 6х30, полочки — обрезки доски на двух шкантах.
+
+stock:
+  - id: ply6
+    name: "Фанера ФК 6х1525х1525"
+    material: birch_plywood
+    type: sheet
+    thickness: 6
+    length: 1525
+    width: 1525
+    grain: any
+    kerf: 1.5
+    sku: "109060"
+  - id: bar2030
+    name: "Брусок сухой строганый 20х30х2000"
+    material: pine
+    type: bar
+    section: 20x30
+    length: 2000
+    qty: 2
+    kerf: 1.5
+    sku: "626001"
+
+parts:
+  - id: rail_h
+    name: Рамка (верх/низ)
+    stock: bar2030
+    qty: 2
+    length: 750
+    instances:
+      - {at: [0, 0, 0], orient: XZY}
+      - {at: [0, 0, 720], orient: XZY}
+  - id: rail_v
+    name: Рамка (бок)
+    stock: bar2030
+    qty: 2
+    length: 690
+    instances:
+      - {at: [0, 0, 30], orient: ZXY}
+      - {at: [720, 0, 30], orient: ZXY}
+  - id: panel
+    name: Панель перфорации
+    stock: ply6
+    length: 750
+    width: 750
+    orient: ZXY
+    at: [0, 20, 0]
+    features:
+      - {type: hole_grid, diameter: 6, pitch: [50, 50], margin: [25, 25]}
+
+joints:
+  - {id: panel_rail_bottom, type: screw, part_a: panel, part_b: "rail_h#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: panel_rail_top, type: screw, part_a: panel, part_b: "rail_h#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: panel_rail_left, type: screw, part_a: panel, part_b: "rail_v#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: panel_rail_right, type: screw, part_a: panel, part_b: "rail_v#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 4, mounts: ["rail_h#1", "rail_h#2"], name: "Дюбель Hard-Fix 6x30 с шурупом", sku: "687547"}
+
+finishes: []
+
+steps:
+  - {title: "Собрать рамку из бруска 20х30", add: [rail_h, rail_v], joints: []}
+  - {title: "Прикрутить панель к рамке (сетка отверстий 6мм уже размечена и просверлена)", add: [panel], joints: [panel_rail_bottom, panel_rail_top, panel_rail_left, panel_rail_right]}
+  - {title: "Повесить на дюбели с шурупами", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [750, 750, 20], source: "шапка текста + сечение рамки", tolerance: 5}
+
+ambiguities:
+  - "Шапка текста задаёт только 750х750 (плоскость панели), глубина изделия (отступ от стены) числом не названа — взята равной толщине бруска рамки 20 мм плюс фанера 6 мм = 26 мм от стены до лицевой плоскости панели."
+  - "Колышки (шканты 6х30) и полочки на двух шкантах — вставляются в те же отверстия сетки 6 мм, отдельной геометрией/деталями не смоделированы (в каталоге Петровича деревянных шкантов как товара нет — арт.640686 отсутствует, если добавить как hardware/joint dowel_glue, ожидаема bom.not_in_catalog)."
+  - "Количество и раскладка крючков/полочек не заданы текстом числом — не смоделированы как отдельная фурнитура, кроме дюбелей крепления к стене."
+  - "Порядок операции «подложить обрезок доски снизу» при сверлении сетки — техника сверления без сколов, отдельной деталью не моделируется."
+
+constraints: {budget: 3000}

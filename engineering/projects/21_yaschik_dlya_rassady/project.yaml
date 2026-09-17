@@ -1,0 +1,76 @@
+# Ящик для рассады: доска 20х95, короб на саморезах, дно из 3 досок снизу, антисептик.
+# Оси: X - ширина (0..600), Y - глубина (0..260), Z - высота.
+project:
+  id: yaschik_dlya_rassady_021
+  name: "Ящик для рассады"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать доску 20х95: 2 стенки 600, 2 торца 260 мм, дно из 3 досок 600 мм.
+    Собрать на саморезы 32 мм, засверливая 3 мм. Пропитать антисептиком, высушить.
+
+stock:
+  - id: board2095
+    name: "Доска сухая строганая 20х95х2000"
+    material: pine
+    type: board
+    section: 20x95
+    length: 2000
+    qty: 2
+    kerf: 1.5
+    sku: "102345"
+
+parts:
+  - id: wall
+    name: Стенка (перед/зад)
+    stock: board2095
+    qty: 2
+    length: 600
+    instances:
+      - {at: [0, 0, 0], orient: XZY}
+      - {at: [0, 280, 0], orient: XZY}
+  - id: end
+    name: Торец
+    stock: board2095
+    qty: 2
+    length: 260
+    instances:
+      - {at: [0, 20, 0], orient: YZX}
+      - {at: [580, 20, 0], orient: YZX}
+  - id: bottom
+    name: Дно (доска)
+    stock: board2095
+    qty: 3
+    length: 600
+    instances:
+      - {at: [0, 0, -20], orient: XYZ}
+      - {at: [0, 95, -20], orient: XYZ}
+      - {at: [0, 190, -20], orient: XYZ}
+
+joints:
+  - {id: wall1_end1, type: screw, part_a: "wall#1", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: wall1_end2, type: screw, part_a: "wall#1", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: wall2_end1, type: screw, part_a: "wall#2", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: wall2_end2, type: screw, part_a: "wall#2", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom1_wall1, type: screw, part_a: "bottom#1", part_b: "wall#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom1_end1, type: screw, part_a: "bottom#1", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom3_end2, type: screw, part_a: "bottom#3", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom2_end1, type: screw, part_a: "bottom#2", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+
+finishes:
+  - {id: f1, type: antiseptic, parts: all, coats: 1, sku: "1098347"}
+
+steps:
+  - {title: "Собрать короб: стенки и торцы", add: [wall, end], joints: [wall1_end1, wall1_end2, wall2_end1, wall2_end2]}
+  - {title: "Прикрутить дно снизу", add: [bottom], joints: [bottom1_wall1, bottom1_end1, bottom3_end2, bottom2_end1]}
+  - {title: "Пропитать антисептиком", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [600, 300, 100], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Шапка текста даёт габарит 600×300×100. Торцы 260 мм физически точно совпадают со внутренним промежутком между стенками при глубине короба 300 (300-2×20=260), поэтому глубина 300 подтверждается моделью. Высота короба по модели 95 (стенка) + 20 (дно снизу) = 115 мм против заявленных 100 — конфликт оставлен в claims, не подогнан."
+  - "Поддон из плёнки под рассаду упомянут в описании, но не входит в смету и не моделируется (не материал с геометрией)."
+
+constraints: {budget: 3000}

@@ -1,0 +1,80 @@
+# Вешалка: доска 20x145x800 с декоративной раскладкой (20x5) сверху и снизу (торцы под 45° в стусле),
+# 5 крючков, морилка, крепление на 3 дюбеля.
+project:
+  id: 12_veshalka_iz_doski_s_metallicheskimi_kryu
+  name: "Вешалка из доски с металлическими крючками"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить доску 800 мм и две раскладки в размер, торцы раскладки — под 45° в стусле. Приклеить
+    и прикрутить раскладку по периметру. Покрыть морилкой. Прикрутить 5 крючков с шагом 150 мм.
+    Повесить на дюбели.
+
+stock:
+  - id: board145
+    name: "Доска сосна 20х145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+  - id: raskladka
+    name: "Раскладка 20х5"
+    material: pine
+    type: bar
+    section: 5x20
+    length: 2500
+    kerf: 1.5
+    sku: "612193"
+
+parts:
+  - id: board
+    name: "Доска-основание"
+    stock: board145
+    length: 800
+    orient: XZY
+    at: [0, 0, 0]
+  - id: trim_top
+    name: "Раскладка верхняя"
+    stock: raskladka
+    length: 800
+    orient: XZY
+    at: [0, -5, 125]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+  - id: trim_bottom
+    name: "Раскладка нижняя"
+    stock: raskladka
+    length: 800
+    orient: XZY
+    at: [0, -5, 0]
+    ends: {start: {angle: 45, plane: W}, end: {angle: 45, plane: W}}
+
+joints:
+  - {id: trim_top_glue, type: glue, part_a: trim_top, part_b: board}
+  - {id: trim_top_screw, type: screw, part_a: trim_top, part_b: board, fastener: {type: wood_screw, diameter: 3.0}, count: 3, along: X}
+  - {id: trim_bottom_glue, type: glue, part_a: trim_bottom, part_b: board}
+  - {id: trim_bottom_screw, type: screw, part_a: trim_bottom, part_b: board, fastener: {type: wood_screw, diameter: 3.0}, count: 3, along: X}
+
+hardware:
+  - {id: hooks, type: hook, qty: 5, mounts: [board], name: "Крючок-вешалка №4 цинк", sku: "640859"}
+  - {id: wall_dowels, type: wall_dowel, qty: 3, mounts: [board], screws_per_unit: 0, name: "Дюбель 6x30 с шурупом", sku: "687547"}
+
+finishes:
+  - {id: f1, type: stain, parts: [board, trim_top, trim_bottom], coats: 1}
+
+steps:
+  - {title: "Отпилить доску и раскладку, торцы под 45°", add: [board, trim_top, trim_bottom], joints: []}
+  - {title: "Приклеить и прикрутить раскладку", add: [], joints: [trim_top_glue, trim_top_screw, trim_bottom_glue, trim_bottom_screw]}
+  - {title: "Покрыть морилкой", add: [], joints: []}
+  - {title: "Прикрутить крючки, повесить на дюбели", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [800, 20, 145], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Текст говорит «раскладка по периметру», но отпиливаются только 2 раскладки (не 4) — смоделированы верхняя и нижняя планки, боковые отсутствуют; полного периметра нет."
+  - "В смете нет саморезов для крепления раскладки, хотя шаг 2 требует «прикрутить» — длина самореза не задана, движок подобрал минимальную безопасную."
+
+constraints: {budget: 3000}

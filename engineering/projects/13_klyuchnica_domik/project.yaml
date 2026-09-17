@@ -1,0 +1,93 @@
+# Ключница «домик»: 3 доски 20x145x300 бок о бок (склеены кромка в кромку), у крайних досок спилен
+# верхний внешний угол под 45° (силуэт крыши), поперечная планка сзади стягивает щит, снизу полочка
+# из обрезка, 5 крючков, морилка, крепление на дюбели.
+project:
+  id: 13_klyuchnica_domik
+  name: "Ключница «домик»"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить 3 куска доски 300 мм, два верхних угла спилить под 45° — получится домик. Склеить куски
+    между собой через поперечную планку сзади. Снизу прикрутить полочку из обрезка. Вкрутить 5 крючков,
+    покрыть морилкой, повесить на дюбели.
+
+stock:
+  - id: board145
+    name: "Доска сосна 20х145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+
+parts:
+  - id: panel_left
+    name: "Щит левый (угол спилен)"
+    stock: board145
+    length: 300
+    orient: ZXY
+    at: [0, 0, 0]
+    shape: {type: polygon, points: [[0,0],[145,0],[145,300],[40,300],[0,260]]}
+  - id: panel_mid
+    name: "Щит средний"
+    stock: board145
+    length: 300
+    orient: ZXY
+    at: [145, 0, 0]
+  - id: panel_right
+    name: "Щит правый (угол спилен)"
+    stock: board145
+    length: 300
+    orient: ZXY
+    at: [290, 0, 0]
+    shape: {type: polygon, points: [[0,0],[145,0],[145,260],[105,300],[0,300]]}
+  - id: crossbar
+    name: "Поперечная планка сзади"
+    stock: board145
+    length: 435
+    width: 90
+    orient: XZY
+    at: [0, 20, 120]
+  - id: shelf
+    name: "Полочка (из обрезка)"
+    stock: board145
+    length: 435
+    width: 60
+    orient: XYZ
+    at: [0, -40, -20]
+
+joints:
+  - {id: panel_lm, type: glue, part_a: panel_left, part_b: panel_mid}
+  - {id: panel_mr, type: glue, part_a: panel_mid, part_b: panel_right}
+  - {id: cross_left, type: glue, part_a: crossbar, part_b: panel_left}
+  - {id: cross_mid, type: glue, part_a: crossbar, part_b: panel_mid}
+  - {id: cross_right, type: glue, part_a: crossbar, part_b: panel_right}
+  - {id: shelf_left, type: screw, part_a: shelf, part_b: panel_left, fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: shelf_mid, type: screw, part_a: shelf, part_b: panel_mid, fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: shelf_right, type: screw, part_a: shelf, part_b: panel_right, fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+
+hardware:
+  - {id: hooks, type: hook, qty: 5, mounts: [panel_left, panel_mid, panel_right], name: "Крючок-вешалка №2 цинк", sku: "640854"}
+  - {id: wall_dowels, type: wall_dowel, qty: 2, mounts: [crossbar], screws_per_unit: 0, name: "Дюбель 6x30 с шурупом", sku: "687547"}
+
+finishes:
+  - {id: f1, type: stain, parts: [panel_left, panel_mid, panel_right, crossbar, shelf], coats: 1}
+
+steps:
+  - {title: "Отпилить 3 куска, спилить верхние углы под 45°", add: [panel_left, panel_mid, panel_right], joints: []}
+  - {title: "Склеить щит через поперечную планку", add: [crossbar], joints: [panel_lm, panel_mr, cross_left, cross_mid, cross_right]}
+  - {title: "Прикрутить полочку снизу", add: [shelf], joints: [shelf_left, shelf_mid, shelf_right]}
+  - {title: "Вкрутить крючки, покрыть морилкой, повесить на дюбели", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [300, 20, 250], source: "шапка текста (300x250 мм)", tolerance: 5}
+  - {kind: part_dim, target: panel_mid, value: [300, 145], source: "шаги текста (3 куска доски 300 мм)"}
+
+ambiguities:
+  - "Шапка текста даёт габарит 300×250 мм, но по шагам это 3 доски 145 мм бок о бок (итого ширина ~435 мм) высотой 300 мм — щит заведомо шире заявленного, конфликт оставлен движку."
+  - "«Два верхних угла спилить под 45°» истолковано как срез внешних верхних углов крайних досок (силуэт крыши), а не единый конёк по всей ширине щита — в тексте не уточнено."
+  - "Сечение поперечной планки и полочки (обрезок) не задано текстом — приняты 90 мм и 60 мм из остатков доски 145 мм."
+
+constraints: {budget: 3000}

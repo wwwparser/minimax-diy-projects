@@ -1,0 +1,86 @@
+# 47. Вешалка-штанга лофт: стальная труба ВГП ДУ15 в двух деревянных держателях на стене.
+# Стена — плоскость y = 0 (вне модели). Труба идёт вдоль X, держатели — по концам трубы.
+# Держатель 300х145 из текста = 2 склеенных слоя доски 20х145 (T=20 каждый, итого 40).
+# Внутренний слой держателя получает гнездо 22 мм (перьевое сверло) под конец трубы.
+project:
+  id: 47_veshalka_shtanga_loft_stal_naya_truba_na
+  name: "Вешалка-штанга лофт: труба на держателях"
+  category: wood+metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить трубу ВГП ДУ15 на 1000 мм ножовкой по металлу, зачистить торцы шкуркой.
+    Из доски 20х145 склеить 2 держателя 300х145 (по 2 слоя доски), в каждом перьевым сверлом
+    22 мм сделать гнездо под трубу. Покрасить трубу грунт-эмалью. Прикрутить держатели к стене
+    на дюбели, вставить трубу в гнёзда.
+
+stock:
+  - {id: board145, name: "Доска 20х145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+  - {id: tube_du15, name: "Труба ВГП ДУ15", material: steel, type: round_tube, diameter: 21.3, wall: 2.8, length: 3000, kerf: 1.5, sku: "133937"}
+
+parts:
+  # держатель левый (у x=0): наружный слой (к стене) + внутренний слой (с гнездом под трубу)
+  - id: holder_outer_left
+    name: "Держатель левый, наружный слой"
+    stock: board145
+    length: 300
+    orient: ZYX
+    at: [0, 0, 0]
+  - id: holder_inner_left
+    name: "Держатель левый, внутренний слой (с гнездом)"
+    stock: board145
+    length: 300
+    orient: ZYX
+    at: [20, 0, 0]
+    features:
+      - {type: hole, diameter: 22, depth: 20, face: top, position: {along_length: center, along_width: center}}
+  # держатель правый (у x=1060): внутренний слой ближе к трубе, наружный — к стене
+  - id: holder_inner_right
+    name: "Держатель правый, внутренний слой (с гнездом)"
+    stock: board145
+    length: 300
+    orient: ZYX
+    at: [1020, 0, 0]
+    features:
+      - {type: hole, diameter: 22, depth: 20, face: bottom, position: {along_length: center, along_width: center}}
+  - id: holder_outer_right
+    name: "Держатель правый, наружный слой"
+    stock: board145
+    length: 300
+    orient: ZYX
+    at: [1040, 0, 0]
+  - id: tube
+    name: "Труба ВГП ДУ15"
+    stock: tube_du15
+    length: 1000
+    orient: XYZ
+    at: [20, 61.85, 139.35]
+
+joints:
+  - {id: glue_left,  type: glue, part_a: holder_outer_left,  part_b: holder_inner_left}
+  - {id: glue_right, type: glue, part_a: holder_outer_right, part_b: holder_inner_right}
+  - {id: tube_left,  type: inserted, part_a: tube, part_b: holder_inner_left}
+  - {id: tube_right, type: inserted, part_a: tube, part_b: holder_inner_right}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 4, mounts: [holder_outer_left, holder_outer_right], screws_per_unit: 0, name: "Дюбель 6x30 с шурупом", sku: "687547"}
+
+finishes:
+  - {id: paint_tube, type: enamel_aerosol, parts: [tube], coats: 1}
+
+steps:
+  - {title: "Отпилить и зачистить трубу", add: [tube], joints: []}
+  - {title: "Склеить держатели и просверлить гнёзда 22 мм", add: [holder_outer_left, holder_inner_left, holder_outer_right, holder_inner_right], joints: [glue_left, glue_right]}
+  - {title: "Прикрутить держатели к стене на дюбели, вставить трубу", add: [], joints: [tube_left, tube_right]}
+
+claims:
+  - {kind: overall, value: [1060, 145, 300], source: "шапка текста «длина 1000 мм» — вероятно длина трубы, а не всей сборки с держателями", tolerance: 5}
+
+ambiguities:
+  - "Шапка текста даёт «длина 1000 мм» — в шагах это явно длина отпиленной трубы; итоговая длина сборки (труба + 2 держателя по 40 мм) физически 1060 мм. Оставлено как заявленный конфликт (claims/spec.conflict_overall), а не подогнано молча."
+  - "«Склеить 2 держателя 300х145» — держатель смоделирован как 2 склеенных слоя доски 20х145х300 (итого 40 мм толщины), что соответствует упаковке материала (1 доска 2000 мм на 4 отрезка по 300 мм)."
+  - "Ориентация держателя относительно стены в тексте не детализирована: принята схема, где узкая грань (40х300) держателя обращена к стене, а гнездо 22 мм сверлится в противоположной узкой грани держателя (вдоль оси трубы) — так труба идёт горизонтально между двумя держателями."
+  - "Глубина гнезда под трубу (перьевое сверло 22 мм) в тексте не названа числом — принята 20 мм (на всю толщину внутреннего слоя), труба своим концом упирается в этот слой (joint type inserted, без крепежа — труба просто вставлена)."
+  - "Труба не крепится крепежом к держателям (просто лежит в гнёздах) — держатели крепятся к стене дюбелями."
+
+constraints: {budget: 3000}

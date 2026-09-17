@@ -1,0 +1,78 @@
+# Садовая скамейка без спинки: 2 П-образные опоры (ножки брусок 50x50 + царга доска 20x95 на ребре)
+# и сиденье из 3 досок 45x95x1000, прикрученное сверху на конструкционные саморезы.
+project:
+  id: 24_sadovaya_skameyka_bez_spinki
+  name: "Садовая скамейка без спинки"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать доску 45×95×3000 на 3 части по 1000 мм — сиденье. 4 ножки по 410 мм из бруска 50×50,
+    2 царги 300 мм из доски 20×95. Собрать 2 П-образные опоры на конструкционные саморезы.
+    Прикрутить доски сиденья с зазором 8 мм. Пропитать антисептиком.
+
+stock:
+  - {id: board4595, name: "Доска 45×95", material: pine, type: board, section: 45x95, length: 3000, kerf: 1.5, sku: '1224118'}
+  - {id: bar50, name: "Брусок 50×50", material: pine, type: bar, section: 50x50, length: 2000, kerf: 1.5, sku: '1092606'}
+  - {id: board2095, name: "Доска 20×95", material: pine, type: board, section: 20x95, length: 2000, kerf: 1.5, sku: '102345'}
+
+parts:
+  # Ножки: две П-образные опоры, по 2 ножки на опору вдоль Y (глубина сиденья ~300 мм из шапки)
+  - id: leg
+    name: Ножка
+    stock: bar50
+    qty: 4
+    length: 410
+    instances:
+      - {at: [25, 0, 0], orient: ZXY}
+      - {at: [25, 250, 0], orient: ZXY}
+      - {at: [975, 0, 0], orient: ZXY}
+      - {at: [975, 250, 0], orient: ZXY}
+  # Царги на ребре вдоль Y, прикручены к внутренним граням ножек у самого верха (заподлицо с верхом ножек)
+  - id: rail
+    name: Царга
+    stock: board2095
+    qty: 2
+    length: 300
+    instances:
+      - {at: [75, 0, 315], orient: YZX}
+      - {at: [955, 0, 315], orient: YZX}
+  # Сиденье: 3 доски 45x95x1000 вдоль X поверх царг и ножек, с зазором 8 мм между досками
+  - id: seat
+    name: Доска сиденья
+    stock: board4595
+    qty: 3
+    length: 1000
+    instances:
+      - {at: [0, 0, 410], orient: XYZ}
+      - {at: [0, 103, 410], orient: XYZ}
+      - {at: [0, 206, 410], orient: XYZ}
+
+joints:
+  - {id: rail_leg1, type: screw, part_a: "rail#1", part_b: "leg#1", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: rail_leg2, type: screw, part_a: "rail#1", part_b: "leg#2", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: rail_leg3, type: screw, part_a: "rail#2", part_b: "leg#3", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: rail_leg4, type: screw, part_a: "rail#2", part_b: "leg#4", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat1_rail1, type: screw, part_a: "seat#1", part_b: "rail#1", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat1_rail2, type: screw, part_a: "seat#1", part_b: "rail#2", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat2_rail1, type: screw, part_a: "seat#2", part_b: "rail#1", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat2_rail2, type: screw, part_a: "seat#2", part_b: "rail#2", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat3_rail1, type: screw, part_a: "seat#3", part_b: "rail#1", fastener: {type: wood_screw, diameter: 4.0}}
+  - {id: seat3_rail2, type: screw, part_a: "seat#3", part_b: "rail#2", fastener: {type: wood_screw, diameter: 4.0}}
+
+finishes:
+  - {id: f1, type: antiseptic, parts: all, coats: 1, sku: '1098347'}
+
+steps:
+  - {title: "П-образные опоры: ножки + царги", add: [leg, rail], joints: [rail_leg1, rail_leg2, rail_leg3, rail_leg4]}
+  - {title: "Сиденье на опоры", add: [seat], joints: [seat1_rail1, seat1_rail2, seat2_rail1, seat2_rail2, seat3_rail1, seat3_rail2]}
+
+claims:
+  - {kind: overall, value: [1000, 300, 430], source: "шапка текста", tolerance: 10}
+
+ambiguities:
+  - "Шапка текста даёт габарит 1000×300, высоту 430 мм. По модели верх ножек и царг на отметке 410 мм, сиденье (толщина 45 мм) лежит сверху — полная высота 455 мм, что не совпадает ни с 410 (высота ножек), ни с 430 из шапки. Заложено в claims как overall-конфликт."
+  - "Сиденье из 3 досок шириной 95 мм с зазором 8 мм даёт общую глубину 3×95+2×8=301 мм — совпадает с 300 мм из шапки в пределах допуска."
+  - "Текст не уточняет, к какой грани ножек крепится царга и заподлицо ли она с верхом ножек — принято: царга на ребре, прикручена к внутренней грани ножек, верх царги заподлицо с верхом ножек (сиденье опирается на оба)."
+
+constraints: {budget: 3000}

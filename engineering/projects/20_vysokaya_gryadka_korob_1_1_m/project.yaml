@@ -1,0 +1,161 @@
+# Высокая грядка-короб 1x1 м: 4 угловые стойки 40x40x350 (60 мм в земле, 290 мм над землёй),
+# стенки из доски 20x145 в 2 ряда (высота ряда 145 -> 2 ряда = 290 мм, совпадает с высотой стоек
+# над землёй). Перед/зад — доски во всю длину 1000 мм (внешний габарит по X); левая/правая стороны
+# вставлены МЕЖДУ передней и задней (960 мм), иначе будет нахлёст досок в углу — см. ambiguities.
+project:
+  id: 20_vysokaya_gryadka_korob_1_1_m
+  name: "Высокая грядка-короб 1x1 м"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать доску 20x145: 8 кусков по 1000 мм (из 4 досок по 2 м). 4 угловые стойки по 350 мм из
+    бруска 40x40 (заглубить нижние 60 мм в землю). Прикрутить доски к стойкам в два ряда саморезами
+    51 мм. Пропитать антисептиком перед установкой. Застелить дно сеткой от кротов (по желанию),
+    засыпать землёй.
+
+stock:
+  - id: board145
+    name: "Доска сосна 20х145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+  - id: post40
+    name: "Брусок сосна 40х40"
+    material: pine
+    type: bar
+    section: 40x40
+    length: 2000
+    kerf: 1.5
+    sku: "1092607"
+
+parts:
+  - id: post_fl
+    name: "Стойка передняя левая"
+    stock: post40
+    length: 350
+    orient: ZXY
+    at: [20, 20, -60]
+  - id: post_fr
+    name: "Стойка передняя правая"
+    stock: post40
+    length: 350
+    orient: ZXY
+    at: [940, 20, -60]
+  - id: post_bl
+    name: "Стойка задняя левая"
+    stock: post40
+    length: 350
+    orient: ZXY
+    at: [20, 940, -60]
+  - id: post_br
+    name: "Стойка задняя правая"
+    stock: post40
+    length: 350
+    orient: ZXY
+    at: [940, 940, -60]
+
+  - id: front_1
+    name: "Передняя доска, ряд 1"
+    stock: board145
+    length: 1000
+    orient: XZY
+    at: [0, 0, 0]
+  - id: front_2
+    name: "Передняя доска, ряд 2"
+    stock: board145
+    length: 1000
+    orient: XZY
+    at: [0, 0, 145]
+  - id: back_1
+    name: "Задняя доска, ряд 1"
+    stock: board145
+    length: 1000
+    orient: XZY
+    at: [0, 980, 0]
+  - id: back_2
+    name: "Задняя доска, ряд 2"
+    stock: board145
+    length: 1000
+    orient: XZY
+    at: [0, 980, 145]
+  - id: left_1
+    name: "Левая доска, ряд 1"
+    stock: board145
+    length: 960
+    orient: YZX
+    at: [0, 20, 0]
+  - id: left_2
+    name: "Левая доска, ряд 2"
+    stock: board145
+    length: 960
+    orient: YZX
+    at: [0, 20, 145]
+  - id: right_1
+    name: "Правая доска, ряд 1"
+    stock: board145
+    length: 960
+    orient: YZX
+    at: [980, 20, 0]
+  - id: right_2
+    name: "Правая доска, ряд 2"
+    stock: board145
+    length: 960
+    orient: YZX
+    at: [980, 20, 145]
+
+joints:
+  - {id: front1_pfl, type: screw, part_a: front_1, part_b: post_fl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: front1_pfr, type: screw, part_a: front_1, part_b: post_fr, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: front2_pfl, type: screw, part_a: front_2, part_b: post_fl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: front2_pfr, type: screw, part_a: front_2, part_b: post_fr, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: back1_pbl, type: screw, part_a: back_1, part_b: post_bl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: back1_pbr, type: screw, part_a: back_1, part_b: post_br, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: back2_pbl, type: screw, part_a: back_2, part_b: post_bl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: back2_pbr, type: screw, part_a: back_2, part_b: post_br, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: left1_pfl, type: screw, part_a: left_1, part_b: post_fl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: left1_pbl, type: screw, part_a: left_1, part_b: post_bl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: left2_pfl, type: screw, part_a: left_2, part_b: post_fl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: left2_pbl, type: screw, part_a: left_2, part_b: post_bl, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: right1_pfr, type: screw, part_a: right_1, part_b: post_fr, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: right1_pbr, type: screw, part_a: right_1, part_b: post_br, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: right2_pfr, type: screw, part_a: right_2, part_b: post_fr, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: right2_pbr, type: screw, part_a: right_2, part_b: post_br, fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+
+finishes:
+  - {id: f1, type: antiseptic, parts: all, coats: 1}
+
+steps:
+  - {title: "Нарезать доски (8 шт по 1000 мм) и стойки (4 шт по 350 мм)",
+     add: [post_fl, post_fr, post_bl, post_br], joints: []}
+  - {title: "Прикрутить переднюю и заднюю стенки в два ряда",
+     add: [front_1, front_2, back_1, back_2],
+     joints: [front1_pfl, front1_pfr, front2_pfl, front2_pfr, back1_pbl, back1_pbr, back2_pbl, back2_pbr]}
+  - {title: "Прикрутить боковые стенки в два ряда",
+     add: [left_1, left_2, right_1, right_2],
+     joints: [left1_pfl, left1_pbl, left2_pfl, left2_pbl, right1_pfr, right1_pbr, right2_pfr, right2_pbr]}
+  - {title: "Пропитать антисептиком перед установкой, заглубить стойки на 60 мм, застелить дно сеткой (по желанию), засыпать землёй",
+     add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [1000, 1000, 290], source: "шапка текста (1000x1000x290 мм)", tolerance: 5}
+  - {kind: part_dim, target: left_1, value: [1000, 145], source: "шаги текста (все 8 досок нарезаны по 1000 мм)"}
+  - {kind: part_dim, target: right_1, value: [1000, 145], source: "шаги текста (все 8 досок нарезаны по 1000 мм)"}
+
+ambiguities:
+  - "Текст говорит, что все 8 досок стенок нарезаны одинаково по 1000 мм. Физически корректный короб
+    1000x1000 мм так собрать нельзя без нахлёста в углах: если все 4 стороны по 1000 мм, передние и
+    задние доски перекрываются с боковыми в углах (коллизия). Смоделирован физически верный вариант —
+    передняя и задняя стенки во всю длину 1000 мм, боковые вставлены между ними и потому короче,
+    960 мм. Несовпадение с текстом (960 вместо 1000 у боковых досок) оставлено в claims."
+  - "Заглубление стоек в землю (60 мм) означает, что часть модели уходит ниже отметки z=0 — это не
+    ошибка геометрии, а фактическая часть конструкции (столб в грунте)."
+  - "Сетка от кротов на дне названа опциональной («по желанию») — в модель не включена, это расходный
+    материал без фиксированной геометрии."
+  - "Порядок сборки по тексту не расписан по рядам подробно — шаги укрупнены логическим образом
+    (сначала стойки, затем передняя/задняя стенка, затем боковые)."
+
+constraints: {budget: 3000}

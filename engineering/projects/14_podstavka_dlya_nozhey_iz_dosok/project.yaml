@@ -1,0 +1,85 @@
+# Подставка для ножей: пакет из 5 досок 20x120x250, склеенных кромка в кромку (стопкой по толщине),
+# стянутых саморезами через крайние доски, низ спилен под 15°, пропитка маслом.
+project:
+  id: 14_podstavka_dlya_nozhey_iz_dosok
+  name: "Подставка для ножей из досок"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать 5 кусков доски 20x120 длиной 250 мм. На трёх внутренних кусках сделать ножовкой по 2
+    продольных пропила глубиной 3-4 мм (щели под лезвия). Склеить пакет на ПВА, стянуть саморезами
+    через крайние доски. Спилить низ под 15° для наклона. Отшлифовать и пропитать льняным маслом.
+
+stock:
+  - id: board120
+    name: "Доска сосна 20х120"
+    material: pine
+    type: board
+    section: 20x120
+    length: 2000
+    kerf: 1.5
+    sku: "999584"
+
+parts:
+  - id: board1
+    name: "Крайняя доска 1"
+    stock: board120
+    length: 250
+    orient: ZYX
+    at: [0, 0, 0]
+    ends: {start: {angle: 15, plane: W}}
+  - id: board2
+    name: "Внутренняя доска 2 (щели)"
+    stock: board120
+    length: 250
+    orient: ZYX
+    at: [20, 0, 0]
+    ends: {start: {angle: 15, plane: W}}
+  - id: board3
+    name: "Внутренняя доска 3 (щели)"
+    stock: board120
+    length: 250
+    orient: ZYX
+    at: [40, 0, 0]
+    ends: {start: {angle: 15, plane: W}}
+  - id: board4
+    name: "Внутренняя доска 4 (щели)"
+    stock: board120
+    length: 250
+    orient: ZYX
+    at: [60, 0, 0]
+    ends: {start: {angle: 15, plane: W}}
+  - id: board5
+    name: "Крайняя доска 5"
+    stock: board120
+    length: 250
+    orient: ZYX
+    at: [80, 0, 0]
+    ends: {start: {angle: 15, plane: W}}
+
+joints:
+  - {id: glue12, type: glue, part_a: board1, part_b: board2}
+  - {id: glue23, type: glue, part_a: board2, part_b: board3}
+  - {id: glue34, type: glue, part_a: board3, part_b: board4}
+  - {id: glue45, type: glue, part_a: board4, part_b: board5}
+  - {id: screw1, type: screw, part_a: board1, part_b: board2, fastener: {type: wood_screw, diameter: 3.5, length: 51}, count: 2, along: Z}
+  - {id: screw5, type: screw, part_a: board5, part_b: board4, fastener: {type: wood_screw, diameter: 3.5, length: 51}, count: 2, along: Z}
+
+finishes:
+  - {id: f1, type: oil, parts: [board1, board2, board3, board4, board5], coats: 2}
+
+steps:
+  - {title: "Нарезать 5 досок, сделать пропилы на внутренних", add: [board1, board2, board3, board4, board5], joints: []}
+  - {title: "Склеить пакет и стянуть саморезами через крайние доски", add: [], joints: [glue12, glue23, glue34, glue45, screw1, screw5]}
+  - {title: "Спилить низ под 15°, отшлифовать и пропитать маслом", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [250, 120, 100], source: "шапка текста (250x120x120 мм)", tolerance: 5}
+
+ambiguities:
+  - "Продольные пропилы-щели (глубина 3-4 мм) для лезвий не поддерживаются движком как отдельная фича (частичный пропил вдоль пласти) — геометрически не смоделированы, отмечены только текстом инструкции."
+  - "Шапка текста даёт габарит 250×120×120 мм, но пакет из 5 досок толщиной 20 мм даёт ширину стопки 100 мм, а не 120 — расхождение оставлено движку."
+  - "Саморезы 51 мм через крайнюю доску (20 мм) входят в соседнюю доску на ~31 мм — не на всю толщину пакета; сколько досок держат саморезы и сколько только клей, текст не уточняет."
+
+constraints: {budget: 3000}

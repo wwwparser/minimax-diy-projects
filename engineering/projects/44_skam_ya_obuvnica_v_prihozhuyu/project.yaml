@@ -1,0 +1,104 @@
+# Скамья-обувница: 4 ножки 40х40, сиденье и полка из доски 20х145, боковины с перекладинами.
+# Оси: X — ширина (900), Y — глубина (290), Z — высота. Ножки в 4 углах, сиденье лежит НА ножках сверху
+# (высота сиденья = высота ножек + толщина доски = 450+20=470 — конфликт с габаритом 450 из шапки, см. claims).
+project:
+  id: 44_skam_ya_obuvnica_v_prihozhuyu
+  name: "Скамья-обувница в прихожую"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать 4 ноги 450 мм из бруска 40х40. Сиденье — 2 доски 20х145 по 900, полка — 2 доски по 900.
+    Собрать боковины с перекладинами, прикрутить доски саморезами 51 мм. Лак.
+
+stock:
+  - {id: bar40, name: "Брусок 40х40", material: pine, type: bar, section: 40x40, length: 2000, kerf: 1.5, sku: "1092607"}
+  - {id: board145, name: "Доска 20х145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+
+parts:
+  - id: leg
+    name: Ножка
+    stock: bar40
+    qty: 4
+    length: 450
+    instances:
+      - {at: [0, 0, 0], orient: ZXY}      # 1: перед-лево
+      - {at: [860, 0, 0], orient: ZXY}    # 2: перед-право
+      - {at: [0, 250, 0], orient: ZXY}    # 3: зад-лево
+      - {at: [860, 250, 0], orient: ZXY}  # 4: зад-право
+
+  - id: rail
+    name: Перекладина (боковина, под полку)
+    stock: board145
+    qty: 2
+    length: 210
+    width: 40                 # роспуск доски 145 -> 40
+    instances:
+      - {at: [0, 40, 80], orient: YXZ}     # 1: левая, между ножками 1 и 3
+      - {at: [860, 40, 80], orient: YXZ}   # 2: правая, между ножками 2 и 4
+
+  - id: seat_front
+    name: Сиденье (передняя доска)
+    stock: board145
+    length: 900
+    orient: XYZ
+    at: [0, 0, 450]
+
+  - id: seat_back
+    name: Сиденье (задняя доска)
+    stock: board145
+    length: 900
+    orient: XYZ
+    at: [0, 145, 450]
+
+  - id: shelf_front
+    name: Полка для обуви (передняя доска)
+    stock: board145
+    length: 900
+    width: 105                # роспуск 145 -> 105: полка вставлена между ножками (вровень с перекладинами), не поверх них
+    orient: XYZ
+    at: [0, 40, 100]
+
+  - id: shelf_back
+    name: Полка для обуви (задняя доска)
+    stock: board145
+    length: 900
+    width: 105
+    orient: XYZ
+    at: [0, 145, 100]
+
+joints:
+  # боковины: ножки + перекладины под полку (длина саморезов в тексте не названа — подберёт движок)
+  - {id: leg1_rail, type: screw, part_a: "leg#1", part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: leg3_rail, type: screw, part_a: "leg#3", part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: leg2_rail, type: screw, part_a: "leg#2", part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: leg4_rail, type: screw, part_a: "leg#4", part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5}}
+  # сиденье прикручено сверху к ножкам, саморезы 51 мм (из текста)
+  - {id: seatf_leg1, type: screw, part_a: seat_front, part_b: "leg#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: seatf_leg2, type: screw, part_a: seat_front, part_b: "leg#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: seatb_leg3, type: screw, part_a: seat_back, part_b: "leg#3", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: seatb_leg4, type: screw, part_a: seat_back, part_b: "leg#4", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  # полка прикручена к перекладинам, саморезы 51 мм (из текста) — доска 20 + перекладина 20 = 40 мм, короче самореза
+  - {id: shelff_rail1, type: screw, part_a: shelf_front, part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: shelff_rail2, type: screw, part_a: shelf_front, part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: shelfb_rail1, type: screw, part_a: shelf_back, part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+  - {id: shelfb_rail2, type: screw, part_a: shelf_back, part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}}
+
+finishes:
+  - {id: f1, type: varnish, parts: all, coats: 2}
+
+steps:
+  - {title: "Ножки и перекладины (боковины)", add: [leg, rail], joints: [leg1_rail, leg3_rail, leg2_rail, leg4_rail]}
+  - {title: "Полка для обуви", add: [shelf_front, shelf_back], joints: [shelff_rail1, shelff_rail2, shelfb_rail1, shelfb_rail2]}
+  - {title: "Сиденье", add: [seat_front, seat_back], joints: [seatf_leg1, seatf_leg2, seatb_leg3, seatb_leg4]}
+  - {title: "Лакировка", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [900, 290, 450], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Высота полки от пола не названа в тексте — принята условно 100 мм (низ доски полки)."
+  - "Габарит из шапки 450 мм по высоте — это высота одних ножек; сиденье лежит НА ножках сверху (доска 20 мм), поэтому фактическая высота сборки 470 мм. Ширина 900 и глубина 290 (2х145) сходятся."
+  - "Способ соединения ножек с перекладинами (боковины) в тексте не детализирован — принят как обычный саморез, длина не из текста (подобрана движком)."
+
+constraints: {budget: 3000}

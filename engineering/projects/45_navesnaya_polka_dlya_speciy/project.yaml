@@ -1,0 +1,67 @@
+# Навесная полка для специй: 2 полки 500х95 (доска 20х95, ширина доски = ширина полки, роспуск не нужен),
+# 2 боковины 350 из этой же доски (стоят вертикально). Раскладка-бортик — декоративная, не моделируется (см. ambiguities).
+# Оси: X — ширина (500), Y — глубина (95), Z — высота (2 яруса).
+project:
+  id: 45_navesnaya_polka_dlya_speciy
+  name: "Навесная полка для специй"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать доску 20х95: 2 полки 500, 2 боковины 350 мм. Прикрутить полки к боковинам саморезами 32 мм.
+    Спереди приклеить бортики из раскладки. Покрыть лаком, повесить на дюбели.
+
+stock:
+  - {id: board95, name: "Доска 20х95", material: pine, type: board, section: 20x95, length: 2000, kerf: 1.5, sku: "102345"}
+
+parts:
+  - id: side
+    name: Боковина
+    stock: board95
+    qty: 2
+    length: 350
+    instances:
+      - {at: [0, 0, 0], orient: ZYX}      # левая
+      - {at: [480, 0, 0], orient: ZYX}    # правая (500 - T(20) = 480)
+
+  - id: shelf_low
+    name: Полка нижняя
+    stock: board95
+    length: 460                # полка вставлена МЕЖДУ боковинами: 500 - 2х20(толщина боковины) = 460
+    orient: XYZ
+    at: [20, 0, 150]
+
+  - id: shelf_top
+    name: Полка верхняя
+    stock: board95
+    length: 460
+    orient: XYZ
+    at: [20, 0, 330]
+
+joints:
+  # саморезы 32 мм из текста: идут через толщину боковины (20 мм) в торец полки
+  - {id: low_left,  type: screw, part_a: "side#1", part_b: shelf_low, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: low_right, type: screw, part_a: "side#2", part_b: shelf_low, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: top_left,  type: screw, part_a: "side#1", part_b: shelf_top, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: top_right, type: screw, part_a: "side#2", part_b: shelf_top, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 4, mounts: ["side#1", "side#2"], name: "Дюбель 6х30 с шурупом"}
+
+finishes:
+  - {id: f1, type: varnish_aerosol, parts: all, coats: 1}
+
+steps:
+  - {title: "Полки на боковины", add: [side, shelf_low, shelf_top], joints: [low_left, low_right, top_left, top_right]}
+  - {title: "Бортики из раскладки (приклеить спереди)", add: [], joints: []}
+  - {title: "Лак, навеска на дюбели", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [500, 95, 350], source: "шапка текста (500х95, 2 яруса)", tolerance: 5}
+
+ambiguities:
+  - "Раскладка (бортик 20х5) спереди полок — тонкий декоративный элемент на клею, геометрически не параметризован (не part), учтён только как материал в смете."
+  - "Расстояние между двумя полками (2 яруса) в тексте не задано — принято условно 180 мм (низ на 150 мм от верха боковины снизу, верх у самого верха боковины)."
+  - "Высота крепления полки на стену (дюбели) в тексте не названа — просто «повесить на дюбели», расположены на боковинах."
+
+constraints: {budget: 3000}

@@ -1,0 +1,87 @@
+# Столик для завтрака в постели: щит ЛДСП 800х300 на двух складных П-образных ножках 250 мм на карточных петлях.
+project:
+  id: 34_stolik_dlya_zavtraka_v_posteli
+  name: "Столик для завтрака в постели"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Щит ЛДСП 800х300 - столешница. Из бруска 20х45 сделать две П-образные ножки высотой 250 мм.
+    Прикрутить ножки к столешнице на карточные петли - складываются внутрь. По торцам - ручки-скобы.
+    Кромки бруска отшлифовать.
+
+stock:
+  - id: ldsp
+    name: "Щит мебельный ЛДСП 800х300х16 мм"
+    material: chipboard
+    type: sheet
+    thickness: 16
+    length: 800
+    width: 300
+    grain: any
+    sku: "634962"
+  - id: bar2045
+    name: "Брусок сухой строганый 20х45х2000"
+    material: pine
+    type: bar
+    section: 20x45
+    length: 2000
+    kerf: 1.5
+    sku: "626000"
+
+parts:
+  - id: top
+    name: Столешница
+    stock: ldsp
+    length: 800
+    width: 300
+    orient: XYZ
+    at: [0, 0, 250]
+  - id: post
+    name: Стойка ножки
+    stock: bar2045
+    qty: 4
+    length: 230
+    instances:
+      - {at: [100, 20, 0], orient: ZXY}
+      - {at: [100, 260, 0], orient: ZXY}
+      - {at: [655, 20, 0], orient: ZXY}
+      - {at: [655, 260, 0], orient: ZXY}
+  - id: leg_top
+    name: Верхняя перекладина ножки (петельная планка)
+    stock: bar2045
+    qty: 2
+    length: 260
+    instances:
+      - {at: [100, 20, 230], orient: YXZ}
+      - {at: [655, 20, 230], orient: YXZ}
+
+joints:
+  - {id: post1a_rail1, type: screw, part_a: leg_top#1, part_b: "post#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: post1b_rail1, type: screw, part_a: leg_top#1, part_b: "post#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: post2a_rail2, type: screw, part_a: leg_top#2, part_b: "post#3", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: post2b_rail2, type: screw, part_a: leg_top#2, part_b: "post#4", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: hinge_leg1, type: hinge, part_a: leg_top#1, part_b: top, hardware: hinge40, hardware_count: 2}
+  - {id: hinge_leg2, type: hinge, part_a: leg_top#2, part_b: top, hardware: hinge40, hardware_count: 2}
+
+hardware:
+  - {id: hinge40, type: butt_hinge, size: "40", qty: 4, name: "Петля карточная универсальная неразъемная 40х50 мм цинк", sku: "139627"}
+  - {id: handles, type: handle, qty: 2, mounts: [top], name: "Ручка-скоба РС-140 дерево", sku: "107016"}
+
+finishes: []
+
+steps:
+  - {title: "Сборка ножек (П-образные рамки)", add: [post, leg_top], joints: [post1a_rail1, post1b_rail1, post2a_rail2, post2b_rail2]}
+  - {title: "Ножки на петли к столешнице", add: [top], joints: [hinge_leg1, hinge_leg2]}
+
+claims:
+  - {kind: overall, value: [800, 300], source: "шапка текста: 800×300", tolerance: 5}
+  - {kind: part_dim, target: post, value: [250], source: "шапка текста: ножки 250 мм (высота ножки в сборе — стойка+перекладина)"}
+
+ambiguities:
+  - "В смете указан щит ЛДСП дуб светлый 800×300×16, в каталоге Петровича под этим артикулом такого сочетания цвет/размер нет — взят ближайший по размеру щит 634962 (белый). Цвет за пределами модели, на смету/геометрию не влияет."
+  - "Точная конструкция «П-образной ножки» (сколько стоек, как соединены со столешницей) в тексте не детализирована — принято: 2 стойки + верхняя петельная планка на каждую ножку, планка на 2 петлях."
+  - "Петля 8014 40×40 (арт.502778) из сметы отсутствует в каталоге — использован ближайший аналог 40×50 мм (арт.139627)."
+  - "Точное положение ручек-скоб по торцам столешницы в тексте не задано численно."
+
+constraints: {budget: 3000}

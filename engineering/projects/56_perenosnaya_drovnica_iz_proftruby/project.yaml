@@ -1,0 +1,84 @@
+# 56. Переносная дровница из профтрубы 20×20: короб-рамка на 4 стойках, 2 уровня рам
+# (нижняя и верхняя), соединение уголками 40×40 на болтах М6 (сварка недоступна).
+project:
+  id: 56_perenosnaya_drovnica_iz_proftruby
+  name: "Переносная дровница из профтрубы"
+  category: metalwork
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: "engineering/texts/56_perenosnaya_drovnica_iz_proftruby.md"
+
+stock:
+  - {id: tube20, name: "Труба профильная 20×20×1,5", material: steel, type: rect_tube, section: 20x20x1.5, wall: 1.5, length: 3000, kerf: 1.2, sku: "612276"}
+
+parts:
+  - id: leg
+    name: Стойка
+    stock: tube20
+    qty: 4
+    length: 350
+    instances:
+      - {at: [0, 20, 0], orient: ZXY}      # leg#1 перед-лево
+      - {at: [580, 20, 0], orient: ZXY}    # leg#2 перед-право
+      - {at: [0, 310, 0], orient: ZXY}     # leg#3 зад-лево
+      - {at: [580, 310, 0], orient: ZXY}   # leg#4 зад-право
+  - id: rail_long
+    name: Перекладина длинная
+    stock: tube20
+    qty: 4
+    length: 600
+    instances:
+      - {at: [0, 0, 0], orient: XZY}       # rail_long#1 перед-низ (y0..20, z0..20)
+      - {at: [0, 330, 0], orient: XZY}     # rail_long#2 зад-низ (y330..350)
+      - {at: [0, 0, 330], orient: XZY}     # rail_long#3 перед-верх (z330..350)
+      - {at: [0, 330, 330], orient: XZY}   # rail_long#4 зад-верх
+  - id: rail_short
+    name: Перекладина короткая
+    stock: tube20
+    qty: 4
+    length: 310
+    instances:
+      - {at: [20, 20, 0], orient: YZX}     # rail_short#1 лево-низ (x20..40, y20..330 между стойками по внутр. граням)
+      - {at: [560, 20, 0], orient: YZX}    # rail_short#2 право-низ (x560..580)
+      - {at: [20, 20, 330], orient: YZX}   # rail_short#3 лево-верх
+      - {at: [560, 20, 330], orient: YZX}  # rail_short#4 право-верх
+
+joints:
+  # нижний уровень
+  - {id: rl1_leg1, type: bolt, part_a: "rail_long#1", part_b: "leg#1", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl1_leg2, type: bolt, part_a: "rail_long#1", part_b: "leg#2", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl2_leg3, type: bolt, part_a: "rail_long#2", part_b: "leg#3", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl2_leg4, type: bolt, part_a: "rail_long#2", part_b: "leg#4", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rs1_leg1, type: bolt, part_a: "rail_short#1", part_b: "leg#1", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs1_leg3, type: bolt, part_a: "rail_short#1", part_b: "leg#3", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs2_leg2, type: bolt, part_a: "rail_short#2", part_b: "leg#2", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs2_leg4, type: bolt, part_a: "rail_short#2", part_b: "leg#4", fastener: {type: bolt, diameter: 6}, along: X}
+  # верхний уровень
+  - {id: rl3_leg1, type: bolt, part_a: "rail_long#3", part_b: "leg#1", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl3_leg2, type: bolt, part_a: "rail_long#3", part_b: "leg#2", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl4_leg3, type: bolt, part_a: "rail_long#4", part_b: "leg#3", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rl4_leg4, type: bolt, part_a: "rail_long#4", part_b: "leg#4", fastener: {type: bolt, diameter: 6}, along: Y}
+  - {id: rs3_leg1, type: bolt, part_a: "rail_short#3", part_b: "leg#1", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs3_leg3, type: bolt, part_a: "rail_short#3", part_b: "leg#3", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs4_leg2, type: bolt, part_a: "rail_short#4", part_b: "leg#2", fastener: {type: bolt, diameter: 6}, along: X}
+  - {id: rs4_leg4, type: bolt, part_a: "rail_short#4", part_b: "leg#4", fastener: {type: bolt, diameter: 6}, along: X}
+
+hardware:
+  - {id: corner_angles, type: corner_bracket, qty: 8, mounts: [leg, rail_long, rail_short], name: "Уголок соединительный оцинкованный 40х40х20х2", sku: "108858"}
+  - {id: end_caps, type: other, qty: 4, mounts: [leg], name: "Заглушка пластиковая для профильной трубы 20х20", sku: "638957"}
+
+finishes:
+  - {id: paint, type: enamel_aerosol, parts: [leg, rail_long, rail_short], coats: 1}
+
+steps:
+  - {title: "Нарезать профтрубу: стойки и перекладины", add: [leg, rail_long, rail_short], joints: []}
+  - {title: "Собрать раму на уголках 40×40 и болтах М6", add: [], joints: [rl1_leg1, rl1_leg2, rl2_leg3, rl2_leg4, rs1_leg1, rs1_leg3, rs2_leg2, rs2_leg4, rl3_leg1, rl3_leg2, rl4_leg3, rl4_leg4, rs3_leg1, rs3_leg3, rs4_leg2, rs4_leg4]}
+  - {title: "Заглушки на торцы и покраска грунт-эмалью", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [600, 350, 350], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Длина болта М6 в шагах текста не названа (в смете куплены М6×20 — движок подберёт длину сам)."
+
+constraints: {budget: 3000}

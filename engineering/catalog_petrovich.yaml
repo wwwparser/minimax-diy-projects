@@ -1,0 +1,6701 @@
+# Сгенерировано build_petrovich_catalog.py из снимка каталога Петровича 16.09.2026 (Москва, розница)
+items:
+- sku: '102345'
+  name: Доска сухая строганая 20х95х2000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 216.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102345/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 95.0
+    length: 2000.0
+- sku: '102347'
+  name: Доска сухая строганая 20х95х3000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 320.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102347/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 95.0
+    length: 3000.0
+- sku: '102355'
+  name: Доска сухая строганая 20х145х2000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 341.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102355/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 145.0
+    length: 2000.0
+- sku: '102356'
+  name: Доска сухая строганая 20х145х3000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 506.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102356/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 145.0
+    length: 3000.0
+- sku: '102357'
+  name: Доска сухая строганая 45х120х6000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 1686.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102357/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 45.0
+    width: 120.0
+    length: 6000.0
+- sku: '102359'
+  name: Доска сухая строганая 45х145х6000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 2121.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102359/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 45.0
+    width: 145.0
+    length: 6000.0
+- sku: '102361'
+  name: Доска сухая строганая 45х195х6000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 2845.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/102361/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 45.0
+    width: 195.0
+    length: 6000.0
+- sku: '999584'
+  name: Доска сухая строганая 20х120х2000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 309.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/999584/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 120.0
+    length: 2000.0
+- sku: '999585'
+  name: Доска сухая строганая 20х120х3000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 382.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/999585/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 20.0
+    width: 120.0
+    length: 3000.0
+- sku: '1224118'
+  name: Доска сухая строганая 45х95х3000 мм хвойные породы сорт АВ ФГИС ЛК
+  price: 671.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224118/
+  kind: stock
+  stock:
+    type: board
+    material: pine
+    thickness: 45.0
+    width: 95.0
+    length: 3000.0
+- sku: '101152'
+  name: Брусок 50х50х3000 мм нестроганый сорт 1-2 хвойные породы деловой ФГИС ЛК
+  price: 299.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101152/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 50.0
+    width: 50.0
+    length: 3000.0
+- sku: '101160'
+  name: Брусок сухой строганый 45х45х3000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 331.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101160/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 45.0
+    width: 45.0
+    length: 3000.0
+- sku: '101163'
+  name: Брусок сухой строганый 20х30х3000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 93.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101163/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 30.0
+    length: 3000.0
+- sku: '101164'
+  name: Брусок сухой строганый 20х45х3000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 144.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101164/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 45.0
+    length: 3000.0
+- sku: '101165'
+  name: Брусок сухой строганый 30х45х3000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 237.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101165/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 30.0
+    width: 45.0
+    length: 3000.0
+- sku: '626000'
+  name: Брусок сухой строганый 20х45х2000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 97.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/626000/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 45.0
+    length: 2000.0
+- sku: '626001'
+  name: Брусок сухой строганый 20х30х2000 мм сорт АВ хвойные породы ФГИС ЛК
+  price: 71.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/626001/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 30.0
+    length: 2000.0
+- sku: '965501'
+  name: Брусок сухой строганый 40х40х3000 мм сорт АВ хвойные породы профилированный
+  price: 247.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/965501/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 40.0
+    width: 40.0
+    length: 3000.0
+- sku: '1092606'
+  name: Брусок сухой строганый 50х50х2000 мм сорт АВ хвойные породы профилированный
+  price: 278.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1092606/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 50.0
+    width: 50.0
+    length: 2000.0
+- sku: '1092607'
+  name: Брусок сухой строганый 40х40х2000 мм сорт АВ хвойные породы профилированный
+  price: 175.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1092607/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 40.0
+    width: 40.0
+    length: 2000.0
+- sku: '1144560'
+  name: Брусок сухой строганый 40х60х3000 мм сорт Экстра хвойные породы сращенный
+  price: 1180.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1144560/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 40.0
+    width: 60.0
+    length: 3000.0
+- sku: '1144561'
+  name: Брусок сухой строганый 15х45х2500 мм сорт Экстра хвойные породы сращенный
+  price: 269.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1144561/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 15.0
+    width: 45.0
+    length: 2500.0
+- sku: '1144566'
+  name: Брусок сухой строганый 20х45х2500 мм сорт Экстра хвойные породы сращенный
+  price: 346.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1144566/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 45.0
+    length: 2500.0
+- sku: '1144567'
+  name: Брусок сухой строганый 20х30х2500 мм сорт Экстра хвойные породы сращенный
+  price: 238.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1144567/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 20.0
+    width: 30.0
+    length: 2500.0
+- sku: '612193'
+  name: Раскладка 20х5х2500 мм сорт Экстра сращенная
+  price: 137.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612193/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 5.0
+    width: 20.0
+    length: 2500.0
+- sku: '612194'
+  name: Раскладка 30х5х2500 мм сорт Экстра сращенная
+  price: 158.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612194/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 5.0
+    width: 30.0
+    length: 2500.0
+- sku: '612195'
+  name: Раскладка 40х6х2500 мм сорт Экстра сращенная
+  price: 200.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612195/
+  kind: stock
+  stock:
+    type: bar
+    material: pine
+    thickness: 6.0
+    width: 40.0
+    length: 2500.0
+- sku: '109059'
+  name: Фанера ФК 4х1525х1525 мм сорт 4/4 нешлифованная
+  price: 569.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109059/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 4.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109060'
+  name: Фанера ФК 6х1525х1525 мм сорт 4/4 нешлифованная
+  price: 786.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109060/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 6.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109061'
+  name: Фанера ФК 8х1525х1525 мм сорт 4/4 нешлифованная
+  price: 993.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109061/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 8.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109062'
+  name: Фанера ФК 10х1525х1525 мм сорт 4/4 нешлифованная
+  price: 1190.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109062/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 10.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109063'
+  name: Фанера ФК 12х1525х1525 мм сорт 4/4 нешлифованная
+  price: 1469.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109063/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 12.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109064'
+  name: Фанера ФК 15х1525х1525 мм сорт 4/4 нешлифованная
+  price: 1842.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109064/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 15.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109065'
+  name: Фанера ФК 18х1525х1525 мм сорт 4/4 нешлифованная
+  price: 2101.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109065/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 18.0
+    length: 1525.0
+    width: 1525.0
+- sku: '109066'
+  name: Фанера ФК 21х1525х1525 мм сорт 4/4 нешлифованная
+  price: 2690.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/109066/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 21.0
+    length: 1525.0
+    width: 1525.0
+- sku: '634466'
+  name: Фанера ФК 12х505х505 мм сорт 3/4 шлифованная
+  price: 362.0
+  unit: л.
+  url: https://moscow.petrovich.ru/product/634466/
+  kind: stock
+  stock:
+    type: sheet
+    material: birch_plywood
+    thickness: 12.0
+    length: 505.0
+    width: 505.0
+- sku: '634961'
+  name: Щит мебельный ЛДСП 800х200х16 мм белый
+  price: 258.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634961/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 200.0
+    thickness: 16.0
+- sku: '634962'
+  name: Щит мебельный ЛДСП 800х300х16 мм белый
+  price: 318.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634962/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 300.0
+    thickness: 16.0
+- sku: '634981'
+  name: Щит мебельный ЛДСП 800х600х16 мм дуб светлый
+  price: 713.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634981/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 600.0
+    thickness: 16.0
+- sku: '634964'
+  name: Щит мебельный ЛДСП 1200х300х16 мм белый
+  price: 526.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634964/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 300.0
+    thickness: 16.0
+- sku: '634965'
+  name: Щит мебельный ЛДСП 1200х400х16 мм белый
+  price: 626.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634965/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 400.0
+    thickness: 16.0
+- sku: '634984'
+  name: Щит мебельный ЛДСП 1200х600х16 мм дуб светлый
+  price: 1097.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/634984/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 600.0
+    thickness: 16.0
+- sku: '807963'
+  name: Щит мебельный ЛДСП 2700х600х16 мм белый
+  price: 2162.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/807963/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2700.0
+    width: 600.0
+    thickness: 16.0
+- sku: '807958'
+  name: Щит мебельный ЛДСП 2700х400х16 мм дуб светлый
+  price: 1535.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/807958/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2700.0
+    width: 400.0
+    thickness: 16.0
+- sku: '807965'
+  name: Щит мебельный ЛДСП 2700х300х16 мм белый
+  price: 1151.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/807965/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2700.0
+    width: 300.0
+    thickness: 16.0
+- sku: '1061238'
+  name: Щит мебельный ЛДСП 800х200х18 мм дуб золотой
+  price: 362.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061238/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 200.0
+    thickness: 18.0
+- sku: '1061239'
+  name: Щит мебельный ЛДСП 800х300х18 мм дуб золотой
+  price: 517.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061239/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 300.0
+    thickness: 18.0
+- sku: '1061240'
+  name: Щит мебельный ЛДСП 1200х600х18 мм дуб золотой
+  price: 1345.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061240/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 600.0
+    thickness: 18.0
+- sku: '1061241'
+  name: Щит мебельный ЛДСП 800х600х18 мм дуб золотой
+  price: 931.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061241/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 800.0
+    width: 600.0
+    thickness: 18.0
+- sku: '1061242'
+  name: Щит мебельный ЛДСП 1200х300х18 мм дуб золотой
+  price: 724.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061242/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 300.0
+    thickness: 18.0
+- sku: '1061243'
+  name: Щит мебельный ЛДСП 2770х600х18 мм дуб золотой
+  price: 2765.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061243/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2770.0
+    width: 600.0
+    thickness: 18.0
+- sku: '1061244'
+  name: Щит мебельный ЛДСП 2770х300х18 мм дуб золотой
+  price: 1492.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061244/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2770.0
+    width: 300.0
+    thickness: 18.0
+- sku: '1061245'
+  name: Щит мебельный ЛДСП 2770х400х18 мм дуб золотой
+  price: 1942.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061245/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 2770.0
+    width: 400.0
+    thickness: 18.0
+- sku: '1061246'
+  name: Щит мебельный ЛДСП 1200х400х18 мм дуб золотой
+  price: 931.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1061246/
+  kind: stock
+  stock:
+    type: sheet
+    material: chipboard
+    length: 1200.0
+    width: 400.0
+    thickness: 18.0
+- sku: '108532'
+  name: Труба профильная 40х25х2 мм 3 м
+  price: 650.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108532/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 25.0
+    wall: 2.0
+    length: 3000.0
+- sku: '108533'
+  name: Труба профильная 40х25х2 мм 6 м
+  price: 1310.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108533/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 25.0
+    wall: 2.0
+    length: 6000.0
+- sku: '108534'
+  name: Труба профильная 40х40х2 мм 3 м
+  price: 714.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108534/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 40.0
+    wall: 2.0
+    length: 3000.0
+- sku: '108535'
+  name: Труба профильная 40х40х2 мм 6 м
+  price: 1411.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108535/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 40.0
+    wall: 2.0
+    length: 6000.0
+- sku: '108536'
+  name: Труба профильная 60х30х2 мм 3 м
+  price: 865.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108536/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 30.0
+    wall: 2.0
+    length: 3000.0
+- sku: '108537'
+  name: Труба профильная 60х30х2 мм 6 м
+  price: 1750.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108537/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 30.0
+    wall: 2.0
+    length: 6000.0
+- sku: '108538'
+  name: Труба профильная 80х80х4 мм 3 м
+  price: 3547.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108538/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 80.0
+    wall: 4.0
+    length: 3000.0
+- sku: '108539'
+  name: Труба профильная 80х80х4 мм 6 м
+  price: 7029.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108539/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 80.0
+    wall: 4.0
+    length: 6000.0
+- sku: '108540'
+  name: Труба профильная 100х100х4 мм 3 м
+  price: 4249.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108540/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 100.0
+    thickness: 100.0
+    wall: 4.0
+    length: 3000.0
+- sku: '108541'
+  name: Труба профильная 100х100х4 мм 6 м
+  price: 7169.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108541/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 100.0
+    thickness: 100.0
+    wall: 4.0
+    length: 6000.0
+- sku: '132299'
+  name: Труба профильная 50х50х2 мм 3 м
+  price: 932.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/132299/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 50.0
+    thickness: 50.0
+    wall: 2.0
+    length: 3000.0
+- sku: '132306'
+  name: Труба профильная 50х50х2 мм 6 м
+  price: 1832.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/132306/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 50.0
+    thickness: 50.0
+    wall: 2.0
+    length: 6000.0
+- sku: '139018'
+  name: Труба профильная 60х60х2 мм 3 м
+  price: 1195.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139018/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 60.0
+    wall: 2.0
+    length: 3000.0
+- sku: '139019'
+  name: Труба профильная 60х60х2 мм 6 м
+  price: 2436.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139019/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 60.0
+    wall: 2.0
+    length: 6000.0
+- sku: '603758'
+  name: Труба профильная 40х20х2 мм 3 м
+  price: 550.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/603758/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 20.0
+    wall: 2.0
+    length: 3000.0
+- sku: '603759'
+  name: Труба профильная 40х20х2 мм 6 м
+  price: 1123.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/603759/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 20.0
+    wall: 2.0
+    length: 6000.0
+- sku: '606007'
+  name: Труба профильная 40х20х1,5 мм 6 м
+  price: 852.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/606007/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 20.0
+    wall: 1.5
+    length: 6000.0
+- sku: '606012'
+  name: Труба профильная 40х20х1,5 мм 3 м
+  price: 455.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/606012/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 20.0
+    wall: 1.5
+    length: 3000.0
+- sku: '612274'
+  name: Труба профильная 80х80х3 мм 3 м
+  price: 2083.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612274/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 80.0
+    wall: 3.0
+    length: 3000.0
+- sku: '612275'
+  name: Труба профильная 80х80х3 мм 6 м
+  price: 4133.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612275/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 80.0
+    wall: 3.0
+    length: 6000.0
+- sku: '612276'
+  name: Труба профильная 20х20х1,5 мм 3 м
+  price: 316.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612276/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 20.0
+    thickness: 20.0
+    wall: 1.5
+    length: 3000.0
+- sku: '612277'
+  name: Труба профильная 20х20х1,5 мм 6 м
+  price: 681.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612277/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 20.0
+    thickness: 20.0
+    wall: 1.5
+    length: 6000.0
+- sku: '612278'
+  name: Труба профильная 60х40х2 мм 3 м
+  price: 942.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612278/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 40.0
+    wall: 2.0
+    length: 3000.0
+- sku: '612279'
+  name: Труба профильная 60х40х2 мм 6 м
+  price: 1928.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612279/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 40.0
+    wall: 2.0
+    length: 6000.0
+- sku: '612280'
+  name: Труба профильная 15х15х1,5 мм 3 м
+  price: 232.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612280/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 15.0
+    thickness: 15.0
+    wall: 1.5
+    length: 3000.0
+- sku: '612281'
+  name: Труба профильная 15х15х1,5 мм 6 м
+  price: 463.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612281/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 15.0
+    thickness: 15.0
+    wall: 1.5
+    length: 6000.0
+- sku: '612282'
+  name: Труба профильная 50х25х2 мм 3 м
+  price: 756.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612282/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 50.0
+    thickness: 25.0
+    wall: 2.0
+    length: 3000.0
+- sku: '612283'
+  name: Труба профильная 50х25х2 мм 6 м
+  price: 1507.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612283/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 50.0
+    thickness: 25.0
+    wall: 2.0
+    length: 6000.0
+- sku: '612284'
+  name: Труба профильная 120х120х4 мм 3 м
+  price: 4361.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612284/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 120.0
+    thickness: 120.0
+    wall: 4.0
+    length: 3000.0
+- sku: '612285'
+  name: Труба профильная 120х120х4 мм 6 м
+  price: 8682.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612285/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 120.0
+    thickness: 120.0
+    wall: 4.0
+    length: 6000.0
+- sku: '612286'
+  name: Труба профильная 80х40х2 мм 3 м
+  price: 1236.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612286/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 40.0
+    wall: 2.0
+    length: 3000.0
+- sku: '612287'
+  name: Труба профильная 80х40х2 мм 6 м
+  price: 2441.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612287/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 40.0
+    wall: 2.0
+    length: 6000.0
+- sku: '612983'
+  name: Труба профильная 60х60х3 мм 6 м
+  price: 3177.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612983/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 60.0
+    wall: 3.0
+    length: 6000.0
+- sku: '612984'
+  name: Труба профильная 60х60х3 мм 3 м
+  price: 1589.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612984/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 60.0
+    thickness: 60.0
+    wall: 3.0
+    length: 3000.0
+- sku: '637096'
+  name: Труба профильная 25х25х1,5 мм 3 м
+  price: 443.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/637096/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 25.0
+    thickness: 25.0
+    wall: 1.5
+    length: 3000.0
+- sku: '637097'
+  name: Труба профильная 25х25х1,5 мм 6 м
+  price: 797.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/637097/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 25.0
+    thickness: 25.0
+    wall: 1.5
+    length: 6000.0
+- sku: '1068661'
+  name: Труба профильная 20х20х1,35 мм 2,5 м
+  price: 284.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1068661/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 20.0
+    thickness: 20.0
+    wall: 1.35
+    length: 2500.0
+- sku: '1068663'
+  name: Труба профильная 70х70х2,5 мм 3 м
+  price: 2764.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1068663/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 70.0
+    thickness: 70.0
+    wall: 2.5
+    length: 3000.0
+- sku: '1068665'
+  name: Труба профильная 80х80х2 мм 2,5 м
+  price: 1664.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1068665/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 80.0
+    thickness: 80.0
+    wall: 2.0
+    length: 2500.0
+- sku: '1068666'
+  name: Труба профильная 40х20х1,5 мм 2,5 м
+  price: 434.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1068666/
+  kind: stock
+  stock:
+    type: rect_tube
+    material: steel
+    width: 40.0
+    thickness: 20.0
+    wall: 1.5
+    length: 2500.0
+- sku: '108788'
+  name: Уголок горячекатаный 40х40х4 мм 3 м
+  price: 891.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108788/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 40.0
+    thickness: 40.0
+    wall: 4.0
+    length: 3000.0
+- sku: '108789'
+  name: Уголок горячекатаный 40х40х4 мм 6 м
+  price: 1925.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108789/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 40.0
+    thickness: 40.0
+    wall: 4.0
+    length: 6000.0
+- sku: '108790'
+  name: Уголок горячекатаный 50х50х5 мм 3 м
+  price: 1236.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108790/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 50.0
+    thickness: 50.0
+    wall: 5.0
+    length: 3000.0
+- sku: '108791'
+  name: Уголок горячекатаный 50х50х5 мм 6 м
+  price: 2650.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108791/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 50.0
+    thickness: 50.0
+    wall: 5.0
+    length: 6000.0
+- sku: '606008'
+  name: Уголок горячекатаный 63х63х5 мм 6 м
+  price: 3214.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/606008/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 63.0
+    thickness: 63.0
+    wall: 5.0
+    length: 6000.0
+- sku: '606013'
+  name: Уголок горячекатаный 63х63х5 мм 3 м
+  price: 1622.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/606013/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 63.0
+    thickness: 63.0
+    wall: 5.0
+    length: 3000.0
+- sku: '612288'
+  name: Уголок горячекатаный 100х100х7 мм 3 м
+  price: 3984.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612288/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 100.0
+    thickness: 100.0
+    wall: 7.0
+    length: 3000.0
+- sku: '612289'
+  name: Уголок горячекатаный 100х100х7 мм 6 м
+  price: 7935.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612289/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 100.0
+    thickness: 100.0
+    wall: 7.0
+    length: 6000.0
+- sku: '612290'
+  name: Уголок горячекатаный 45х45х4 мм 3 м
+  price: 1087.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612290/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 45.0
+    thickness: 45.0
+    wall: 4.0
+    length: 3000.0
+- sku: '612291'
+  name: Уголок горячекатаный 45х45х4 мм 6 м
+  price: 2124.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612291/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 45.0
+    thickness: 45.0
+    wall: 4.0
+    length: 6000.0
+- sku: '612292'
+  name: Уголок горячекатаный 32х32х3 мм 3 м
+  price: 691.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612292/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 32.0
+    thickness: 32.0
+    wall: 3.0
+    length: 3000.0
+- sku: '612293'
+  name: Уголок горячекатаный 32х32х3 мм 6 м
+  price: 1246.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612293/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 32.0
+    thickness: 32.0
+    wall: 3.0
+    length: 6000.0
+- sku: '612294'
+  name: Уголок горячекатаный 25х25х3 мм 3 м
+  price: 500.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612294/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 25.0
+    thickness: 25.0
+    wall: 3.0
+    length: 3000.0
+- sku: '612295'
+  name: Уголок горячекатаный 25х25х3 мм 6 м
+  price: 945.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/612295/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 25.0
+    thickness: 25.0
+    wall: 3.0
+    length: 6000.0
+- sku: '637098'
+  name: Уголок горячекатаный 75х75х5 мм 3 м
+  price: 2125.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/637098/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 75.0
+    thickness: 75.0
+    wall: 5.0
+    length: 3000.0
+- sku: '637099'
+  name: Уголок горячекатаный 75х75х5 мм 6 м
+  price: 4298.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/637099/
+  kind: stock
+  stock:
+    type: angle
+    material: steel
+    width: 75.0
+    thickness: 75.0
+    wall: 5.0
+    length: 6000.0
+- sku: '106326'
+  name: Полоса горячекатаная 20х4 мм 6 м
+  price: 512.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/106326/
+  kind: stock
+  stock:
+    type: flat_bar
+    material: steel
+    width: 20.0
+    thickness: 4.0
+    length: 6000.0
+- sku: '106327'
+  name: Полоса горячекатаная 40х4 мм 3 м
+  price: 495.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/106327/
+  kind: stock
+  stock:
+    type: flat_bar
+    material: steel
+    width: 40.0
+    thickness: 4.0
+    length: 3000.0
+- sku: '106328'
+  name: Полоса горячекатаная 40х4 мм 6 м
+  price: 963.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/106328/
+  kind: stock
+  stock:
+    type: flat_bar
+    material: steel
+    width: 40.0
+    thickness: 4.0
+    length: 6000.0
+- sku: '1088217'
+  name: Полоса горячекатаная 40х3 мм 2,5 м
+  price: 404.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1088217/
+  kind: stock
+  stock:
+    type: flat_bar
+    material: steel
+    width: 40.0
+    thickness: 3.0
+    length: 2500.0
+- sku: '133937'
+  name: Труба стальная водогазопроводная ДУ 15х2,8 мм 3 м
+  price: 482.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/133937/
+  kind: stock
+  stock:
+    type: round_tube
+    material: steel
+    diameter: 21.3
+    wall: 2.8
+    length: 3000.0
+- sku: '133938'
+  name: Труба стальная водогазопроводная ДУ 20х2,8 мм 3 м
+  price: 504.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/133938/
+  kind: stock
+  stock:
+    type: round_tube
+    material: steel
+    diameter: 26.8
+    wall: 2.8
+    length: 3000.0
+- sku: '133939'
+  name: Труба стальная водогазопроводная ДУ 25х3,2 мм 3 м
+  price: 817.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/133939/
+  kind: stock
+  stock:
+    type: round_tube
+    material: steel
+    diameter: 33.5
+    wall: 3.2
+    length: 3000.0
+- sku: '133940'
+  name: Труба стальная водогазопроводная ДУ 32х3,2 мм 3 м
+  price: 932.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/133940/
+  kind: stock
+  stock:
+    type: round_tube
+    material: steel
+    diameter: 42.3
+    wall: 3.2
+    length: 3000.0
+- sku: '138984'
+  name: Труба стальная водогазопроводная ДУ 40х3,5 мм 3 м
+  price: 1245.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/138984/
+  kind: stock
+  stock:
+    type: round_tube
+    material: steel
+    diameter: 46.0
+    wall: 3.5
+    length: 3000.0
+- sku: '665876'
+  name: Шпилька резьбовая оцинкованная d6x1000 мм
+  price: 57.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665876/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 6.0
+    length: 1000.0
+- sku: '665877'
+  name: Шпилька резьбовая оцинкованная d6x2000 мм
+  price: 102.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665877/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 6.0
+    length: 2000.0
+- sku: '665878'
+  name: Шпилька резьбовая оцинкованная d8x1000 мм
+  price: 81.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665878/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 8.0
+    length: 1000.0
+- sku: '665879'
+  name: Шпилька резьбовая оцинкованная d8x2000 мм
+  price: 137.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665879/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 8.0
+    length: 2000.0
+- sku: '665880'
+  name: Шпилька резьбовая оцинкованная d10x1000 мм
+  price: 123.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665880/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 10.0
+    length: 1000.0
+- sku: '665881'
+  name: Шпилька резьбовая оцинкованная d10x2000 мм
+  price: 197.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665881/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 10.0
+    length: 2000.0
+- sku: '665882'
+  name: Шпилька резьбовая оцинкованная d12x1000 мм
+  price: 195.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665882/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 12.0
+    length: 1000.0
+- sku: '665883'
+  name: Шпилька резьбовая оцинкованная d12x2000 мм
+  price: 305.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665883/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 12.0
+    length: 2000.0
+- sku: '665884'
+  name: Шпилька резьбовая оцинкованная d14x1000 мм
+  price: 226.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665884/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 14.0
+    length: 1000.0
+- sku: '665885'
+  name: Шпилька резьбовая оцинкованная d14x2000 мм
+  price: 401.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665885/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 14.0
+    length: 2000.0
+- sku: '665886'
+  name: Шпилька резьбовая оцинкованная d16x1000 мм
+  price: 299.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665886/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 16.0
+    length: 1000.0
+- sku: '665887'
+  name: Шпилька резьбовая оцинкованная d16x2000 мм
+  price: 505.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665887/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 16.0
+    length: 2000.0
+- sku: '665888'
+  name: Шпилька резьбовая оцинкованная d18x1000 мм
+  price: 402.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665888/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 18.0
+    length: 1000.0
+- sku: '665889'
+  name: Шпилька резьбовая оцинкованная d18x2000 мм
+  price: 771.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665889/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 18.0
+    length: 2000.0
+- sku: '665890'
+  name: Шпилька резьбовая оцинкованная d20x1000 мм
+  price: 462.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665890/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 20.0
+    length: 1000.0
+- sku: '665891'
+  name: Шпилька резьбовая оцинкованная d20x2000 мм
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665891/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 20.0
+    length: 2000.0
+- sku: '665894'
+  name: Шпилька резьбовая оцинкованная d24x1000 мм
+  price: 668.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665894/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 24.0
+    length: 1000.0
+- sku: '665895'
+  name: Шпилька резьбовая оцинкованная d24x2000 мм
+  price: 1226.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/665895/
+  kind: stock
+  stock:
+    type: threaded_rod
+    material: galvanized
+    diameter: 24.0
+    length: 2000.0
+- sku: '103165'
+  name: Канат крученый джутовый 3 пряди d10 мм
+  price: 29.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/103165/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 10.0
+    length: 1000
+- sku: '103166'
+  name: Канат крученый джутовый 3 пряди d12 мм
+  price: 38.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/103166/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 12.0
+    length: 1000
+- sku: '103168'
+  name: Канат крученый джутовый 3 пряди d16 мм
+  price: 90.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/103168/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 16.0
+    length: 1000
+- sku: '103169'
+  name: Канат крученый джутовый 3 пряди d18 мм
+  price: 103.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/103169/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 18.0
+    length: 1000
+- sku: '128606'
+  name: Канат крученый джутовый 3 пряди d6 мм
+  price: 15.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/128606/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 6.0
+    length: 1000
+- sku: '128607'
+  name: Канат крученый джутовый 3 пряди d8 мм
+  price: 57.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/128607/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 8.0
+    length: 1000
+- sku: '1161475'
+  name: Канат крученый джутовый 3 пряди d14 мм 10 м МДС
+  price: 874.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1161475/
+  kind: stock
+  stock:
+    type: rope
+    material: jute
+    diameter: 14.0
+    length: 1000
+- sku: '109233'
+  name: Цепь короткозвенная оцинкованная d4 мм DIN 766
+  price: 123.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/109233/
+  kind: stock
+  stock:
+    type: chain
+    material: galvanized
+    diameter: 4.0
+    length: 1000
+- sku: '109234'
+  name: Цепь короткозвенная оцинкованная d6 мм DIN 766
+  price: 299.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/109234/
+  kind: stock
+  stock:
+    type: chain
+    material: galvanized
+    diameter: 6.0
+    length: 1000
+- sku: '128732'
+  name: Цепь длиннозвенная оцинкованная d3 мм DIN 763
+  price: 81.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/128732/
+  kind: stock
+  stock:
+    type: chain
+    material: galvanized
+    diameter: 3.0
+    length: 1000
+- sku: '128733'
+  name: Цепь длиннозвенная оцинкованная d5 мм DIN 763
+  price: 180.0
+  unit: пог. м
+  url: https://moscow.petrovich.ru/product/128733/
+  kind: stock
+  stock:
+    type: chain
+    material: galvanized
+    diameter: 5.0
+    length: 1000
+- sku: '979379'
+  name: Сетка кладочная оцинкованная Streck 15х15 мм 0,09х20 м рулон
+  price: 593.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/979379/
+  kind: stock
+  stock:
+    type: mesh
+    material: galvanized
+    width: 15000.0
+    length: 15000.0
+- sku: '1146578'
+  name: Сетка кладочная оцинкованная 55х55 мм d2,5 мм 0,5х2 м
+  price: 441.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1146578/
+  kind: stock
+  stock:
+    type: mesh
+    material: galvanized
+    width: 55000.0
+    length: 55000.0
+- sku: '107155'
+  name: Саморезы ГД 25x3,5 мм (1000 шт.)
+  price: 565.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107155/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 25.0
+- sku: '107156'
+  name: Саморезы ГД 25x3,5 мм (200 шт.)
+  price: 133.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107156/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 25.0
+- sku: '107158'
+  name: Саморезы ГД 32x3,5 мм (1000 шт.)
+  price: 668.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107158/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 32.0
+- sku: '107159'
+  name: Саморезы ГД 32x3,5 мм (200 шт.)
+  price: 164.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107159/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 32.0
+- sku: '107160'
+  name: Саморезы ГД 32x3,5 мм (2500 шт.)
+  price: 1535.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107160/
+  kind: fastener
+  pack: 2500
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 32.0
+- sku: '107163'
+  name: Саморезы ГД 41x3,5 мм (1000 шт.)
+  price: 874.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107163/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 41.0
+- sku: '107164'
+  name: Саморезы ГД 41x3,5 мм (200 шт.)
+  price: 201.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107164/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 41.0
+- sku: '107165'
+  name: Саморезы ГД 41x3,5 мм (2000 шт.)
+  price: 1535.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107165/
+  kind: fastener
+  pack: 2000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 41.0
+- sku: '107167'
+  name: Саморезы ГД 45x3,5 мм (200 шт.)
+  price: 226.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107167/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 45.0
+- sku: '107169'
+  name: Саморезы ГД 51x3,5 мм (1000 шт.)
+  price: 917.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107169/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 51.0
+- sku: '107170'
+  name: Саморезы ГД 51x3,5 мм (1500 шт.)
+  price: 1396.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107170/
+  kind: fastener
+  pack: 1500
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 51.0
+- sku: '107171'
+  name: Саморезы ГД 51x3,5 мм (200 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107171/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 51.0
+- sku: '107173'
+  name: Саморезы ГД 55x3,5 мм (200 шт.)
+  price: 256.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107173/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 55.0
+- sku: '107175'
+  name: Саморезы ГД 65x3,8 мм (500 шт.)
+  price: 711.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107175/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: wood_screw
+    diameter: 3.8
+    length: 65.0
+- sku: '107176'
+  name: Саморезы ГД 65x3,8 мм (100 шт.)
+  price: 174.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107176/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 3.8
+    length: 65.0
+- sku: '107177'
+  name: Саморезы ГД 75x4,2 мм (500 шт.)
+  price: 854.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107177/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 75.0
+- sku: '107178'
+  name: Саморезы ГД 75x4,2 мм (100 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107178/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 75.0
+- sku: '107182'
+  name: Саморезы ГД 90x4,2 мм (250 шт.)
+  price: 668.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107182/
+  kind: fastener
+  pack: 250
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 90.0
+- sku: '107185'
+  name: Саморезы ГД 100x4,8 мм (250 шт.)
+  price: 814.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/107185/
+  kind: fastener
+  pack: 250
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 100.0
+- sku: '125766'
+  name: Саморезы ГД 19x3,5 мм (40 шт.)
+  price: 37.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125766/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 19.0
+- sku: '125767'
+  name: Саморезы ГД 25x3,5 мм (30 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125767/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 25.0
+- sku: '125768'
+  name: Саморезы ГД 32x3,5 мм (30 шт.)
+  price: 37.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125768/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 32.0
+- sku: '125769'
+  name: Саморезы ГД 35x3,5 мм (30 шт.)
+  price: 41.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125769/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 35.0
+- sku: '125770'
+  name: Саморезы ГД 41x3,5 мм (25 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125770/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 41.0
+- sku: '125771'
+  name: Саморезы ГД 45x3,5 мм (20 шт.)
+  price: 37.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125771/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 45.0
+- sku: '125772'
+  name: Саморезы ГД 51x3,5 мм (18 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125772/
+  kind: fastener
+  pack: 18
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 51.0
+- sku: '125773'
+  name: Саморезы ГД 55x3,5 мм (13 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125773/
+  kind: fastener
+  pack: 13
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 55.0
+- sku: '125774'
+  name: Саморезы ГД 65x3,8 мм (11 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125774/
+  kind: fastener
+  pack: 11
+  fastener:
+    type: wood_screw
+    diameter: 3.8
+    length: 65.0
+- sku: '125775'
+  name: Саморезы ГД 75x4,2 мм (10 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125775/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 75.0
+- sku: '125776'
+  name: Саморезы ГД 90x4,2 мм (6 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125776/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 90.0
+- sku: '125777'
+  name: Саморезы ГД 100x4,8 мм (4 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125777/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 100.0
+- sku: '125778'
+  name: Саморезы ГД 110x4,8 мм (3 шт.)
+  price: 26.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125778/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 110.0
+- sku: '125779'
+  name: Саморезы ГД 127x4,8 мм (3 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125779/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 127.0
+- sku: '125780'
+  name: Саморезы ГД 152x4,8 мм (2 шт.)
+  price: 26.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125780/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 152.0
+- sku: '126403'
+  name: Саморезы ГД 16x3,5 мм (1000 шт.)
+  price: 402.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126403/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 16.0
+- sku: '126404'
+  name: Саморезы ГД 19x3,5 мм (1000 шт.)
+  price: 442.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126404/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 19.0
+- sku: '126405'
+  name: Саморезы ГД 35x3,5 мм (1000 шт.)
+  price: 638.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126405/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 35.0
+- sku: '126406'
+  name: Саморезы ГД 45x3,5 мм (1000 шт.)
+  price: 917.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126406/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 45.0
+- sku: '126407'
+  name: Саморезы ГД 55x3,5 мм (1000 шт.)
+  price: 1020.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126407/
+  kind: fastener
+  pack: 1000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 55.0
+- sku: '126408'
+  name: Саморезы ГД 110x4,8 мм (250 шт.)
+  price: 875.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126408/
+  kind: fastener
+  pack: 250
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 110.0
+- sku: '126409'
+  name: Саморезы ГД 127x4,8 мм (200 шт.)
+  price: 874.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126409/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 127.0
+- sku: '126410'
+  name: Саморезы ГД 152x4,8 мм (200 шт.)
+  price: 917.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/126410/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 152.0
+- sku: '128694'
+  name: Саморезы ГД 41x3,5 мм (8000 шт.)
+  price: 4625.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/128694/
+  kind: fastener
+  pack: 8000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 41.0
+- sku: '128695'
+  name: Саморезы ГД 51x3,5 мм (6000 шт.)
+  price: 4110.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/128695/
+  kind: fastener
+  pack: 6000
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 51.0
+- sku: '128696'
+  name: Саморезы ГД 75x4,2 мм (3500 шт.)
+  price: 4110.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/128696/
+  kind: fastener
+  pack: 3500
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 75.0
+- sku: '149558'
+  name: Саморезы ГД 16x3,5 мм (200 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/149558/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 16.0
+- sku: '167407'
+  name: Саморезы ГД 45x3,5 мм усиленные Hard-Fix (500 шт.)
+  price: 926.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/167407/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 45.0
+- sku: '167408'
+  name: Саморезы ГД 55x3,5 мм усиленные Hard-Fix (500 шт.)
+  price: 1020.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/167408/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 55.0
+- sku: '167409'
+  name: Саморезы ГД 70x4,2 мм усиленные Hard-Fix (200 шт.)
+  price: 730.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/167409/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 70.0
+- sku: '167410'
+  name: Саморезы ГД 100x4,8 мм усиленные Hard-Fix (200 шт.)
+  price: 1602.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/167410/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 100.0
+- sku: '167411'
+  name: Саморезы ГД 120x4,8 мм усиленные Hard-Fix (200 шт.)
+  price: 1705.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/167411/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 120.0
+- sku: '1079964'
+  name: Саморезы ГД 55x3,5 мм усиленные Hard-Fix (50 шт.)
+  price: 133.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079964/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 55.0
+- sku: '1079966'
+  name: Саморезы ГД 35x3,5 мм усиленные Hard-Fix (150 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079966/
+  kind: fastener
+  pack: 150
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 35.0
+- sku: '1079967'
+  name: Саморезы ГД 45x3,5 мм усиленные Hard-Fix (100 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079967/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 3.5
+    length: 45.0
+- sku: '1079968'
+  name: Саморезы ГД 70x4,2 мм усиленные Hard-Fix (50 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079968/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 4.2
+    length: 70.0
+- sku: '1079969'
+  name: Саморезы ГД 100x4,8 мм усиленные Hard-Fix (25 шт.)
+  price: 164.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079969/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 100.0
+- sku: '1079970'
+  name: Саморезы ГД 120x4,8 мм усиленные Hard-Fix (25 шт.)
+  price: 174.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1079970/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: wood_screw
+    diameter: 4.8
+    length: 120.0
+- sku: '160978'
+  name: Саморезы по дереву 40x4,0 мм потайная головка конструкционные (24 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160978/
+  kind: fastener
+  pack: 24
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 40.0
+- sku: '160979'
+  name: Саморезы по дереву 40x4,0 мм потайная головка конструкционные (500 шт.)
+  price: 1947.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160979/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 40.0
+- sku: '160980'
+  name: Саморезы по дереву 50x4,0 мм потайная головка конструкционные (18 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160980/
+  kind: fastener
+  pack: 18
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 50.0
+- sku: '160981'
+  name: Саморезы по дереву 50x4,0 мм потайная головка конструкционные (200 шт.)
+  price: 926.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160981/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 50.0
+- sku: '160982'
+  name: Саморезы по дереву 60x4,0 мм потайная головка конструкционные (16 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160982/
+  kind: fastener
+  pack: 16
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 60.0
+- sku: '160983'
+  name: Саморезы по дереву 60x4,0 мм потайная головка конструкционные (200 шт.)
+  price: 1091.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160983/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 4.0
+    length: 60.0
+- sku: '160984'
+  name: Саморезы по дереву 100x5,0 мм потайная головка конструкционные (50 шт.)
+  price: 699.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160984/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 100.0
+- sku: '160985'
+  name: Саморезы по дереву 100x5,0 мм потайная головка конструкционные (6 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160985/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 100.0
+- sku: '160986'
+  name: Саморезы по дереву 50x5,0 мм потайная головка конструкционные (200 шт.)
+  price: 1225.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160986/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 50.0
+- sku: '160987'
+  name: Саморезы по дереву 50x5,0 мм потайная головка конструкционные (12 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160987/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 50.0
+- sku: '160988'
+  name: Саморезы по дереву 60x5,0 мм потайная головка конструкционные (10 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160988/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 60.0
+- sku: '160990'
+  name: Саморезы по дереву 60x5,0 мм потайная головка конструкционные (200 шт.)
+  price: 1400.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160990/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 60.0
+- sku: '160991'
+  name: Саморезы по дереву 70x5,0 мм потайная головка конструкционные (200 шт.)
+  price: 1688.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160991/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 70.0
+- sku: '160993'
+  name: Саморезы по дереву 70x5,0 мм потайная головка конструкционные (9 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160993/
+  kind: fastener
+  pack: 9
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 70.0
+- sku: '160994'
+  name: Саморезы по дереву 80x5,0 мм потайная головка конструкционные (200 шт.)
+  price: 1966.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160994/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 80.0
+- sku: '160995'
+  name: Саморезы по дереву 80x5,0 мм потайная головка конструкционные (8 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160995/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 80.0
+- sku: '160996'
+  name: Саморезы по дереву 90x5,0 мм потайная головка конструкционные (50 шт.)
+  price: 524.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160996/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 90.0
+- sku: '160997'
+  name: Саморезы по дереву 90x5,0 мм потайная головка конструкционные (7 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160997/
+  kind: fastener
+  pack: 7
+  fastener:
+    type: wood_screw
+    diameter: 5.0
+    length: 90.0
+- sku: '160999'
+  name: Саморезы по дереву 100x6,0 мм потайная головка конструкционные (4 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/160999/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 100.0
+- sku: '161000'
+  name: Саморезы по дереву 100x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 2007.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161000/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 100.0
+- sku: '161002'
+  name: Саморезы по дереву 120x6,0 мм потайная головка конструкционные (4 шт.)
+  price: 143.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161002/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 120.0
+- sku: '161004'
+  name: Саморезы по дереву 120x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 2462.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161004/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 120.0
+- sku: '161005'
+  name: Саморезы по дереву 140x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 2771.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161005/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 140.0
+- sku: '161006'
+  name: Саморезы по дереву 160x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 3183.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161006/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 160.0
+- sku: '161007'
+  name: Саморезы по дереву 180x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 3492.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161007/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 180.0
+- sku: '161008'
+  name: Саморезы по дереву 200x6,0 мм потайная головка конструкционные (100 шт.)
+  price: 4625.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161008/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: wood_screw
+    diameter: 6.0
+    length: 200.0
+- sku: '161009'
+  name: Саморезы по дереву 120x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 2565.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161009/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 120.0
+- sku: '161010'
+  name: Саморезы по дереву 160x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 2977.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161010/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 160.0
+- sku: '161011'
+  name: Саморезы по дереву 180x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 3286.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161011/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 180.0
+- sku: '161033'
+  name: Саморезы по дереву 200x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 3801.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161033/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 200.0
+- sku: '161035'
+  name: Саморезы по дереву 220x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 4728.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161035/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 220.0
+- sku: '161036'
+  name: Саморезы по дереву 240x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 4934.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161036/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 240.0
+- sku: '161038'
+  name: Саморезы по дереву 260x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 5346.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161038/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 260.0
+- sku: '161039'
+  name: Саморезы по дереву 280x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 5964.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161039/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 280.0
+- sku: '161040'
+  name: Саморезы по дереву 300x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 6582.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161040/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 300.0
+- sku: '161042'
+  name: Саморезы по дереву 320x8,0 мм тарельчатая головка конструкционные (50 шт.)
+  price: 7406.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/161042/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wood_screw
+    diameter: 8.0
+    length: 320.0
+- sku: '101030'
+  name: Болт оцинкованный M5x30 мм DIN 933 (6 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101030/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 5.0
+    length: 30.0
+- sku: '101031'
+  name: Болт оцинкованный M5x50 мм DIN 933 (5 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101031/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: bolt
+    diameter: 5.0
+    length: 50.0
+- sku: '101035'
+  name: Болт оцинкованный M6x20 мм DIN 933 (6 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101035/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 20.0
+- sku: '101038'
+  name: Болт оцинкованный M6x30 мм DIN 933 (5 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101038/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 30.0
+- sku: '101040'
+  name: Болт оцинкованный M6x40 мм DIN 933 (4 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101040/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 40.0
+- sku: '101044'
+  name: Болт оцинкованный M6x70 мм DIN 933 (3 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101044/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 70.0
+- sku: '101050'
+  name: Болт оцинкованный M8x30 мм DIN 933 (4 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101050/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 30.0
+- sku: '101052'
+  name: Болт оцинкованный M8x40 мм DIN 933 (3 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101052/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+- sku: '101054'
+  name: Болт оцинкованный M8x50 мм DIN 933 (3 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101054/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 50.0
+- sku: '101057'
+  name: Болт оцинкованный M8x70 мм DIN 933 (2 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101057/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 70.0
+- sku: '101065'
+  name: Болт оцинкованный M10x30 мм DIN 933 (2 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101065/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 30.0
+- sku: '101067'
+  name: Болт оцинкованный M10x50 мм DIN 933 (2 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101067/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 50.0
+- sku: '101070'
+  name: Болт оцинкованный M10x70 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101070/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 70.0
+- sku: '132296'
+  name: Болт оцинкованный M5x30 мм DIN 933 (80 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132296/
+  kind: fastener
+  pack: 80
+  fastener:
+    type: bolt
+    diameter: 5.0
+    length: 30.0
+- sku: '132297'
+  name: Болт оцинкованный M6x100 мм DIN 933 (2 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132297/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 100.0
+- sku: '132298'
+  name: Болт оцинкованный M6x16 мм DIN 933 (100 шт.)
+  price: 277.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132298/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 16.0
+- sku: '132300'
+  name: Болт оцинкованный M6x16 мм DIN 933 (7 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132300/
+  kind: fastener
+  pack: 7
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 16.0
+- sku: '132301'
+  name: Болт оцинкованный M6x20 мм DIN 933 (80 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132301/
+  kind: fastener
+  pack: 80
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 20.0
+- sku: '132302'
+  name: Болт оцинкованный M6x25 мм DIN 933 (6 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132302/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 25.0
+- sku: '132303'
+  name: Болт оцинкованный M6x25 мм DIN 933 (70 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132303/
+  kind: fastener
+  pack: 70
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 25.0
+- sku: '132304'
+  name: Болт оцинкованный M6x30 мм DIN 933 (60 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132304/
+  kind: fastener
+  pack: 60
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 30.0
+- sku: '132305'
+  name: Болт оцинкованный M6x40 мм DIN 933 (50 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132305/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 40.0
+- sku: '132307'
+  name: Болт оцинкованный M6x50 мм DIN 933 (4 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132307/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 50.0
+- sku: '132308'
+  name: Болт оцинкованный M6x50 мм DIN 933 (40 шт.)
+  price: 215.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132308/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 50.0
+- sku: '132309'
+  name: Болт оцинкованный M6x60 мм DIN 933 (3 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132309/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 60.0
+- sku: '132310'
+  name: Болт оцинкованный M6x60 мм DIN 933 (30 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132310/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 60.0
+- sku: '132311'
+  name: Болт оцинкованный M6x70 мм DIN 933 (30 шт.)
+  price: 215.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132311/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 70.0
+- sku: '132312'
+  name: Болт оцинкованный M6x80 мм DIN 933 (40 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132312/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 80.0
+- sku: '132313'
+  name: Болт оцинкованный M8x100 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132313/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 100.0
+- sku: '132314'
+  name: Болт оцинкованный M8x100 мм DIN 933 (20 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132314/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 100.0
+- sku: '132315'
+  name: Болт оцинкованный M8x120 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132315/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 120.0
+- sku: '132316'
+  name: Болт оцинкованный M8x20 мм DIN 933 (4 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132316/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 20.0
+- sku: '132317'
+  name: Болт оцинкованный M8x20 мм DIN 933 (50 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132317/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 20.0
+- sku: '132318'
+  name: Болт оцинкованный M8x25 мм DIN 933 (4 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132318/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 25.0
+- sku: '132319'
+  name: Болт оцинкованный M8x25 мм DIN 933 (40 шт.)
+  price: 277.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132319/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 25.0
+- sku: '132320'
+  name: Болт оцинкованный M8x30 мм DIN 933 (30 шт.)
+  price: 215.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132320/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 30.0
+- sku: '132321'
+  name: Болт оцинкованный M8x40 мм DIN 933 (25 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132321/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+- sku: '132322'
+  name: Болт оцинкованный M8x50 мм DIN 933 (20 шт.)
+  price: 215.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132322/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 50.0
+- sku: '132323'
+  name: Болт оцинкованный M8x60 мм DIN 933 (2 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132323/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 60.0
+- sku: '132324'
+  name: Болт оцинкованный M8x60 мм DIN 933 (20 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132324/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 60.0
+- sku: '132325'
+  name: Болт оцинкованный M8x70 мм DIN 933 (20 шт.)
+  price: 277.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132325/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 70.0
+- sku: '132326'
+  name: Болт оцинкованный M8x80 мм DIN 933 (2 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132326/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 80.0
+- sku: '132327'
+  name: Болт оцинкованный M8x80 мм DIN 933 (20 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132327/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 80.0
+- sku: '132328'
+  name: Болт оцинкованный M8x90 мм DIN 933 (2 шт.)
+  price: 50.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132328/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 90.0
+- sku: '132329'
+  name: Болт оцинкованный M8x90 мм DIN 933 (20 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132329/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 90.0
+- sku: '132330'
+  name: Болт оцинкованный M10x100 мм DIN 933 (2 шт.)
+  price: 81.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132330/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 100.0
+- sku: '132331'
+  name: Болт оцинкованный M10x100 мм DIN 933 (12 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132331/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 100.0
+- sku: '132332'
+  name: Болт оцинкованный M10x120 мм DIN 933 (2 шт.)
+  price: 81.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132332/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 120.0
+- sku: '132333'
+  name: Болт оцинкованный M10x120 мм DIN 933 (10 шт.)
+  price: 339.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132333/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 120.0
+- sku: '132334'
+  name: Болт оцинкованный M10x20 мм DIN 933 (25 шт.)
+  price: 277.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132334/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 20.0
+- sku: '132335'
+  name: Болт оцинкованный M10x30 мм DIN 933 (20 шт.)
+  price: 277.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132335/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 30.0
+- sku: '132336'
+  name: Болт оцинкованный M10x40 мм DIN 933 (15 шт.)
+  price: 215.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132336/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 40.0
+- sku: '132337'
+  name: Болт оцинкованный M10x50 мм DIN 933 (10 шт.)
+  price: 184.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132337/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 50.0
+- sku: '132338'
+  name: Болт оцинкованный M10x60 мм DIN 933 (10 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132338/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 60.0
+- sku: '132339'
+  name: Болт оцинкованный M10x70 мм DIN 933 (15 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132339/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 70.0
+- sku: '132340'
+  name: Болт оцинкованный M10x80 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132340/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 80.0
+- sku: '132341'
+  name: Болт оцинкованный M10x80 мм DIN 933 (12 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132341/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 80.0
+- sku: '132342'
+  name: Болт оцинкованный M12x100 мм DIN 933 (2 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132342/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 100.0
+- sku: '132343'
+  name: Болт оцинкованный M12x100 мм DIN 933 (8 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132343/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 100.0
+- sku: '132344'
+  name: Болт оцинкованный M12x40 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132344/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 40.0
+- sku: '132345'
+  name: Болт оцинкованный M12x40 мм DIN 933 (15 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132345/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 40.0
+- sku: '132346'
+  name: Болт оцинкованный M12x50 мм DIN 933 (2 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132346/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 50.0
+- sku: '132347'
+  name: Болт оцинкованный M12x50 мм DIN 933 (12 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132347/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 50.0
+- sku: '132348'
+  name: Болт оцинкованный M12x70 мм DIN 933 (2 шт.)
+  price: 81.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132348/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 70.0
+- sku: '132349'
+  name: Болт оцинкованный M12x70 мм DIN 933 (10 шт.)
+  price: 308.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132349/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 70.0
+- sku: '132350'
+  name: Болт оцинкованный M12x80 мм DIN 933 (10 шт.)
+  price: 339.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132350/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 80.0
+- sku: '132351'
+  name: Болт оцинкованный M12x90 мм DIN 933 (10 шт.)
+  price: 359.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132351/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 90.0
+- sku: '132352'
+  name: Болт оцинкованный M14x50 мм DIN 933 (20 шт.)
+  price: 608.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132352/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: bolt
+    diameter: 14.0
+    length: 50.0
+- sku: '132353'
+  name: Болт оцинкованный M14x70 мм DIN 933 (15 шт.)
+  price: 608.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132353/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 14.0
+    length: 70.0
+- sku: '132354'
+  name: Болт оцинкованный M16x50 мм DIN 933 (15 шт.)
+  price: 711.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132354/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 16.0
+    length: 50.0
+- sku: '132355'
+  name: Болт оцинкованный M16x70 мм DIN 933 (12 шт.)
+  price: 711.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132355/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: bolt
+    diameter: 16.0
+    length: 70.0
+- sku: '132356'
+  name: Болт оцинкованный M16x80 мм DIN 933 (10 шт.)
+  price: 711.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132356/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 16.0
+    length: 80.0
+- sku: '132357'
+  name: Болт оцинкованный M16x90 мм DIN 933 (10 шт.)
+  price: 711.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132357/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 16.0
+    length: 90.0
+- sku: '132358'
+  name: Болт оцинкованный M18x70 мм DIN 933 (8 шт.)
+  price: 565.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132358/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 18.0
+    length: 70.0
+- sku: '132359'
+  name: Болт оцинкованный M18x80 мм DIN 933 (8 шт.)
+  price: 608.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132359/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 18.0
+    length: 80.0
+- sku: '132360'
+  name: Болт оцинкованный M20x100 мм DIN 933 (5 шт.)
+  price: 545.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132360/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: bolt
+    diameter: 20.0
+    length: 100.0
+- sku: '132361'
+  name: Болт оцинкованный M20x60 мм DIN 933 (8 шт.)
+  price: 608.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132361/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 20.0
+    length: 60.0
+- sku: '132362'
+  name: Болт оцинкованный M20x70 мм DIN 933 (6 шт.)
+  price: 608.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132362/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 20.0
+    length: 70.0
+- sku: '132363'
+  name: Болт оцинкованный M20x80 мм DIN 933 (5 шт.)
+  price: 545.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132363/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: bolt
+    diameter: 20.0
+    length: 80.0
+- sku: '132364'
+  name: Болт оцинкованный M24x60 мм DIN 933 (4 шт.)
+  price: 565.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132364/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 24.0
+    length: 60.0
+- sku: '615989'
+  name: Болт оцинкованный M10x100 мм DIN 933 (2 кг)
+  price: 874.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615989/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 100.0
+- sku: '615990'
+  name: Болт оцинкованный M10x120 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615990/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 120.0
+- sku: '615991'
+  name: Болт оцинкованный M10x40 мм DIN 933 (2 кг)
+  price: 874.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615991/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 40.0
+- sku: '615992'
+  name: Болт оцинкованный M10x50 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615992/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 50.0
+- sku: '615993'
+  name: Болт оцинкованный M10x60 мм DIN 933 (2 кг)
+  price: 874.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615993/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 60.0
+- sku: '615994'
+  name: Болт оцинкованный M6x16 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615994/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 16.0
+- sku: '615995'
+  name: Болт оцинкованный M6x20 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615995/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 20.0
+- sku: '615996'
+  name: Болт оцинкованный M6x30 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615996/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 30.0
+- sku: '615997'
+  name: Болт оцинкованный M8x20 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615997/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 20.0
+- sku: '615998'
+  name: Болт оцинкованный M8x30 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615998/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 30.0
+- sku: '615999'
+  name: Болт оцинкованный M8x40 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/615999/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+- sku: '616000'
+  name: Болт оцинкованный M8x50 мм DIN 933 (2 кг)
+  price: 917.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/616000/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 50.0
+- sku: '616001'
+  name: Болт оцинкованный M8x60 мм DIN 933 (2 кг)
+  price: 874.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616001/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 60.0
+- sku: '634879'
+  name: Болт оцинкованный M6x20 мм DIN 933 10,9 (100 шт.)
+  price: 525.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634879/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 20.0
+- sku: '634881'
+  name: Болт оцинкованный M6x30 мм DIN 933 10,9 (100 шт.)
+  price: 628.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634881/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 30.0
+- sku: '634882'
+  name: Болт оцинкованный M6x40 мм DIN 933 10,9 (100 шт.)
+  price: 700.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634882/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 40.0
+- sku: '634884'
+  name: Болт оцинкованный M6x60 мм DIN 933 10,9 (100 шт.)
+  price: 1544.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634884/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 60.0
+- sku: '634887'
+  name: Болт оцинкованный M8x16 мм DIN 933 10,9 (100 шт.)
+  price: 628.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634887/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 16.0
+- sku: '634890'
+  name: Болт оцинкованный M8x30 мм DIN 933 10,9 (100 шт.)
+  price: 885.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634890/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 30.0
+- sku: '634891'
+  name: Болт оцинкованный M8x35 мм DIN 933 10,9 (100 шт.)
+  price: 1369.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634891/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 35.0
+- sku: '634892'
+  name: Болт оцинкованный M8x40 мм DIN 933 10,9 (100 шт.)
+  price: 1050.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634892/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+- sku: '634893'
+  name: Болт оцинкованный M8x45 мм DIN 933 10,9 (100 шт.)
+  price: 1328.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634893/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 45.0
+- sku: '634895'
+  name: Болт оцинкованный M8x60 мм DIN 933 10,9 (50 шт.)
+  price: 844.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634895/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 60.0
+- sku: '634897'
+  name: Болт оцинкованный M8x80 мм DIN 933 10,9 (50 шт.)
+  price: 1050.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634897/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 80.0
+- sku: '634900'
+  name: Болт оцинкованный M10x20 мм DIN 933 10,9 (100 шт.)
+  price: 1369.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634900/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 20.0
+- sku: '634901'
+  name: Болт оцинкованный M10x30 мм DIN 933 10,9 (100 шт.)
+  price: 1483.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634901/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 30.0
+- sku: '634902'
+  name: Болт оцинкованный M10x40 мм DIN 933 10,9 (50 шт.)
+  price: 1050.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634902/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 40.0
+- sku: '634903'
+  name: Болт оцинкованный M10x45 мм DIN 933 10,9 (100 шт.)
+  price: 2008.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634903/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 45.0
+- sku: '634904'
+  name: Болт оцинкованный M10x50 мм DIN 933 10,9 (50 шт.)
+  price: 1050.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634904/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 50.0
+- sku: '634905'
+  name: Болт оцинкованный M10x60 мм DIN 933 10,9 (50 шт.)
+  price: 1369.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634905/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 60.0
+- sku: '634906'
+  name: Болт оцинкованный M10x80 мм DIN 933 10,9 (50 шт.)
+  price: 1647.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634906/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 80.0
+- sku: '634907'
+  name: Болт оцинкованный M12x20 мм DIN 933 10,9 (100 шт.)
+  price: 1967.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634907/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 20.0
+- sku: '634908'
+  name: Болт оцинкованный M12x30 мм DIN 933 10,9 (100 шт.)
+  price: 2080.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634908/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 30.0
+- sku: '634909'
+  name: Болт оцинкованный M12x40 мм DIN 933 10,9 (100 шт.)
+  price: 2647.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634909/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 40.0
+- sku: '634910'
+  name: Болт оцинкованный M12x45 мм DIN 933 10,9 (50 шт.)
+  price: 1483.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634910/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 45.0
+- sku: '634911'
+  name: Болт оцинкованный M12x50 мм DIN 933 10,9 (50 шт.)
+  price: 1483.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634911/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 50.0
+- sku: '634912'
+  name: Болт оцинкованный M12x80 мм DIN 933 10,9 (50 шт.)
+  price: 2327.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634912/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 80.0
+- sku: '634917'
+  name: Болт оцинкованный M6x35 мм DIN 933 10,9 (16 шт.)
+  price: 144.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634917/
+  kind: fastener
+  pack: 16
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 35.0
+- sku: '634922'
+  name: Болт оцинкованный M6x80 мм DIN 933 10,9 (8 шт.)
+  price: 350.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634922/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 80.0
+- sku: '634923'
+  name: Болт оцинкованный M8x16 мм DIN 933 10,9 (15 шт.)
+  price: 144.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634923/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 16.0
+- sku: '634927'
+  name: Болт оцинкованный M8x40 мм DIN 933 10,9 (2 шт.)
+  price: 51.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634927/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+- sku: '634935'
+  name: Болт оцинкованный M10x35 мм DIN 933 10,9 (6 шт.)
+  price: 164.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634935/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 10.0
+    length: 35.0
+- sku: '634940'
+  name: Болт оцинкованный M12x50 мм DIN 933 10,9 (4 шт.)
+  price: 164.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634940/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 50.0
+- sku: '634960'
+  name: Болт оцинкованный M12x60 мм DIN 933 10,9 (50 шт.)
+  price: 2111.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/634960/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: bolt
+    diameter: 12.0
+    length: 60.0
+- sku: '640755'
+  name: Болт мебельный оцинкованный 6х20 мм DIN 603 полусферическая головка с гайкой (10 шт.)
+  price: 92.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640755/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 20.0
+    head: carriage
+    nut_included: true
+- sku: '640756'
+  name: Болт мебельный оцинкованный 6х30 мм DIN 603 полусферическая головка с гайкой (10 шт.)
+  price: 92.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640756/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 30.0
+    head: carriage
+    nut_included: true
+- sku: '640757'
+  name: Болт мебельный оцинкованный 6х40 мм DIN 603 полусферическая головка с гайкой (8 шт.)
+  price: 98.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640757/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 40.0
+    head: carriage
+    nut_included: true
+- sku: '640758'
+  name: Болт мебельный оцинкованный 6х50 мм DIN 603 полусферическая головка с гайкой (8 шт.)
+  price: 92.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640758/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 50.0
+    head: carriage
+    nut_included: true
+- sku: '640759'
+  name: Болт мебельный оцинкованный 6х60 мм DIN 603 полусферическая головка с гайкой (6 шт.)
+  price: 78.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640759/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 60.0
+    head: carriage
+    nut_included: true
+- sku: '640760'
+  name: Болт мебельный оцинкованный 6х70 мм DIN 603 полусферическая головка с гайкой (6 шт.)
+  price: 98.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640760/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 70.0
+    head: carriage
+    nut_included: true
+- sku: '640761'
+  name: Болт мебельный оцинкованный 6х80 мм DIN 603 полусферическая головка с гайкой (6 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640761/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 6.0
+    length: 80.0
+    head: carriage
+    nut_included: true
+- sku: '640762'
+  name: Болт мебельный оцинкованный 8х30 мм DIN 603 полусферическая головка с гайкой (6 шт.)
+  price: 137.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640762/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 30.0
+    head: carriage
+    nut_included: true
+- sku: '640763'
+  name: Болт мебельный оцинкованный 8х40 мм DIN 603 полусферическая головка с гайкой (6 шт.)
+  price: 112.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640763/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 40.0
+    head: carriage
+    nut_included: true
+- sku: '640764'
+  name: Болт мебельный оцинкованный 8х50 мм DIN 603 полусферическая головка с гайкой (4 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640764/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 50.0
+    head: carriage
+    nut_included: true
+- sku: '640765'
+  name: Болт мебельный оцинкованный 8х60 мм DIN 603 полусферическая головка с гайкой (4 шт.)
+  price: 92.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640765/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 60.0
+    head: carriage
+    nut_included: true
+- sku: '640766'
+  name: Болт мебельный оцинкованный 8х70 мм DIN 603 полусферическая головка с гайкой (4 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640766/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 70.0
+    head: carriage
+    nut_included: true
+- sku: '640767'
+  name: Болт мебельный оцинкованный 8х80 мм DIN 603 полусферическая головка с гайкой (2 шт.)
+  price: 67.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640767/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 80.0
+    head: carriage
+    nut_included: true
+- sku: '640768'
+  name: Болт мебельный оцинкованный 8х90 мм DIN 603 полусферическая головка с гайкой (2 шт.)
+  price: 77.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640768/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: bolt
+    diameter: 8.0
+    length: 90.0
+    head: carriage
+    nut_included: true
+- sku: '101742'
+  name: Гайка шестигранная оцинкованная М5 DIN 934 (20 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101742/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: nut
+    diameter: 5.0
+- sku: '101743'
+  name: Гайка шестигранная оцинкованная М5 DIN 934 (400 шт.)
+  price: 256.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101743/
+  kind: fastener
+  pack: 400
+  fastener:
+    type: nut
+    diameter: 5.0
+- sku: '101744'
+  name: Гайка шестигранная оцинкованная М6 DIN 934 (15 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101744/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: nut
+    diameter: 6.0
+- sku: '101745'
+  name: Гайка шестигранная оцинкованная М6 DIN 934 (200 шт.)
+  price: 208.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101745/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: nut
+    diameter: 6.0
+- sku: '101746'
+  name: Гайка шестигранная оцинкованная М8 DIN 934 (10 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101746/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: nut
+    diameter: 8.0
+- sku: '101749'
+  name: Гайка шестигранная оцинкованная М10 DIN 934 (5 шт.)
+  price: 46.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101749/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: nut
+    diameter: 10.0
+- sku: '101750'
+  name: Гайка шестигранная оцинкованная М12 DIN 934 (3 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/101750/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: nut
+    diameter: 12.0
+- sku: '101753'
+  name: Гайка шестигранная оцинкованная М14 DIN 934 (2 шт.)
+  price: 40.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101753/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: nut
+    diameter: 14.0
+- sku: '101755'
+  name: Гайка шестигранная оцинкованная М18 DIN 934 (1 шт.)
+  price: 40.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101755/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: nut
+    diameter: 18.0
+- sku: '101757'
+  name: Гайка шестигранная оцинкованная М20 DIN 934 (1 шт.)
+  price: 50.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/101757/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: nut
+    diameter: 20.0
+- sku: '132366'
+  name: Гайка шестигранная оцинкованная М8 DIN 934 (100 шт.)
+  price: 221.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132366/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: nut
+    diameter: 8.0
+- sku: '132367'
+  name: Гайка шестигранная оцинкованная М10 DIN 934 (50 шт.)
+  price: 226.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132367/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: nut
+    diameter: 10.0
+- sku: '132368'
+  name: Гайка шестигранная оцинкованная М12 DIN 934 (30 шт.)
+  price: 186.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132368/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: nut
+    diameter: 12.0
+- sku: '132369'
+  name: Гайка шестигранная оцинкованная М14 DIN 934 (20 шт.)
+  price: 246.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132369/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: nut
+    diameter: 14.0
+- sku: '132370'
+  name: Гайка шестигранная оцинкованная М16 DIN 934 (2 шт.)
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132370/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: nut
+    diameter: 16.0
+- sku: '132371'
+  name: Гайка шестигранная оцинкованная М16 DIN 934 (15 шт.)
+  price: 201.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132371/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: nut
+    diameter: 16.0
+- sku: '132372'
+  name: Гайка шестигранная оцинкованная М18 DIN 934 (10 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132372/
+  kind: fastener
+  pack: 10
+  fastener:
+    type: nut
+    diameter: 18.0
+- sku: '132373'
+  name: Гайка шестигранная оцинкованная М20 DIN 934 (7 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132373/
+  kind: fastener
+  pack: 7
+  fastener:
+    type: nut
+    diameter: 20.0
+- sku: '132374'
+  name: Гайка шестигранная оцинкованная М22 DIN 934 (6 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132374/
+  kind: fastener
+  pack: 6
+  fastener:
+    type: nut
+    diameter: 22.0
+- sku: '132375'
+  name: Гайка шестигранная оцинкованная М24 DIN 934 (4 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132375/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: nut
+    diameter: 24.0
+- sku: '132850'
+  name: Гайка шестигранная оцинкованная М3 DIN 934 (30 шт.)
+  price: 26.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132850/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: nut
+    diameter: 3.0
+- sku: '132851'
+  name: Гайка шестигранная оцинкованная М4 DIN 934 (25 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132851/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: nut
+    diameter: 4.0
+- sku: '616009'
+  name: Гайка шестигранная оцинкованная М10 DIN 934 (2 кг)
+  price: 814.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616009/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: nut
+    diameter: 10.0
+- sku: '616010'
+  name: Гайка шестигранная оцинкованная М6 DIN 934 (1 кг)
+  price: 442.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616010/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: nut
+    diameter: 6.0
+- sku: '616011'
+  name: Гайка шестигранная оцинкованная М8 DIN 934 (1 кг)
+  price: 401.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/616011/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: nut
+    diameter: 8.0
+- sku: '109296'
+  name: Шайба оцинкованная 5х10 мм DIN 125А (30 шт.)
+  price: 24.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109296/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: washer
+    diameter: 5.0
+- sku: '109297'
+  name: Шайба оцинкованная 5х10 мм DIN 125А (500 шт.)
+  price: 133.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109297/
+  kind: fastener
+  pack: 500
+  fastener:
+    type: washer
+    diameter: 5.0
+- sku: '109298'
+  name: Шайба оцинкованная 6х12 мм DIN 125А (25 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109298/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: washer
+    diameter: 6.0
+- sku: '109299'
+  name: Шайба оцинкованная 6х12 мм DIN 125А (300 шт.)
+  price: 216.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109299/
+  kind: fastener
+  pack: 300
+  fastener:
+    type: washer
+    diameter: 6.0
+- sku: '109300'
+  name: Шайба оцинкованная 8х16 мм DIN 125А (20 шт.)
+  price: 47.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109300/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: washer
+    diameter: 8.0
+- sku: '109301'
+  name: Шайба оцинкованная 8х16 мм DIN 125А (200 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109301/
+  kind: fastener
+  pack: 200
+  fastener:
+    type: washer
+    diameter: 8.0
+- sku: '109302'
+  name: Шайба оцинкованная 10х20 мм DIN 125А (100 шт.)
+  price: 226.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109302/
+  kind: fastener
+  pack: 100
+  fastener:
+    type: washer
+    diameter: 10.0
+- sku: '109303'
+  name: Шайба оцинкованная 10х20 мм DIN 125А (12 шт.)
+  price: 47.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/109303/
+  kind: fastener
+  pack: 12
+  fastener:
+    type: washer
+    diameter: 10.0
+- sku: '109305'
+  name: Шайба оцинкованная 12х24 мм DIN 125А (8 шт.)
+  price: 47.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/109305/
+  kind: fastener
+  pack: 8
+  fastener:
+    type: washer
+    diameter: 12.0
+- sku: '109307'
+  name: Шайба оцинкованная 14х28 мм DIN 125А (5 шт.)
+  price: 47.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/109307/
+  kind: fastener
+  pack: 5
+  fastener:
+    type: washer
+    diameter: 14.0
+- sku: '109310'
+  name: Шайба оцинкованная 18х34 мм DIN 125А (3 шт.)
+  price: 51.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/109310/
+  kind: fastener
+  pack: 3
+  fastener:
+    type: washer
+    diameter: 18.0
+- sku: '109312'
+  name: Шайба оцинкованная 20х37 мм DIN 125А (2 шт.)
+  price: 34.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/109312/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: washer
+    diameter: 20.0
+- sku: '132386'
+  name: Шайба оцинкованная 12х24 мм DIN 125А (50 шт.)
+  price: 195.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132386/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: washer
+    diameter: 12.0
+- sku: '132387'
+  name: Шайба оцинкованная 14х28 мм DIN 125А (50 шт.)
+  price: 236.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132387/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: washer
+    diameter: 14.0
+- sku: '132388'
+  name: Шайба оцинкованная 16х28 мм DIN 125А (4 шт.)
+  price: 47.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132388/
+  kind: fastener
+  pack: 4
+  fastener:
+    type: washer
+    diameter: 16.0
+- sku: '1174538'
+  name: Шайба оцинкованная 16х30 мм DIN 125А (40 шт.)
+  price: 226.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1174538/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: washer
+    diameter: 16.0
+- sku: '132390'
+  name: Шайба оцинкованная 18х34 мм DIN 125А (30 шт.)
+  price: 205.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132390/
+  kind: fastener
+  pack: 30
+  fastener:
+    type: washer
+    diameter: 18.0
+- sku: '132391'
+  name: Шайба оцинкованная 20х37 мм DIN 125А (25 шт.)
+  price: 235.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132391/
+  kind: fastener
+  pack: 25
+  fastener:
+    type: washer
+    diameter: 20.0
+- sku: '132392'
+  name: Шайба оцинкованная 22х39 мм DIN 125А (2 шт.)
+  price: 51.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132392/
+  kind: fastener
+  pack: 2
+  fastener:
+    type: washer
+    diameter: 22.0
+- sku: '132393'
+  name: Шайба оцинкованная 22х39 мм DIN 125А (20 шт.)
+  price: 226.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132393/
+  kind: fastener
+  pack: 20
+  fastener:
+    type: washer
+    diameter: 22.0
+- sku: '132394'
+  name: Шайба оцинкованная 24х44 мм DIN 125А (15 шт.)
+  price: 257.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132394/
+  kind: fastener
+  pack: 15
+  fastener:
+    type: washer
+    diameter: 24.0
+- sku: '132858'
+  name: Шайба оцинкованная 3х7 мм DIN 125А (50 шт.)
+  price: 20.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132858/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: washer
+    diameter: 3.0
+- sku: '132859'
+  name: Шайба оцинкованная 4х9 мм DIN 125А (40 шт.)
+  price: 20.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/132859/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: washer
+    diameter: 4.0
+- sku: '616012'
+  name: Шайба оцинкованная 10х20 мм DIN 125 (1 кг)
+  price: 469.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616012/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: washer
+    diameter: 10.0
+- sku: '616013'
+  name: Шайба оцинкованная 6х12,5 мм DIN 125 (1 кг)
+  price: 566.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616013/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: washer
+    diameter: 6.0
+- sku: '616014'
+  name: Шайба оцинкованная 8х16 мм DIN 125 (1 кг)
+  price: 469.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/616014/
+  kind: fastener
+  pack: 1
+  fastener:
+    type: washer
+    diameter: 8.0
+- sku: '687546'
+  name: Дюбель универсальный Hard-Fix 5x25 мм нейлон с шурупом (50 шт.)
+  price: 263.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/687546/
+  kind: fastener
+  pack: 50
+  fastener:
+    type: wall_dowel
+    diameter: 5.0
+    length: 25.0
+- sku: '687547'
+  name: Дюбель универсальный Hard-Fix 6x30 мм нейлон с шурупом (40 шт.)
+  price: 236.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/687547/
+  kind: fastener
+  pack: 40
+  fastener:
+    type: wall_dowel
+    diameter: 6.0
+    length: 30.0
+- sku: '502780'
+  name: Петля 8017 карточная универсальная неразъемная 60х43 мм цинк желтый
+  price: 81.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/502780/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '60'
+- sku: '139622'
+  name: Петля ПН-5-40 карточная универсальная неразъемная 37х40 мм цинк
+  price: 72.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139622/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '37'
+- sku: '139627'
+  name: Петля карточная универсальная неразъемная 40х50 мм цинк
+  price: 61.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139627/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '40'
+- sku: '139628'
+  name: Петля карточная универсальная неразъемная 110х40 мм цинк
+  price: 119.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139628/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '110'
+- sku: '139629'
+  name: Петля карточная универсальная неразъемная 200х45 мм цинк
+  price: 164.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/139629/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '200'
+- sku: '162241'
+  name: Петля ПН1 карточная левая разъемная 85х65 мм цинк
+  price: 160.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/162241/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '85'
+- sku: '502776'
+  name: Петля карточная универсальная неразъемная 25х24 мм цинк желтый
+  price: 40.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/502776/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '25'
+- sku: '502777'
+  name: Петля 8012 карточная универсальная неразъемная 30х29 мм цинк желтый
+  price: 50.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/502777/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '30'
+- sku: '502779'
+  name: Петля 8016 карточная универсальная неразъемная 50х42 мм цинк желтый
+  price: 81.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/502779/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '50'
+- sku: '502781'
+  name: Петля 8019 карточная универсальная неразъемная 80х56 мм цинк желтый
+  price: 143.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/502781/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '80'
+- sku: '630627'
+  name: Петля ПН-1 карточная левая разъемная 130х70 мм цинк (2 шт.)
+  price: 329.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/630627/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '130'
+- sku: '669885'
+  name: Петля Corsa Deco карточная универсальная неразъемная 100х75 мм латунь
+  price: 71.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/669885/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '100'
+- sku: '810883'
+  name: Петля Fuaro карточная левая разъемная 125х75 мм бронза
+  price: 240.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/810883/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: butt_hinge
+    size: '125'
+- sku: '108818'
+  name: Уголок крепежный оцинкованный 40х140х40х2 мм
+  price: 61.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108818/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '40'
+- sku: '108821'
+  name: Уголок крепежный оцинкованный 50х50х35х2 мм
+  price: 25.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108821/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '50'
+- sku: '108822'
+  name: Уголок крепежный оцинкованный 70х70х55х2 мм
+  price: 61.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/108822/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '70'
+- sku: '142154'
+  name: Уголок крепежный оцинкованный 90х90х40х2 мм
+  price: 61.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/142154/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '90'
+- sku: '134598'
+  name: Уголок крепежный оцинкованный 60х150х90х2 мм
+  price: 123.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/134598/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '60'
+- sku: '162193'
+  name: Уголок крепежный оцинкованный 105х105х90х1.8 мм
+  price: 123.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/162193/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: corner_bracket
+    size: '105'
+- sku: '162187'
+  name: Уголок мебельный оцинкованный 20х20х16х1.7 мм (8 шт.)
+  price: 57.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/162187/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '20'
+- sku: '640818'
+  name: Уголок мебельный оцинкованный 30х30х30 мм
+  price: 22.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640818/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '30'
+- sku: '640823'
+  name: Уголок мебельный оцинкованный 40х40х16х1,8 мм
+  price: 20.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640823/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '40'
+- sku: '162190'
+  name: Уголок мебельный оцинкованный 50х50х19х2 мм (4 шт.)
+  price: 92.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/162190/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '50'
+- sku: '162191'
+  name: Уголок мебельный оцинкованный 60х60х19х2 мм (4 шт.)
+  price: 102.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/162191/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '60'
+- sku: '640815'
+  name: Уголок мебельный оцинкованный 25х25х28 мм
+  price: 15.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640815/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '25'
+- sku: '640816'
+  name: Уголок мебельный оцинкованный 26х26х30 мм
+  price: 18.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640816/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '26'
+- sku: '640817'
+  name: Уголок мебельный оцинкованный 28х28х25 мм
+  price: 15.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640817/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '28'
+- sku: '640820'
+  name: Уголок мебельный оцинкованный 32х32х32 мм
+  price: 30.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640820/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '32'
+- sku: '640821'
+  name: Уголок мебельный оцинкованный 42х42х30х2,3 мм
+  price: 36.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640821/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_bracket
+    size: '42'
+- sku: '640852'
+  name: Крючок-вешалка №1 цинк
+  price: 37.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640852/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: hook
+    size: '1'
+- sku: '640854'
+  name: Крючок-вешалка №2 цинк
+  price: 30.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640854/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: hook
+    size: '2'
+- sku: '640859'
+  name: Крючок-вешалка №4 цинк
+  price: 72.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640859/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: hook
+    size: '4'
+- sku: '640864'
+  name: Крючок-вешалка №7 цинк
+  price: 41.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/640864/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: hook
+    size: '7'
+- sku: '693001'
+  name: Опора колесная поворотная пластик на площадке 25 мм черная (1 шт.)
+  price: 72.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693001/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '25'
+- sku: '693002'
+  name: Опора колесная поворотная пластик на площадке 30 мм черная (1 шт.)
+  price: 92.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693002/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '30'
+- sku: '693004'
+  name: Опора колесная поворотная пластик/резина на площадке 50 мм серая (1 шт.)
+  price: 196.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693004/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '50'
+- sku: '693008'
+  name: Опора колесная поворотная пластик/резина на площадке 75 мм серая (1 шт.)
+  price: 366.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693008/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '75'
+- sku: '693011'
+  name: Опора колесная поворотная сталь/резина на площадке 100 мм черная (1 шт.)
+  price: 572.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693011/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '100'
+- sku: '693012'
+  name: Опора колесная поворотная сталь/резина на площадке 125 мм черная (1 шт.)
+  price: 675.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/693012/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: caster
+    size: '125'
+- sku: '692956'
+  name: Ножка мебельная стальная 30х100 мм белая (1 шт.)
+  price: 160.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692956/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '100'
+- sku: '692978'
+  name: Ножка мебельная стальная 25х25х150 мм хром (1 шт.)
+  price: 205.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692978/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '150'
+- sku: '692961'
+  name: Ножка мебельная стальная 30х200 мм белая (1 шт.)
+  price: 263.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692961/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '200'
+- sku: '692964'
+  name: Ножка мебельная стальная 30х250 мм хром (1 шт.)
+  price: 299.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692964/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '250'
+- sku: '692966'
+  name: Ножка мебельная стальная 30х300 мм белая (1 шт.)
+  price: 343.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692966/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '300'
+- sku: '692969'
+  name: Ножка мебельная стальная 30х400 мм хром (1 шт.)
+  price: 366.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/692969/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: furniture_leg
+    size: '400'
+- sku: '107016'
+  name: Ручка-скоба РС-140 дерево
+  price: 181.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/107016/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '140'
+- sku: '107020'
+  name: Ручка-скоба РС цинк 100 мм
+  price: 127.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/107020/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '100'
+- sku: '107021'
+  name: Ручка-скоба РС белая 80 мм
+  price: 127.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/107021/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '80'
+- sku: '1027482'
+  name: Ручка-скоба Fuaro PULL.PH32/2000.45 нержавеющая сталь 2000 мм (47957)
+  price: 6708.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1027482/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '32'
+- sku: '1029981'
+  name: Ручка-скоба Fuaro PH-22-25/300 круглая розетка нержавеющая сталь
+  price: 2013.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1029981/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '22'
+- sku: '1029992'
+  name: Ручка-скоба Fuaro PH-21-25/300 нержавеющая сталь
+  price: 1744.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1029992/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '21'
+- sku: '1029996'
+  name: Ручка-скоба Fuaro PH-25-25/300 нержавеющая сталь
+  price: 2415.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1029996/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '25'
+- sku: '1029997'
+  name: Ручка-скоба Fuaro PH-26-38/1500 черная
+  price: 4259.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1029997/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '26'
+- sku: '1029998'
+  name: Ручка-скоба Fuaro PH-45-32/600 нержавеющая сталь
+  price: 3219.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1029998/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '45'
+- sku: '1224119'
+  name: Ручка-скоба мебельная Kerron Metallic 120 мм металлическая графит (S-2622-96 GF)
+  price: 277.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224119/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '120'
+- sku: '1224120'
+  name: Ручка-скоба мебельная Kerron Ceramic 131 мм металлическая с фарфоровой вставкой оксидированная бронза (SF02-05-96 OAB)
+  price: 236.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224120/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '131'
+- sku: '1224126'
+  name: Ручка-скоба мебельная Kerron Classic 125 мм металлическая черненый старинный цинк (RS-086-96 BAZ)
+  price: 205.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224126/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '125'
+- sku: '1224122'
+  name: Ручка-скоба мебельная Kerron Classic 167 мм металлическая бронза (RS-008-128 BA)
+  price: 205.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224122/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '167'
+- sku: '1224123'
+  name: Ручка-скоба мебельная Kerron Classic 137 мм металлическая бронза (RS-008-96 BA)
+  price: 164.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224123/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '137'
+- sku: '1224124'
+  name: Ручка-скоба мебельная Kerron Classic 166 мм металлическая бронза (RS-041-128 BA)
+  price: 215.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224124/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '166'
+- sku: '1224127'
+  name: Ручка-скоба мебельная Kerron Classic 144 мм металлическая черненый старинный цинк (RS-097-128 BAZ)
+  price: 267.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224127/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '144'
+- sku: '1224128'
+  name: Ручка-скоба мебельная Kerron Classic 156 мм металлическая черная матовая (RS-105-128 BL)
+  price: 277.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224128/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '156'
+- sku: '1224129'
+  name: Ручка-скоба мебельная Kerron Classic 163 мм металлическая черная матовая (RS-106-128 BL)
+  price: 256.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224129/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '163'
+- sku: '1224130'
+  name: Ручка-скоба мебельная Kerron Classic 130 мм металлическая черная матовая (RS-106-96 BL)
+  price: 196.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224130/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '130'
+- sku: '1224131'
+  name: Ручка-скоба мебельная Kerron Scandi 115 мм металлическая хром (S-2360-96)
+  price: 236.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224131/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '115'
+- sku: '1224132'
+  name: Ручка-скоба мебельная Kerron Metallic 119 мм металлическая хром (S-2370-96)
+  price: 411.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224132/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '119'
+- sku: '1224133'
+  name: Ручка-скоба мебельная Kerron Metallic 152 мм металлическая черная матовая (S-2622-128 BL)
+  price: 318.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224133/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '152'
+- sku: '1224135'
+  name: Ручка-скоба мебельная Kerron Metallic 141 мм металлическая черная матовая (S-2623-128 BL)
+  price: 267.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224135/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '141'
+- sku: '1224136'
+  name: Ручка-скоба мебельная Kerron Metallic 176 мм металлическая черная матовая (S-2623-160 BL)
+  price: 308.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224136/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '176'
+- sku: '1224137'
+  name: Ручка-скоба мебельная Kerron Metallic 109 мм металлическая черная матовая (S-2623-96 BL)
+  price: 236.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1224137/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: handle
+    size: '109'
+- sku: '127618'
+  name: Шуруп-кольцо 3,5x30 мм (4 шт.)
+  price: 38.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/127618/
+  kind: hardware
+  pack: 4
+  hardware:
+    type: screw_eye
+    size: 3,5x30
+- sku: '127620'
+  name: Шуруп-кольцо 5,0x40 мм (2 шт.)
+  price: 34.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/127620/
+  kind: hardware
+  pack: 2
+  hardware:
+    type: screw_eye
+    size: 5,0x40
+- sku: '127621'
+  name: Шуруп-кольцо 5,0x60 мм
+  price: 36.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/127621/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: screw_eye
+    size: 5,0x60
+- sku: '127622'
+  name: Шуруп-кольцо 6,0x70 мм
+  price: 40.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/127622/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: screw_eye
+    size: 6,0x70
+- sku: '128608'
+  name: Карабин пружинный d10 мм 100 мм DIN 5299
+  price: 102.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128608/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '10'
+- sku: '128609'
+  name: Карабин пружинный d12 мм 140 мм DIN 5299
+  price: 195.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128609/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '12'
+- sku: '128610'
+  name: Карабин пружинный d4 мм 40 мм DIN 5299
+  price: 40.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128610/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '4'
+- sku: '128611'
+  name: Карабин пружинный d5 мм 50 мм DIN 5299
+  price: 50.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128611/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '5'
+- sku: '128612'
+  name: Карабин пружинный d6 мм 60 мм DIN 5299
+  price: 57.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128612/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '6'
+- sku: '128613'
+  name: Карабин пружинный d8 мм 80 мм DIN 5299
+  price: 71.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/128613/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: carabiner
+    size: '8'
+- sku: '796071'
+  name: Кронштейн для полки металлический белый 335 мм Титан-GS
+  price: 195.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/796071/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: shelf_bracket
+    size: '335'
+- sku: '796072'
+  name: Кронштейн для полки металлический белый 435 мм Титан-GS
+  price: 226.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/796072/
+  kind: hardware
+  pack: 1
+  hardware:
+    type: shelf_bracket
+    size: '435'
+- sku: '1098347'
+  name: Антисептик Dali универсальный биозащитный 0,6 л бесцветный
+  price: 435.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098347/
+  kind: finish
+  finish:
+    type: antiseptic
+    volume_l: 0.6
+- sku: '1098348'
+  name: Антисептик Dali универсальный биозащитный 5 л бесцветный
+  price: 1314.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098348/
+  kind: finish
+  finish:
+    type: antiseptic
+    volume_l: 5.0
+- sku: '1098186'
+  name: Лак алкидный яхтный аэрозольный Престиж бесцветный 425 мл глянцевый
+  price: 204.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098186/
+  kind: finish
+  finish:
+    type: varnish_aerosol
+    volume_l: 0.425
+- sku: '1098206'
+  name: Лак алкидно-уретановый паркетный Престиж Wood глянцевый бесцветный 0,9 л
+  price: 270.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098206/
+  kind: finish
+  finish:
+    type: varnish
+    volume_l: 0.9
+- sku: '1098207'
+  name: Лак алкидно-уретановый паркетный Престиж Wood глянцевый бесцветный 2,5 л
+  price: 702.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098207/
+  kind: finish
+  finish:
+    type: varnish
+    volume_l: 2.5
+- sku: '1098208'
+  name: Лак алкидно-уретановый паркетный Престиж Wood глянцевый бесцветный 5 л
+  price: 1467.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098208/
+  kind: finish
+  finish:
+    type: varnish
+    volume_l: 5.0
+- sku: '682718'
+  name: Морилка MasterGood водная антисептическая дуб 0,5 л
+  price: 108.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/682718/
+  kind: finish
+  finish:
+    type: stain
+    volume_l: 0.5
+- sku: '1133779'
+  name: Морилка MasterGood водная антисептическая дуб 10 л
+  price: 1582.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1133779/
+  kind: finish
+  finish:
+    type: stain
+    volume_l: 10.0
+- sku: '1097440'
+  name: Масло Радуга для дерева льняное 0,5 л
+  price: 749.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1097440/
+  kind: finish
+  finish:
+    type: oil
+    volume_l: 0.5
+- sku: '1098190'
+  name: Эмаль аэрозольная Престиж желтая глянцевая 425 мл (01-014-005-004)
+  price: 158.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098190/
+  kind: finish
+  finish:
+    type: enamel_aerosol
+    volume_l: 0.425
+- sku: '602990'
+  name: Грунт-эмаль аэрозольная для пластика Kudo белая матовая RAL 9003 520 мл (KU-6003)
+  price: 342.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/602990/
+  kind: finish
+  finish:
+    type: enamel_aerosol
+    volume_l: 0.52
+    rust: true
+- sku: '1098184'
+  name: Грунт-эмаль аэрозольная по ржавчине Престиж серая матовая RAL 7040 425 мл (01-106-720-004)
+  price: 190.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1098184/
+  kind: finish
+  finish:
+    type: enamel_aerosol
+    volume_l: 0.425
+    rust: true
+- sku: '675688'
+  name: Клей ПВА Момент Столяр Экспресс D2 125 г
+  price: 238.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/675688/
+  kind: glue
+  glue:
+    type: pva
+    mass_kg: 0.125
+- sku: '675690'
+  name: Клей ПВА Момент Столяр Универсальный D1 250 г
+  price: 272.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/675690/
+  kind: glue
+  glue:
+    type: pva
+    mass_kg: 0.25
+- sku: '675691'
+  name: Клей ПВА Момент Столяр Универсальный D1 750 г
+  price: 673.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/675691/
+  kind: glue
+  glue:
+    type: pva
+    mass_kg: 0.75
+- sku: '691894'
+  name: Наждачная бумага Flexione 230х280 мм Р40 влагостойкая
+  price: 44.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691894/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 40
+    sheets: 1
+- sku: '691895'
+  name: Наждачная бумага Flexione 230х280 мм Р60 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691895/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 60
+    sheets: 1
+- sku: '691896'
+  name: Наждачная бумага Flexione 230х280 мм Р80 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691896/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 80
+    sheets: 1
+- sku: '691897'
+  name: Наждачная бумага Flexione 230х280 мм Р100 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691897/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 100
+    sheets: 1
+- sku: '691898'
+  name: Наждачная бумага Flexione 230х280 мм Р120 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691898/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 120
+    sheets: 1
+- sku: '691899'
+  name: Наждачная бумага Flexione 230х280 мм Р150 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691899/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 150
+    sheets: 1
+- sku: '691900'
+  name: Наждачная бумага Flexione 230х280 мм Р180 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691900/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 180
+    sheets: 1
+- sku: '691901'
+  name: Наждачная бумага Flexione 230х280 мм Р240 влагостойкая
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/691901/
+  kind: consumable
+  consumable:
+    type: sandpaper
+    grit: 240
+    sheets: 1
+- sku: '669513'
+  name: Сверло по дереву спиральное Vira 10х118 мм (552010)
+  price: 99.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/669513/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 10.0
+- sku: '669514'
+  name: Сверло по дереву спиральное Vira 4х75 мм (552004)
+  price: 38.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/669514/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 4.0
+- sku: '669515'
+  name: Сверло по дереву спиральное Vira 8х110 мм (552008)
+  price: 79.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/669515/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 8.0
+- sku: '684796'
+  name: Сверло по дереву спиральное Vira 3х60 мм с зенкером (552053)
+  price: 176.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/684796/
+  kind: tool
+  tool:
+    type: twist_drill_countersink
+    diameter: 3.0
+- sku: '684797'
+  name: Сверло по дереву спиральное Vira 4х75 мм с зенкером (552054)
+  price: 188.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/684797/
+  kind: tool
+  tool:
+    type: twist_drill_countersink
+    diameter: 4.0
+- sku: '684798'
+  name: Сверло по дереву спиральное Vira 5х86 мм с зенкером (552055)
+  price: 196.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/684798/
+  kind: tool
+  tool:
+    type: twist_drill_countersink
+    diameter: 5.0
+- sku: '684799'
+  name: Сверло по дереву спиральное Vira 6х93 мм с зенкером (552056)
+  price: 200.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/684799/
+  kind: tool
+  tool:
+    type: twist_drill_countersink
+    diameter: 6.0
+- sku: '966064'
+  name: Сверло по дереву спиральное КМ 3х60 мм (966064)
+  price: 42.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966064/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 3.0
+- sku: '966065'
+  name: Сверло по дереву спиральное КМ 6х90 мм (966065)
+  price: 65.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966065/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 6.0
+- sku: '966066'
+  name: Сверло по дереву спиральное КМ 5х85 мм (966066)
+  price: 61.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966066/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 5.0
+- sku: '966069'
+  name: Сверло по дереву спиральное КМ 12х150 мм (966069)
+  price: 138.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966069/
+  kind: tool
+  tool:
+    type: twist_drill
+    diameter: 12.0
+- sku: '1017624'
+  name: Сверло по металлу спиральное Зубр Профессионал 2х49 мм (29625-2)
+  price: 52.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1017624/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.0
+- sku: '1017623'
+  name: Сверло по металлу спиральное Зубр Профессионал 2,5х57 мм (29625-2.5)
+  price: 63.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1017623/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.5
+- sku: '501615'
+  name: Сверло по металлу спиральное Практика 3х100 мм (774-689)
+  price: 101.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501615/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.0
+- sku: '501617'
+  name: Сверло по металлу спиральное Практика 3,5х112 мм (774-719)
+  price: 124.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501617/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.5
+- sku: '1017630'
+  name: Сверло по металлу спиральное Зубр Профессионал 4х75 мм (29625-4)
+  price: 122.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1017630/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 4.0
+- sku: '966050'
+  name: Сверло по металлу спиральное КМ 4,2х75 мм (966050)
+  price: 96.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966050/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 4.2
+- sku: '501620'
+  name: Сверло по металлу спиральное Практика 4,5х126 мм (774-740)
+  price: 140.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501620/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 4.5
+- sku: '1151480'
+  name: Сверло по металлу спиральное Debever Machining Solutions 4,8х86 мм HSS-Co5 (DB-1150480)
+  price: 230.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151480/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 4.8
+- sku: '966053'
+  name: Сверло по металлу спиральное КМ 5х86 мм (966053)
+  price: 125.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966053/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 5.0
+- sku: '1041680'
+  name: Сверло по металлу спиральное Rage by Vira 5,5х93 мм (552077)
+  price: 192.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1041680/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 5.5
+- sku: '966054'
+  name: Сверло по металлу спиральное КМ 6х93 мм (966054)
+  price: 136.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966054/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 6.0
+- sku: '1041688'
+  name: Сверло по металлу спиральное Rage by Vira 6,5х101 мм (552079)
+  price: 260.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1041688/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 6.5
+- sku: '501623'
+  name: Сверло по металлу спиральное Практика 7х156 мм (774-801)
+  price: 264.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501623/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 7.0
+- sku: '966055'
+  name: Сверло по металлу спиральное КМ 8х117 мм (966055)
+  price: 251.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966055/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 8.0
+- sku: '501627'
+  name: Сверло по металлу спиральное Практика 9х175 мм (774-849)
+  price: 428.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501627/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 9.0
+- sku: '966056'
+  name: Сверло по металлу спиральное КМ 10х133 мм (966056)
+  price: 396.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966056/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 10.0
+- sku: '1151387'
+  name: Сверло по металлу спиральное Rawlplug 11х142 мм (RT-HSSP-110)
+  price: 917.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151387/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 11.0
+- sku: '1017636'
+  name: Сверло по металлу спиральное Зубр Профессионал 12х151 мм (29625-12)
+  price: 984.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1017636/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 12.0
+- sku: '1151390'
+  name: Сверло по металлу спиральное Rawlplug 13х151 мм (RT-HSSP-130)
+  price: 1175.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151390/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 13.0
+- sku: '1017625'
+  name: Сверло по металлу спиральное Зубр Профессионал 3,2х65 мм (29625-3.2)
+  price: 103.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1017625/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.2
+- sku: '501624'
+  name: Сверло по металлу спиральное Практика 7,5х156 мм (774-818)
+  price: 294.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501624/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 7.5
+- sku: '501626'
+  name: Сверло по металлу спиральное Практика 8,5х165 мм (774-832)
+  price: 378.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501626/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 8.5
+- sku: '501628'
+  name: Сверло по металлу спиральное Практика 9,5х175 мм (774-856)
+  price: 469.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/501628/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 9.5
+- sku: '1041673'
+  name: Сверло по металлу спиральное Rage by Vira 1х34 мм (2 шт.) (552066)
+  price: 112.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1041673/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 1.0
+- sku: '1041674'
+  name: Сверло по металлу спиральное Rage by Vira 1,5х40 мм (2 шт.) (552067)
+  price: 124.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1041674/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 1.5
+- sku: '1084545'
+  name: Сверло по металлу спиральное Зубр Профессионал 14х160 мм (29621-14)
+  price: 990.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1084545/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 14.0
+- sku: '1084546'
+  name: Сверло по металлу спиральное Зубр Профессионал 15х169 мм (29621-15)
+  price: 1124.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1084546/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 15.0
+- sku: '1084547'
+  name: Сверло по металлу спиральное Зубр Профессионал 16х178 мм (29621-16)
+  price: 1290.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1084547/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 16.0
+- sku: '1084548'
+  name: Сверло по металлу спиральное Зубр Профессионал 18х191 мм (29621-18)
+  price: 1643.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1084548/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 18.0
+- sku: '1084549'
+  name: Сверло по металлу спиральное Зубр Профессионал 20х205 мм (29621-20)
+  price: 2081.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1084549/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 20.0
+- sku: '1151487'
+  name: Сверло по металлу спиральное Debever Machining Solutions 3,3х65 мм HSS-Co5 (2 шт.) (DB-1150330)
+  price: 241.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151487/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.3
+- sku: '1151377'
+  name: Сверло по металлу спиральное Rawlplug 5,1х86 мм (RT-HSSP-051)
+  price: 289.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151377/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 5.1
+- sku: '1151478'
+  name: Сверло по металлу спиральное Debever Machining Solutions 5,2х86 мм HSS-Co5 (DB-1150520)
+  price: 265.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151478/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 5.2
+- sku: '1151455'
+  name: Сверло по металлу спиральное Debever Machining Solutions 12,5х151 мм HSS-Co5 (DB-1151250)
+  price: 1378.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151455/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 12.5
+- sku: '1151458'
+  name: Сверло по металлу спиральное Debever Machining Solutions 11,5х142 мм HSS-Co5 (DB-1151150)
+  price: 1124.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151458/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 11.5
+- sku: '1151460'
+  name: Сверло по металлу спиральное Debever Machining Solutions 10,5х133 мм HSS-Co5 (DB-1151050)
+  price: 948.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151460/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 10.5
+- sku: '1151461'
+  name: Сверло по металлу спиральное Debever Machining Solutions 10,2х133 мм HSS-Co5 (DB-1151020)
+  price: 948.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151461/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 10.2
+- sku: '1151465'
+  name: Сверло по металлу спиральное Debever Machining Solutions 8,8х125 мм HSS-Co5 (DB-1150880)
+  price: 692.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151465/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 8.8
+- sku: '1151466'
+  name: Сверло по металлу спиральное Debever Machining Solutions 8,7х125 мм HSS-Co5 (DB-1150870)
+  price: 692.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151466/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 8.7
+- sku: '1151468'
+  name: Сверло по металлу спиральное Debever Machining Solutions 8,2х117 мм HSS-Co5 (DB-1150820)
+  price: 599.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151468/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 8.2
+- sku: '1151472'
+  name: Сверло по металлу спиральное Debever Machining Solutions 6,8х109 мм HSS-Co5 (DB-1150680)
+  price: 426.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151472/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 6.8
+- sku: '1151473'
+  name: Сверло по металлу спиральное Debever Machining Solutions 6,7х101 мм HSS-Co5 (DB-1150670)
+  price: 426.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151473/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 6.7
+- sku: '1151476'
+  name: Сверло по металлу спиральное Debever Machining Solutions 5,8х93 мм HSS-Co5 (DB-1150580)
+  price: 299.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1151476/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 5.8
+- sku: '1151484'
+  name: Сверло по металлу спиральное Debever Machining Solutions 3,9х75 мм HSS-Co5 (2 шт.) (DB-1150390)
+  price: 288.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151484/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.9
+- sku: '1151485'
+  name: Сверло по металлу спиральное Debever Machining Solutions 3,8х75 мм HSS-Co5 (2 шт.) (DB-1150380)
+  price: 288.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151485/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.8
+- sku: '1151489'
+  name: Сверло по металлу спиральное Debever Machining Solutions 3,1х65 мм HSS-Co5 (2 шт.) (DB-1150310)
+  price: 241.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151489/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 3.1
+- sku: '1151491'
+  name: Сверло по металлу спиральное Debever Machining Solutions 2,9х61 мм HSS-Co5 (2 шт.) (DB-1150290)
+  price: 207.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151491/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.9
+- sku: '1151492'
+  name: Сверло по металлу спиральное Debever Machining Solutions 2,8х61 мм HSS-Co5 (2 шт.) (DB-1150280)
+  price: 207.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151492/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.8
+- sku: '1151493'
+  name: Сверло по металлу спиральное Debever Machining Solutions 2,7х57 мм HSS-Co5 (2 шт.) (DB-1150270)
+  price: 207.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151493/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.7
+- sku: '1151494'
+  name: Сверло по металлу спиральное Debever Machining Solutions 2,6х57 мм HSS-Co5 (2 шт.) (DB-1150260)
+  price: 207.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151494/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 2.6
+- sku: '1151496'
+  name: Сверло по металлу спиральное Debever Machining Solutions 1,6х43 мм HSS-Co5 (2 шт.) (DB-1150160)
+  price: 149.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/1151496/
+  kind: tool
+  tool:
+    type: metal_drill
+    diameter: 1.6
+- sku: '140123'
+  name: Сверло по дереву перьевое Практика 10х152 мм (032-201)
+  price: 131.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/140123/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 10.0
+- sku: '966061'
+  name: Сверло по дереву перьевое КМ 12х152 мм (966061)
+  price: 119.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966061/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 12.0
+- sku: '966063'
+  name: Сверло по дереву перьевое КМ 15х152 мм (966063)
+  price: 112.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966063/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 15.0
+- sku: '966062'
+  name: Сверло по дереву перьевое КМ 18х152 мм (966062)
+  price: 133.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966062/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 18.0
+- sku: '966058'
+  name: Сверло по дереву перьевое КМ 20х152 мм (966058)
+  price: 123.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966058/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 20.0
+- sku: '966060'
+  name: Сверло по дереву перьевое КМ 22х152 мм (966060)
+  price: 145.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966060/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 22.0
+- sku: '966059'
+  name: Сверло по дереву перьевое КМ 25х152 мм (966059)
+  price: 146.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/966059/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 25.0
+- sku: '140130'
+  name: Сверло по дереву перьевое Практика 28х152 мм (032-812)
+  price: 203.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/140130/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 28.0
+- sku: '140131'
+  name: Сверло по дереву перьевое Практика 30х152 мм (032-829)
+  price: 230.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/140131/
+  kind: tool
+  tool:
+    type: spade_bit
+    diameter: 30.0
+- sku: '132443'
+  name: Набор коронок Практика (773-255) по дереву d32-54 мм с переходником (4 шт.)
+  price: 448.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/132443/
+  kind: tool
+  tool:
+    type: hole_saw
+    min: 32.0
+    max: 54.0
+    set: true
+- sku: '1138262'
+  name: Набор коронок Kranz (KR-92-0251) по дереву d19-64 мм с 2 держателями и ключом (8 шт.)
+  price: 756.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/1138262/
+  kind: tool
+  tool:
+    type: hole_saw
+    min: 19.0
+    max: 64.0
+    set: true
+- sku: '132445'
+  name: Набор коронок Практика (773-279) по дереву d19-127 мм с переходниками (12 шт.)
+  price: 1491.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/132445/
+  kind: tool
+  tool:
+    type: hole_saw
+    min: 19.0
+    max: 127.0
+    set: true
+- sku: '882083'
+  name: Бита Hesler PH2 магнитная 25 мм (882083)
+  price: 33.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/882083/
+  kind: tool
+  tool:
+    type: screwdriver_bit
+- sku: '681543'
+  name: Ножовка по дереву 400 мм 9 зуб/дюйм средний зуб
+  price: 226.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/681543/
+  kind: tool
+  tool:
+    type: hand_saw
+- sku: '681539'
+  name: Ножовка по металлу Hesler 300 мм 24 зуб/дюйм средний зуб
+  price: 222.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/681539/
+  kind: tool
+  tool:
+    type: hacksaw
+- sku: '968520'
+  name: Стусло Сибртех пластиковое 300х65 мм (22571)
+  price: 143.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/968520/
+  kind: tool
+  tool:
+    type: miter_box
+- sku: '159373'
+  name: Рулетка с фиксатором 3 м x 16 мм
+  price: 99.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/159373/
+  kind: tool
+  tool:
+    type: tape_measure
+- sku: '125418'
+  name: Карандаш строительный малярный Hesler (2 шт.)
+  price: 30.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/125418/
+  kind: tool
+  tool:
+    type: pencil
+- sku: '685159'
+  name: Очки защитные Исток открытые с желтыми линзами (ОЧК014)
+  price: 112.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/685159/
+  kind: tool
+  tool:
+    type: safety_glasses
+- sku: '687434'
+  name: Струбцина столярная Sparta G-тип 75х55 мм (206535)
+  price: 265.0
+  unit: шт
+  url: https://moscow.petrovich.ru/product/687434/
+  kind: tool
+  tool:
+    type: clamp

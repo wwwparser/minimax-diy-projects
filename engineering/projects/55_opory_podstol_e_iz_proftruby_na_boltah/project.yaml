@@ -1,0 +1,58 @@
+# 55. Опоры-подстолье из профтрубы на болтах. Модель — ОДНА опора (2 стойки 700 + 2 перекладины 620),
+# без сварки: соединение уголками на болтах М6х40. Вторая опора по тексту идентична и физически не
+# связана с первой (общая столешница не входит в проект) — см. notes.md про удвоение закупки.
+project:
+  id: opory_podstolie_proftruba_bolty
+  name: "Опоры-подстолье из профтрубы на болтах"
+  category: metalwork
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: "engineering/texts/55_opory_podstol_e_iz_proftruby_na_boltah.md"
+
+stock:
+  - {id: tube40x20, name: "Труба профильная 40х20х2", material: steel, type: rect_tube, section: "40x20x2", length: 3000, kerf: 2, sku: "603758"}
+
+parts:
+  - id: leg
+    name: Стойка
+    stock: tube40x20
+    qty: 2
+    length: 700
+    instances:
+      - {at: [0, 20, 0], orient: ZXY}
+      - {at: [580, 20, 0], orient: ZXY}
+  - id: rail
+    name: Перекладина
+    stock: tube40x20
+    qty: 2
+    length: 620
+    instances:
+      - {at: [0, 0, 0], orient: XZY}      # нижняя перекладина, перед ногами (y 0..20), z 0..40
+      - {at: [0, 0, 660], orient: XZY}    # верхняя перекладина, z 660..700 — под столешницу
+
+joints:
+  - {id: rail_bot_leg1, type: bolt, part_a: "rail#1", part_b: "leg#1", fastener: {type: bolt, diameter: 6, length: 40}}
+  - {id: rail_bot_leg2, type: bolt, part_a: "rail#1", part_b: "leg#2", fastener: {type: bolt, diameter: 6, length: 40}}
+  - {id: rail_top_leg1, type: bolt, part_a: "rail#2", part_b: "leg#1", fastener: {type: bolt, diameter: 6, length: 40}}
+  - {id: rail_top_leg2, type: bolt, part_a: "rail#2", part_b: "leg#2", fastener: {type: bolt, diameter: 6, length: 40}}
+
+hardware:
+  - {id: corner_angles, type: corner_bracket, qty: 4, size: "50x50x40x2", name: "Уголок соединительный 50х50х40х2", sku: "108861", mounts: ["leg#1", "leg#2", "rail#1", "rail#2"]}
+  - {id: end_caps, type: other, qty: 2, name: "Заглушка пластиковая для профильной трубы 20х20", sku: "638957", mounts: ["leg#1", "leg#2"]}
+
+finishes:
+  - {id: paint, type: enamel_aerosol, parts: [leg, rail], coats: 1}
+
+steps:
+  - {title: "Нарезать трубу: стойки и перекладины", add: [leg, rail], joints: []}
+  - {title: "Соединить уголками на болтах М6х40", add: [], joints: [rail_bot_leg1, rail_bot_leg2, rail_top_leg1, rail_top_leg2]}
+  - {title: "Заглушки на торцы стоек и покраска грунт-эмалью", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [700, 90, 720], source: "шапка текста", tolerance: 5}
+
+ambiguities:
+  - "Высота крепления перекладин (верхней и нижней) в тексте не указана — выбрана конструктивно: верхняя вровень с верхом стоек (под столешницу), нижняя у низа для жёсткости."
+  - "Текст описывает 4 стойки 700 мм + 4 перекладины 620 мм на ОБЕ опоры (по 2 шт на опору) — модель описывает одну опору, см. notes.md."
+
+constraints: {budget: 3000}

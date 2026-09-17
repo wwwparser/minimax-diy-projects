@@ -1,0 +1,128 @@
+# Домик-куб для кошки: короб 400х400х400 из фанеры 6мм на каркасе бруска 20х30, вход в передней стенке,
+# одна стойка обмотана джутом (когтеточка).
+# Оси: X, Y - основание 400х400, Z - высота (0..400).
+project:
+  id: domik_kub_dlya_koshki_022
+  name: "Домик-куб для кошки"
+  category: wood+ply
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Раскроить фанеру 6 мм: 5 квадратов 400х400. Каркас из бруска 20х30: 4 стойки 360 мм, обвязка.
+    В передней стенке разметить вход 170х200, засверлить углы 10 мм и выпилить ножовкой.
+    Обшить каркас фанерой на саморезы 25 мм. Одну стойку снаружи обмотать джутом — когтеточка.
+
+stock:
+  - id: ply6
+    name: "Фанера ФК 6х1525х1525"
+    material: birch_plywood
+    type: sheet
+    thickness: 6
+    length: 1525
+    width: 1525
+    grain: any
+    kerf: 1.5
+    sku: "109060"
+  - id: bar2030
+    name: "Брусок сухой строганый 20х30х2000"
+    material: pine
+    type: bar
+    section: 20x30
+    length: 2000
+    qty: 2
+    kerf: 1.5
+    sku: "626001"
+  - id: jute10
+    name: "Канат крученый джутовый d10"
+    material: jute
+    type: rope
+    diameter: 10
+    length: 1000
+    sku: "103165"
+
+parts:
+  - id: bottom
+    name: Дно
+    stock: ply6
+    length: 388
+    width: 388
+    orient: YXZ
+    at: [6, 6, 0]
+  - id: front
+    name: Передняя стенка (с входом)
+    stock: ply6
+    length: 400
+    width: 400
+    orient: ZXY
+    at: [0, 0, 0]
+    features:
+      - {type: rect_cutout, size: 170x200, anchor: start, position: {along_length: 60, along_width: 115}}
+  - id: back
+    name: Задняя стенка
+    stock: ply6
+    length: 400
+    width: 400
+    orient: ZXY
+    at: [0, 394, 0]
+  - id: side
+    name: Боковая стенка
+    stock: ply6
+    qty: 2
+    length: 400
+    width: 388
+    instances:
+      - {at: [0, 6, 0], orient: ZYX}
+      - {at: [394, 6, 0], orient: ZYX}
+  - id: post
+    name: Стойка каркаса
+    stock: bar2030
+    qty: 4
+    length: 360
+    instances:
+      - {at: [6, 6, 6], orient: ZXY}
+      - {at: [364, 6, 6], orient: ZXY}
+      - {at: [6, 374, 6], orient: ZXY}
+      - {at: [364, 374, 6], orient: ZXY}
+  - id: claw_rope
+    name: "Джутовый канат (обмотка стойки)"
+    stock: jute10
+    length: 5000
+
+joints:
+  - {id: front_post1, type: screw, part_a: front, part_b: "post#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: front_post2, type: screw, part_a: front, part_b: "post#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: back_post3, type: screw, part_a: back, part_b: "post#3", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: back_post4, type: screw, part_a: back, part_b: "post#4", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: side1_post1, type: screw, part_a: "side#1", part_b: "post#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: side1_post3, type: screw, part_a: "side#1", part_b: "post#3", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: side2_post2, type: screw, part_a: "side#2", part_b: "post#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: side2_post4, type: screw, part_a: "side#2", part_b: "post#4", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: bottom_post1, type: screw, part_a: bottom, part_b: "post#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: bottom_post2, type: screw, part_a: bottom, part_b: "post#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: bottom_post3, type: screw, part_a: bottom, part_b: "post#3", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: bottom_post4, type: screw, part_a: bottom, part_b: "post#4", fastener: {type: wood_screw, diameter: 3.5, length: 25}}
+  - {id: claw_wrap, type: hang, part_a: claw_rope, part_b: "post#1"}
+
+finishes: []
+
+steps:
+  - {title: "Каркас: 4 стойки", add: [post], joints: []}
+  - {title: "Дно", add: [bottom], joints: [bottom_post1, bottom_post2, bottom_post3, bottom_post4]}
+  - {title: "Передняя стенка с входом", add: [front], joints: [front_post1, front_post2]}
+  - {title: "Задняя стенка", add: [back], joints: [back_post3, back_post4]}
+  - {title: "Боковые стенки", add: [side], joints: [side1_post1, side1_post3, side2_post2, side2_post4]}
+  - {title: "Обмотать стойку джутом — когтеточка", add: [claw_rope], joints: [claw_wrap]}
+
+claims:
+  - {kind: overall, value: [400, 400, 400], source: "шапка текста", tolerance: 5}
+  - {kind: part_dim, target: post, value: [360], source: "шаги текста"}
+
+  - {kind: fastener, target: "front_post1", value: 25, source: "шаги текста"}
+
+ambiguities:
+  - "Стойки каркаса 360 мм короче заявленной высоты короба 400 мм (фанерные стенки честно взяты 400х400 по факту раскроя листа) — стойки не достают на 40 мм до верха, текст не поясняет, чем закрыт верх (лежанка сверху упомянута отдельно, отдельной детали для неё в тексте нет)."
+  - "«Обвязка» каркаса упомянута в тексте без размеров — смоделированы только 4 угловые стойки, горизонтальные перемычки обвязки не заданы числами и не смоделированы."
+  - "Засверловка углов входа 10 мм — техника выпиливания лобзиком/ножовкой, отдельные отверстия в углах не моделируются как самостоятельные features (вырез входа уже описан как rect_cutout)."
+  - "5-й квадрат фанеры из раскроя (5 листов 400х400) не находит применения в геометрии (дно+перед+зад+2 боковины = 5) — фактически использованы все 5, лежанка сверху не смоделирована отдельной деталью."
+
+constraints: {budget: 3000}

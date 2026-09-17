@@ -1,0 +1,57 @@
+# 48. Полка лофт: доска 800х145 на двух кронштейнах из стального уголка 25х25х3 (250 мм), уголки к стене на дюбелях.
+# Стена — плоскость y = 0 (вне модели). Уголок: полка 1 вертикально у стены (к дюбелям), полка 2 горизонтально под доской.
+project:
+  id: 48_polka_loft_na_stal_nom_ugolke
+  name: "Полка лофт на стальном уголке"
+  category: wood+metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить от уголка 25х25х3 два куска по 250 мм, заусенцы снять шкуркой. В каждом просверлить
+    по 2 отверстия 6 мм в одной полке (к стене) и по 2 — в другой (под доску). Покрасить уголки
+    грунт-эмалью. Прикрутить к стене на дюбели, сверху — доску саморезами 25 мм. Доску покрыть морилкой.
+
+stock:
+  - {id: board145, name: "Доска 20х145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+  - {id: angle25, name: "Уголок 25х25х3", material: steel, type: angle, section: 25x25x3, length: 3000, kerf: 1.2, sku: "612294"}
+
+parts:
+  - id: shelf
+    name: Полка
+    stock: board145
+    length: 800
+    orient: XYZ
+    at: [0, 0, 250]
+  - id: bracket
+    name: Кронштейн из уголка
+    stock: angle25
+    qty: 2
+    length: 250
+    instances:
+      - {at: [100, 0, 225], orient: YXZ}
+      - {at: [675, 0, 225], orient: YXZ}
+    features:
+      - {type: hole, diameter: 6, position: {along_length: 40, along_width: center}}
+      - {type: hole, diameter: 6, position: {along_length: 180, along_width: center}}
+
+joints:
+  - {id: shelf_br1, type: screw, part_a: "bracket#1", part_b: shelf, fastener: {type: wood_screw, diameter: 3.5, length: 25}, count: 2, along: Y}
+  - {id: shelf_br2, type: screw, part_a: "bracket#2", part_b: shelf, fastener: {type: wood_screw, diameter: 3.5, length: 25}, count: 2, along: Y}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 4, mounts: ["bracket#1", "bracket#2"], screws_per_unit: 0, name: "Дюбель 6x30 с шурупом", sku: "687547"}
+
+finishes:
+  - {id: stain, type: stain, parts: [shelf], coats: 1}
+  - {id: paint, type: enamel_aerosol, parts: [bracket], coats: 2}
+
+steps:
+  - {title: "Отпилить и просверлить кронштейны из уголка", add: [bracket], joints: []}
+  - {title: "Кронштейны к стене", add: [], joints: []}
+  - {title: "Полка на кронштейны саморезами 25 мм", add: [shelf], joints: [shelf_br1, shelf_br2]}
+
+ambiguities:
+  - "Саморезы для крепления доски к уголку названы явно (25 мм) — указаны в fastener.length; движок проверяет, что этой длины хватает и она не выходит наружу через доску (T=20)."
+  - "В тексте по 2 отверстия 6 мм в полке уголка к стене и по 2 — под доску; модель повторяет пример wall_shelf: 2 отверстия под доску (через них саморезы в доску), отверстия под дюбели к стене отдельно не смоделированы как features (дюбель — hardware с mounts на кронштейн, без явных координат отверстий в стеновой полке уголка)."
+
+constraints: {budget: 3000}

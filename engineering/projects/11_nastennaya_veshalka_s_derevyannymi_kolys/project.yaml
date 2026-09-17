@@ -1,0 +1,85 @@
+# Настенная вешалка: доска 20x145x900 на стене, 6 колышков-шкантов 12x50 на клею под углом ~10°,
+# морилка, крепление на 3 дюбеля с шурупами.
+project:
+  id: 11_nastennaya_veshalka_s_derevyannymi_kolys
+  name: "Настенная вешалка с деревянными колышками"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить доску 900 мм, скруглить торцы. Разметить 6 отверстий с шагом 140 мм. Сверлом 12 мм
+    засверлить на глубину 20 мм под углом ~10° вверх. Посадить шканты 12x50 на клей ПВА. Покрыть
+    морилкой, повесить на 3 дюбеля с шурупами.
+
+stock:
+  - id: board145
+    name: "Доска сосна 20х145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+  - id: peg_rod
+    name: "Шкант мебельный 12х50"
+    material: birch
+    type: rod
+    diameter: 12
+    length: 2000
+    sku: "640685"
+
+parts:
+  - id: board
+    name: "Доска-основание"
+    stock: board145
+    length: 900
+    orient: XZY
+    at: [0, 0, 0]
+    features:
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 100, along_width: center}}
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 240, along_width: center}}
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 380, along_width: center}}
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 520, along_width: center}}
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 660, along_width: center}}
+      - {type: hole, diameter: 12, depth: 20, face: bottom, position: {along_length: 800, along_width: center}}
+  - id: peg
+    name: "Колышек-шкант"
+    stock: peg_rod
+    qty: 6
+    length: 50
+    instances:
+      - {at: [94, -30, 66.5], orient: YXZ}
+      - {at: [234, -30, 66.5], orient: YXZ}
+      - {at: [374, -30, 66.5], orient: YXZ}
+      - {at: [514, -30, 66.5], orient: YXZ}
+      - {at: [654, -30, 66.5], orient: YXZ}
+      - {at: [794, -30, 66.5], orient: YXZ}
+
+joints:
+  - {id: peg1, type: inserted, part_a: "peg#1", part_b: board}
+  - {id: peg2, type: inserted, part_a: "peg#2", part_b: board}
+  - {id: peg3, type: inserted, part_a: "peg#3", part_b: board}
+  - {id: peg4, type: inserted, part_a: "peg#4", part_b: board}
+  - {id: peg5, type: inserted, part_a: "peg#5", part_b: board}
+  - {id: peg6, type: inserted, part_a: "peg#6", part_b: board}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 3, mounts: [board], screws_per_unit: 0, name: "Дюбель 6x30 с шурупом", sku: "687547"}
+
+finishes:
+  - {id: f1, type: stain, parts: [board, peg], coats: 1}
+
+steps:
+  - {title: "Отпилить и скруглить доску", add: [board], joints: []}
+  - {title: "Засверлить отверстия и посадить шканты на клей", add: [peg], joints: [peg1, peg2, peg3, peg4, peg5, peg6]}
+  - {title: "Покрыть морилкой и повесить на дюбели", add: [], joints: []}
+
+claims:
+  - {kind: overall, value: [900, 20, 145], source: "шапка текста (доска 900x145, без учёта выступающих колышков)", tolerance: 5}
+  - {kind: part_dim, target: peg, value: [50, 12, 12], source: "шаги текста (шкант 12x50)"}
+
+ambiguities:
+  - "Угол засверловки ~10° к вертикали не поддерживается движком геометрии — колышки смоделированы перпендикулярно лицевой плоскости доски, глубина гнезда 20 мм оставлена как в тексте."
+  - "Глубина отверстия 20 мм равна толщине доски (20 мм) — на практике с учётом наклона сверло не выходит наружу, но это близко к пределу; движок может показать конфликт по глубине."
+
+constraints: {budget: 3000}

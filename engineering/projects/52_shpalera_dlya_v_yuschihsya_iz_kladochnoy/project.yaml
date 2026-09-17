@@ -1,0 +1,73 @@
+# 52. Шпалера для вьющихся из кладочной сетки: рама из бруска 40х40 (2 стойки 2000 мм, вкопать на 400,
+# 2 поперечины 500 мм), на раму прикручена оцинкованная кладочная сетка 55х55, d2,5, 0,5х2 м.
+# Рама — приём как в birdhouse (front/side): поперечины покрывают всю ширину по X (y=0..40),
+# стойки сдвинуты в Y на толщину поперечины (y=40..80), так стыкуются гранями без пересечения объёмов.
+project:
+  id: 52_shpalera_dlya_v_yuschihsya_iz_kladochnoy
+  name: "Шпалера для вьющихся из кладочной сетки"
+  category: wood+metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать брусок 40х40: 2 стойки 2000 мм (заглубить 400) и 2 поперечины 500 мм. Собрать раму
+    на саморезы 75 мм. Прикрутить сетку саморезами 25 мм с кузовными шайбами. Пропитать дерево
+    антисептиком, вкопать.
+
+stock:
+  - {id: bar40, name: "Брусок сухой строганый 40х40", material: pine, type: bar, section: 40x40, length: 2000, kerf: 1.5, sku: "1092607"}
+  - {id: mesh55, name: "Сетка кладочная оцинкованная 55х55 d2,5 0,5х2 м", material: galvanized, type: mesh, width: 500, length: 2000, thickness: 2.5, sku: "1146578"}
+
+parts:
+  - id: post
+    name: Стойка
+    stock: bar40
+    qty: 2
+    length: 2000
+    instances:
+      - {at: [0, 40, 0], orient: ZXY}
+      - {at: [460, 40, 0], orient: ZXY}
+  - id: crossbar
+    name: Поперечина
+    stock: bar40
+    qty: 2
+    length: 500
+    instances:
+      - {at: [0, 0, 400], orient: XZY}
+      - {at: [0, 0, 1960], orient: XZY}
+  - id: mesh_panel
+    name: Сетка кладочная
+    stock: mesh55
+    length: 2000
+    width: 500
+    orient: ZXY
+    at: [0, -2.5, 0]
+
+joints:
+  - {id: crossbar_low_post1,  type: screw, part_a: "crossbar#1", part_b: "post#1", fastener: {type: wood_screw, diameter: 4.2, length: 75}}
+  - {id: crossbar_low_post2,  type: screw, part_a: "crossbar#1", part_b: "post#2", fastener: {type: wood_screw, diameter: 4.2, length: 75}}
+  - {id: crossbar_top_post1,  type: screw, part_a: "crossbar#2", part_b: "post#1", fastener: {type: wood_screw, diameter: 4.2, length: 75}}
+  - {id: crossbar_top_post2,  type: screw, part_a: "crossbar#2", part_b: "post#2", fastener: {type: wood_screw, diameter: 4.2, length: 75}}
+  - {id: mesh_to_crossbar_low, type: screw, part_a: mesh_panel, part_b: "crossbar#1", fastener: {type: wood_screw, diameter: 3.5, length: 25}, count: 4, along: X}
+  - {id: mesh_to_crossbar_top, type: screw, part_a: mesh_panel, part_b: "crossbar#2", fastener: {type: wood_screw, diameter: 3.5, length: 25}, count: 4, along: X}
+
+hardware:
+  - {id: mesh_washers, type: other, qty: 8, mounts: ["post#1", "post#2", "crossbar#1", "crossbar#2"], name: "Шайба кузовная оцинкованная 5х15 DIN 9021", sku: "109277"}
+
+finishes:
+  - {id: antiseptic, type: antiseptic, parts: [post, crossbar], coats: 2}
+
+steps:
+  - {title: "Рама из бруска на саморезы 75 мм", add: [post, crossbar], joints: [crossbar_low_post1, crossbar_low_post2, crossbar_top_post1, crossbar_top_post2]}
+  - {title: "Пропитать раму антисептиком", add: [], joints: []}
+  - {title: "Прикрутить сетку саморезами 25 мм с кузовными шайбами, вкопать раму", add: [mesh_panel], joints: [mesh_to_crossbar_low, mesh_to_crossbar_top]}
+
+claims:
+  - {kind: overall, value: [500, 2000], source: "шапка текста «2000×500 мм»", tolerance: 5}
+
+ambiguities:
+  - "Точные высоты крепления поперечин к стойкам текст не называет — приняты: нижняя поперечина на уровне земли (z=400, там же, где по тексту заглубление стоек), верхняя — у самого верха стоек (z=1960..2000)."
+  - "Заглубление стоек на 400 мм в грунт не меняет геометрию детали (физическая длина стойки 2000 мм остаётся как есть) — просто отмечено допущением, что нижние 400 мм окажутся под землёй."
+  - "Сетка (mesh_panel) смоделирована как тонкий плоский лист (толщина 2,5 мм = диаметр проволоки) снаружи рамы, прикрученный к обеим поперечинам (по 4 самореза 25 мм на каждую) — реальная сетка гибкая, её провисание и точные узлы крепления по всей раме (включая стойки) не смоделированы; кузовные шайбы добавлены отдельно как hardware (mesh_washers) без точной привязки к joints."
+  - "sku 109277 (шайба кузовная 5х15 DIN 9021) отсутствует в каталоге Петровича — ожидается bom.not_in_catalog при validate/build; оставлено как факт исходной сметы, не подогнано под другой артикул."
+
+constraints: {budget: 3000}

@@ -1,0 +1,140 @@
+# Стеллаж-этажерка 800x300x1200: 4 стойки бруска 40x40x1200, 2 боковые рамы-лесенки на саморезы 51 мм,
+# 3 яруса полок (доска 20x145), по 2 доски 800 мм на ярус.
+project:
+  id: 30_stellazh_etazherka_iz_brusa_1_2_m
+  name: "Стеллаж-этажерка из бруса 1,2 м"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Нарезать 4 стойки 1200 мм и 6 поперечин 300 мм из бруска 40x40. Собрать 2 боковые рамы-лесенки на
+    саморезы 51 мм. Полки — по 2 доски 800 мм на каждый ярус. Проверить диагонали, при шатании добавить
+    крепёжные уголки. Прикрепить к стене уголком.
+
+stock:
+  - id: bar40
+    name: "Брусок 40x40"
+    material: pine
+    type: bar
+    section: 40x40
+    length: 2000
+    kerf: 1.5
+    sku: "1092607"
+  - id: board145
+    name: "Доска 20x145"
+    material: pine
+    type: board
+    section: 20x145
+    length: 2000
+    kerf: 1.5
+    sku: "102355"
+
+parts:
+  - id: leg
+    name: Стойка
+    stock: bar40
+    qty: 4
+    length: 1200
+    instances:
+      - {at: [0,   0,   0], orient: ZXY}   # A-front
+      - {at: [760, 0,   0], orient: ZXY}   # B-front
+      - {at: [0,   260, 0], orient: ZXY}   # A-back
+      - {at: [760, 260, 0], orient: ZXY}   # B-back
+
+  - id: rail
+    name: Поперечина (рама-лесенка)
+    stock: bar40
+    qty: 6
+    # физическая длина между внутренними гранями стоек: 300 - 2*40 = 220 мм (см. claims/ambiguities —
+    # текст называет длину заготовки 300 мм, конфликт оставлен нарочно)
+    length: 220
+    instances:
+      - {at: [0,   40, 0],    orient: YZX}   # сторона A, нижний уровень
+      - {at: [0,   40, 560],  orient: YZX}   # сторона A, средний уровень
+      - {at: [0,   40, 1140], orient: YZX}   # сторона A, верхний уровень
+      - {at: [760, 40, 0],    orient: YZX}   # сторона B, нижний уровень
+      - {at: [760, 40, 560],  orient: YZX}   # сторона B, средний уровень
+      - {at: [760, 40, 1140], orient: YZX}   # сторона B, верхний уровень
+
+  - id: shelf
+    name: Полка
+    stock: board145
+    qty: 6
+    # полная ширина стеллажа 800 мм (как в тексте): доска ложится поверх поперечин и в плане перекрывает
+    # стойки по углам (запил паза под стойку не моделируем — разрешено явным joint type inserted ниже)
+    length: 800
+    orient: XYZ
+    instances:
+      - {at: [0, 0,   40]}    # ярус 1, передняя доска
+      - {at: [0, 145, 40]}    # ярус 1, задняя доска
+      - {at: [0, 0,   600]}   # ярус 2, передняя доска
+      - {at: [0, 145, 600]}   # ярус 2, задняя доска
+      - {at: [0, 0,   1180]}  # ярус 3, передняя доска
+      - {at: [0, 145, 1180]}  # ярус 3, задняя доска
+
+joints:
+  # сторона A: поперечины к передней (leg#1) и задней (leg#3) стойке
+  - {id: railA1_front, type: screw, part_a: "leg#1", part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railA1_back,  type: screw, part_a: "leg#3", part_b: "rail#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railA2_front, type: screw, part_a: "leg#1", part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railA2_back,  type: screw, part_a: "leg#3", part_b: "rail#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railA3_front, type: screw, part_a: "leg#1", part_b: "rail#3", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railA3_back,  type: screw, part_a: "leg#3", part_b: "rail#3", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  # сторона B
+  - {id: railB1_front, type: screw, part_a: "leg#2", part_b: "rail#4", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railB1_back,  type: screw, part_a: "leg#4", part_b: "rail#4", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railB2_front, type: screw, part_a: "leg#2", part_b: "rail#5", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railB2_back,  type: screw, part_a: "leg#4", part_b: "rail#5", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railB3_front, type: screw, part_a: "leg#2", part_b: "rail#6", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  - {id: railB3_back,  type: screw, part_a: "leg#4", part_b: "rail#6", fastener: {type: wood_screw, diameter: 3.5, length: 51}, along: Y}
+  # полки лежат на поперечинах (способ крепления полок текстом не указан)
+  - {id: shelf1f_A, type: rest, part_a: "shelf#1", part_b: "rail#1"}
+  - {id: shelf1f_B, type: rest, part_a: "shelf#1", part_b: "rail#4"}
+  - {id: shelf1b_A, type: rest, part_a: "shelf#2", part_b: "rail#1"}
+  - {id: shelf1b_B, type: rest, part_a: "shelf#2", part_b: "rail#4"}
+  - {id: shelf2f_A, type: rest, part_a: "shelf#3", part_b: "rail#2"}
+  - {id: shelf2f_B, type: rest, part_a: "shelf#3", part_b: "rail#5"}
+  - {id: shelf2b_A, type: rest, part_a: "shelf#4", part_b: "rail#2"}
+  - {id: shelf2b_B, type: rest, part_a: "shelf#4", part_b: "rail#5"}
+  - {id: shelf3f_A, type: rest, part_a: "shelf#5", part_b: "rail#3"}
+  - {id: shelf3f_B, type: rest, part_a: "shelf#5", part_b: "rail#6"}
+  - {id: shelf3b_A, type: rest, part_a: "shelf#6", part_b: "rail#3"}
+  - {id: shelf3b_B, type: rest, part_a: "shelf#6", part_b: "rail#6"}
+  # доски полок (800 мм) идут во всю ширину и в плане накладываются на стойки по углам (40х40) —
+  # физически доски вырезаны с угловыми пазами под стойки (не моделируем геометрию паза, движок
+  # проверяет коллизии по габаритному параллелепипеду) — разрешаем вложение явным joint inserted
+  - {id: shelf1f_leg1, type: inserted, part_a: "shelf#1", part_b: "leg#1"}
+  - {id: shelf1f_leg2, type: inserted, part_a: "shelf#1", part_b: "leg#2"}
+  - {id: shelf1b_leg3, type: inserted, part_a: "shelf#2", part_b: "leg#3"}
+  - {id: shelf1b_leg4, type: inserted, part_a: "shelf#2", part_b: "leg#4"}
+  - {id: shelf2f_leg1, type: inserted, part_a: "shelf#3", part_b: "leg#1"}
+  - {id: shelf2f_leg2, type: inserted, part_a: "shelf#3", part_b: "leg#2"}
+  - {id: shelf2b_leg3, type: inserted, part_a: "shelf#4", part_b: "leg#3"}
+  - {id: shelf2b_leg4, type: inserted, part_a: "shelf#4", part_b: "leg#4"}
+  - {id: shelf3f_leg1, type: inserted, part_a: "shelf#5", part_b: "leg#1"}
+  - {id: shelf3f_leg2, type: inserted, part_a: "shelf#5", part_b: "leg#2"}
+  - {id: shelf3b_leg3, type: inserted, part_a: "shelf#6", part_b: "leg#3"}
+  - {id: shelf3b_leg4, type: inserted, part_a: "shelf#6", part_b: "leg#4"}
+
+hardware: []
+
+finishes: []
+
+steps:
+  - {title: "Заготовки: 4 стойки 1200 мм, 6 поперечин, доски полок", add: [leg, rail, shelf], joints: []}
+  - {title: "Сборка 2 боковых рам-лесенок на саморезы 51 мм", add: [], joints: [railA1_front, railA1_back, railA2_front, railA2_back, railA3_front, railA3_back, railB1_front, railB1_back, railB2_front, railB2_back, railB3_front, railB3_back]}
+  - {title: "Укладка полок по 2 доски на ярус", add: [], joints: [shelf1f_A, shelf1f_B, shelf1b_A, shelf1b_B, shelf2f_A, shelf2f_B, shelf2b_A, shelf2b_B, shelf3f_A, shelf3f_B, shelf3b_A, shelf3b_B, shelf1f_leg1, shelf1f_leg2, shelf1b_leg3, shelf1b_leg4, shelf2f_leg1, shelf2f_leg2, shelf2b_leg3, shelf2b_leg4, shelf3f_leg1, shelf3f_leg2, shelf3b_leg3, shelf3b_leg4]}
+
+claims:
+  - {kind: overall, value: [800, 300, 1200], source: "шапка текста", tolerance: 5}
+  - {kind: part_dim, target: rail, value: [300], source: "шаги текста", tolerance: 5}
+
+ambiguities:
+  - "Высоты трёх ярусов полок текстом не заданы (только «3 полки», общая высота 1200) — расставлены самостоятельно на уровнях ~0/560/1140 мм по низу поперечин, верхний ярус выровнен вровень с верхом стоек (1200 мм)."
+  - "Длина поперечин 300 мм из шагов текста физически не сходится с боковой рамой-лесенкой: при стойках 40x40 расстояние между их внутренними гранями составляет 300-2*40=220 мм. Модель использует физически корректные 220 мм; конфликт зафиксирован в claims (ожидаем spec.conflict_part)."
+  - "Крепление к стене уголком («при шатании добавить уголки», «прикрепить к стене уголком») не смоделировано как обязательная деталь/фурнитура — это опциональная мера, в смете артикул уголка вообще не указан."
+  - "Способ крепления полок к рамам текстом не назван (просто «полки»), использован тип соединения rest (доски лежат на поперечинах) без отдельного крепежа."
+  - "Саморезы 51 мм для царг: заход в торец поперечины через 40 мм стойки даёт всего ~11 мм заглубления — ожидаема ошибка fastener.penetration_low/short, текст сам предлагает слишком короткий саморез для такого сечения."
+  - "Доски полок сделаны на полную ширину 800 мм (как в тексте) и в плане накладываются на стойки 40x40 по углам — физически углы досок запиливаются пазом под стойку; геометрически это разрешено явным joint type inserted (движок не проверяет форму паза, только габаритный параллелепипед, поэтому пересечение полки со стойкой не считается ошибкой)."
+
+constraints: {budget: 3000}

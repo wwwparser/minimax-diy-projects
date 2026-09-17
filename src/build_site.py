@@ -76,6 +76,19 @@ tr.group td{background:var(--chip);font-weight:700;font-size:13px;text-transform
 tr.sum td{font-weight:800}
 .note{background:var(--card);border-left:4px solid var(--accent2);padding:12px 16px;border-radius:8px;color:var(--muted)}
 .nav2{display:flex;justify-content:space-between;gap:12px;padding:30px 0}
+.eng{margin-top:40px;padding-top:6px;border-top:2px solid var(--line)}
+.badge{display:inline-block;border-radius:999px;padding:4px 12px;font:700 13px Manrope,sans-serif;margin-left:8px;vertical-align:middle}
+.badge.ok{background:#d9efe4;color:#1f5c43}.badge.warning{background:#f7ead0;color:#7a5410}.badge.error{background:#f6d7d2;color:#8a2a1c}
+model-viewer{width:100%;height:440px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.eng-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.eng-grid figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.eng-grid figcaption{padding:8px 12px;font-size:14px;color:#555}
+.eng-grid figure.wide{grid-column:1/-1}
+ul.issues{list-style:none;padding:0;margin:0}
+ul.issues li{background:var(--card);border:1px solid var(--line);border-left:4px solid #c9a24a;border-radius:8px;padding:9px 12px;margin:8px 0}
+ul.issues li.error{border-left-color:#c0392b}
+ul.issues small{display:block;color:var(--muted);margin-top:3px}
+.dl a{margin-right:14px}
 """
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -87,7 +100,8 @@ def page(title, body, desc, depth=0):
     return f"""<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪚</text></svg>">
-{FONTS}<link rel="stylesheet" href="{pre}style.css"></head><body>{body}
+{FONTS}<link rel="stylesheet" href="{pre}style.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script></head><body>{body}
 <footer><div class="wrap">Цены — розница «Петрович», Москва, снимок каталога 16.09.2026; перед покупкой проверяйте на сайте.
 Идеи — из открытых статей (ссылки на страницах проектов), адаптированы под шуруповёрт 12 В и ручной инструмент. Иллюстрации и плакаты сгенерированы ChatGPT.</div></footer></body></html>"""
 
@@ -109,6 +123,92 @@ def convert_images():
                 im = Image.open(png).convert("RGB"); im.thumbnail((640, 640)); im.save(th, "WEBP", quality=78, method=6)
         have.setdefault(int(pid), set()).add(kind)
     return have
+
+
+ENG_BUILD = ROOT / "engineering" / "build"
+KIND_ENG = {"материал": "материал", "крепёж": "крепёж", "фурнитура": "фурнитура", "отделка": "отделка",
+            "расходник": "расходник", "оснастка": "оснастка"}
+
+
+def eng_assets(pid: int):
+    """Копирует результаты diy-project-engineer в docs/eng/NN и возвращает данные для страницы."""
+    src = next(iter(sorted(ENG_BUILD.glob(f"{pid:02d}_*/html_data.json"))), None)
+    if not src:
+        return None
+    data = json.loads(src.read_text(encoding="utf-8"))
+    dst = DOCS / "eng" / f"{pid:02d}"
+    dst.mkdir(parents=True, exist_ok=True)
+    files = {}
+    b = src.parent
+    if (b / "model.glb").exists():
+        shutil.copy(b / "model.glb", dst / "model.glb"); files["glb"] = "model.glb"
+    if (b / "model.step").exists():
+        shutil.copy(b / "model.step", dst / "model.step"); files["step"] = "model.step"
+    imgs = [("assembly.png", "Сборка"), ("exploded.png", "Разнесённый вид"), ("cut_linear.png", "Раскрой погонажа"),
+            ("cut_sheets.png", "Раскрой листа")] + [(f, f"Шаг {n}") for n, f in enumerate(data["files"].get("steps_png", []), 1)]
+    files["images"] = []
+    for name, cap in imgs:
+        if (b / name).exists():
+            out = dst / (Path(name).stem + ".webp")
+            if not out.exists() or out.stat().st_mtime < (b / name).stat().st_mtime:
+                im = Image.open(b / name).convert("RGB"); im.thumbnail((1400, 1400)); im.save(out, "WEBP", quality=85)
+            files["images"].append((out.name, cap))
+    data["_site"] = files
+    return data
+
+
+def eng_section(pid: int) -> str:
+    d = eng_assets(pid)
+    if not d:
+        return ""
+    f = d["_site"]
+    st = d["status"]
+    label = {"ok": "проверено", "warning": "есть предупреждения", "error": "есть ошибки"}[st]
+    viewer = (f'<model-viewer src="../eng/{pid:02d}/model.glb" camera-controls touch-action="pan-y" shadow-intensity="0.6" '
+              f'exposure="1.05" camera-orbit="-35deg 65deg auto" alt="3D-модель"></model-viewer>') if f.get("glb") else ""
+    figs = "".join(f'<figure{" class=wide" if n.startswith("cut_") else ""}><a href="../eng/{pid:02d}/{n}" target="_blank"><img src="../eng/{pid:02d}/{n}" loading="lazy" alt="{E(c)}"></a>'
+                   f'<figcaption>{E(c)}</figcaption></figure>' for n, c in f["images"])
+    fr = "".join(f"<tr><td>{E(x['joint'])}</td><td>{E(x['fastener'])}</td><td class='num'>{x['count']}</td>"
+                 f"<td class='num'>{'' if x['penetration'] is None else f'{x['penetration']:g} мм'}</td>"
+                 f"<td class='num'>{'' if not x['pilot'] else f'⌀{x['pilot']:g}'}</td></tr>" for x in d["fasteners"])
+    pr = []
+    for l in d["bom_purchase"]:
+        name = E(l.get("name") or "")
+        if l.get("url"):
+            name = f'<a href="{E(l["url"])}" target="_blank" rel="noopener">{name}</a>'
+        pr.append(f"<tr><td>{KIND_ENG.get(l['kind'], l['kind'])}</td><td>{name}<small style='display:block;color:#8a7d6d'>{E(l.get('note') or '')}</small></td>"
+                  f"<td class='num'>{l['qty']:g} {E(l.get('unit') or '')}</td><td class='num'>{'' if l.get('sum') is None else f'{l['sum']:.0f} ₽'}</td></tr>")
+    used = d["bom_used"]
+    used_lines = [f"{m['name']}: {m['qty']:g} {m['unit']}" for m in used["materials"]] + \
+                 [f"{m['name']}: {m['qty']} {m['unit']}" for m in used["fasteners"] + used["hardware"]] + \
+                 [f"{m['name']}: ≈{m['qty']:g} {m['unit']}" for m in used["consumables"]]
+    raw_iss = [i for i in d["issues"] if i["severity"] in ("error", "warning") and not i["code"].startswith("bom.")]
+    groups = {}
+    for i in raw_iss:                        # одинаковые замечания по разным соединениям — одной строкой
+        groups.setdefault((i["severity"], i["code"], i["message"].split(": ", 1)[-1]), []).append(i)
+    iss = []
+    for (sev, code, msg), items in groups.items():
+        first = dict(items[0])
+        if len(items) > 1:
+            names = ", ".join(x.get("joint") or ", ".join(x.get("parts") or []) for x in items)
+            first["message"] = f"{msg} — {len(items)} места: {names}"
+        iss.append(first)
+    il = "".join(f'<li class="{i["severity"]}"><b>{"Ошибка" if i["severity"] == "error" else "Внимание"}:</b> {E(i["message"])}'
+                 + (f'<small>Как исправить: {E(i["suggestion"])}</small>' if i.get("suggestion") else "") + "</li>" for i in iss[:14])
+    dl = " ".join(x for x in (f'<a href="../eng/{pid:02d}/model.step" download>STEP для FreeCAD</a>' if f.get("step") else "",
+                              f'<a href="../eng/{pid:02d}/model.glb" download>GLB</a>' if f.get("glb") else "") if x)
+    ov = d["overall_mm"]
+    return f"""<section class="eng"><h2>Инженерная проработка <span class="badge {st}">{label}</span></h2>
+<p class="lead" style="font-size:16px">Параметрическая 3D-модель с настоящими отверстиями, крепёж расставлен по правилам (Eurocode 5, упрощённо для DIY),
+раскрой с учётом пропила, закупка упаковками. Габарит модели {ov[0]:.0f}×{ov[1]:.0f}×{ov[2]:.0f} мм, масса ≈{d['mass_kg']:g} кг.
+Прочность не рассчитывалась.</p>
+{viewer}
+<div class="eng-grid" style="margin-top:16px">{figs}</div>
+{('<h3>Проверка проекта</h3><ul class="issues">' + il + '</ul>') if il else '<p class="note">Ошибок и предупреждений нет.</p>'}
+<h3>Крепёж по соединениям</h3><div class="tablewrap"><table><thead><tr><th>Соединение</th><th>Крепёж</th><th>Шт.</th><th>Заход</th><th>Пилот</th></tr></thead><tbody>{fr}</tbody></table></div>
+<h3>Фактический расход</h3><p class="note">{'<br>'.join(E(x) for x in used_lines)}</p>
+<h3>Закупка по инженерной модели — {d['total']:.0f} ₽</h3><div class="tablewrap"><table><thead><tr><th>Тип</th><th>Позиция</th><th>Кол-во</th><th>Сумма</th></tr></thead><tbody>{''.join(pr)}</tbody></table></div>
+<p class="dl" style="margin-top:12px">{dl}</p></section>"""
 
 
 def ph(p, have, pre, cls="", thumb=False):
@@ -198,6 +298,7 @@ function apply(){{const s=q.value.trim().toLowerCase();let n=0;
 <tbody>{''.join(rows)}</tbody></table></div>
 <p class="note" style="margin-top:18px">Источник идеи: <a href="{E(p['source'])}" target="_blank" rel="noopener">{E(p['source'][:90])}</a>.
 Проект переработан под шуруповёрт 12 В и ручной инструмент.</p>
+{eng_section(p['id'])}
 <div class="nav2">{f'<a href="{prev_p["id"]:02d}.html">← {E(prev_p["name"])}</a>' if prev_p else '<span></span>'}{f'<a href="{next_p["id"]:02d}.html">{E(next_p["name"])} →</a>' if next_p else ''}</div></div>"""
         (DOCS / "p" / f"{p['id']:02d}.html").write_text(page(f"{p['name']} — смета {p['total']} ₽", body, p["summary"], depth=1), encoding="utf-8")
     print(f"сайт: {len(est)} страниц, картинок {n_img}")

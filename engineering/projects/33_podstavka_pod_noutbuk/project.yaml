@@ -1,0 +1,75 @@
+# Подставка под ноутбук: пластина фанеры 470х250 на двух опорах-клиньях из бруска 20х30, спереди упор.
+project:
+  id: 33_podstavka_pod_noutbuk
+  name: "Подставка под ноутбук"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Выпилить из фанеры 12 мм пластину 470х250. Из бруска 20х30 сделать две опоры-клина высотой 20 и 70 мм.
+    Приклеить и прикрутить опоры снизу саморезами 25 мм. Спереди - упор из бруска, чтобы ноутбук не скользил.
+    Отшлифовать, покрыть лаком.
+
+stock:
+  - id: ply12
+    name: "Фанера ФК 12х505х505"
+    material: birch_plywood
+    type: sheet
+    thickness: 12
+    length: 505
+    width: 505
+    grain: any
+    sku: "634466"
+  - id: bar2030
+    name: "Брусок сухой строганый 20х30х2000"
+    material: pine
+    type: bar
+    section: 20x30
+    length: 2000
+    kerf: 1.5
+    sku: "626001"
+
+parts:
+  - id: top
+    name: Пластина-столешница
+    stock: ply12
+    length: 470
+    width: 250
+    orient: XYZ
+    at: [0, 0, 30]
+  - id: leg
+    name: Опора (лыжа) под пластиной
+    stock: bar2030
+    qty: 2
+    length: 250
+    instances:
+      - {at: [20, 0, 0], orient: YZX}
+      - {at: [420, 0, 0], orient: YZX}
+  - id: front_stop
+    name: Упор передний
+    stock: bar2030
+    length: 200
+    orient: XZY
+    at: [135, 0, 42]
+
+joints:
+  - {id: leg1_top, type: screw, part_a: "leg#1", part_b: top, fastener: {type: wood_screw, diameter: 3.5, length: 25}, glue: true}
+  - {id: leg2_top, type: screw, part_a: "leg#2", part_b: top, fastener: {type: wood_screw, diameter: 3.5, length: 25}, glue: true}
+  - {id: stop_top, type: screw, part_a: front_stop, part_b: top, fastener: {type: wood_screw, diameter: 3.5, length: 25}, glue: true}
+
+finishes:
+  - {id: f1, type: varnish_aerosol, parts: [top, leg, front_stop], coats: 1}
+
+steps:
+  - {title: "Пластина и опоры", add: [top, leg], joints: [leg1_top, leg2_top]}
+  - {title: "Передний упор", add: [front_stop], joints: [stop_top]}
+
+claims:
+  - {kind: overall, value: [470, 250], source: "шапка текста: 470×250, наклон 12°", tolerance: 5}
+  - {kind: part_dim, target: leg, value: [20, 70], source: "шаги текста: опоры-клинья высотой 20 и 70 мм"}
+
+ambiguities:
+  - "Текст описывает опоры как клинья переменной высоты (20 и 70 мм), создающие наклон 12° (что соответствует tg=50/250). Движок не умеет строить наклонённую плоскую деталь на двух опорах разной высоты — в модели обе опоры сделаны одинаковой высоты (30 мм, по ширине бруска), пластина стоит горизонтально. Реальный наклон и разность высот опор оставлены в claims как конфликт с моделью."
+  - "Ширина переднего упора (200 мм) и его положение по X в тексте не заданы — взяты произвольно, по центру пластины."
+
+constraints: {budget: 3000}

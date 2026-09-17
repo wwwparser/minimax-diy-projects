@@ -1,0 +1,81 @@
+# 54. Настенный Г-образный кронштейн для кашпо из стальной полосы 40×3.
+# Стена — плоскость y = 0 (вне модели). Вертикальная полоса плашмя к стене; горизонтальный вылет плашмя
+# внизу, торцом упирается в вертикальную. Внутренний угол стягивает крепёжный уголок 70×70×55×2:
+# вертикальная полка уголка лежит на лицевой грани вертикальной полосы, горизонтальная — на вылете;
+# каждая полка притянута болтом М6 к своей полосе.
+project:
+  id: 54_nastennyy_kronshteyn_dlya_kashpo_iz_stal
+  name: "Настенный кронштейн для кашпо из стальной полосы"
+  category: metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Отпилить от полосы 40×3 куски 300 и 250 мм ножовкой по металлу. Соединить их под 90° крепёжным уголком
+    на болтах М6 (отверстия 6 мм на 1-й скорости с каплей масла). На конце вылета просверлить отверстие под
+    карабин. Покрасить грунт-эмалью. Прикрутить к стене на дюбели, подвесить кашпо на цепи.
+
+stock:
+  - {id: strip40, name: "Полоса горячекатаная 40×3", material: steel, type: flat_bar, section: 3x40, length: 2500, kerf: 1.2, sku: "1088217"}
+  - {id: chain3, name: "Цепь оцинкованная d3", material: galvanized, type: chain, diameter: 3, sku: "128732"}
+
+parts:
+  - id: mount_arm
+    name: Вертикальная полоса (к стене)
+    stock: strip40
+    length: 250
+    orient: ZXY                     # L вверх, ширина 40 по X, толщина 3 по Y (к стене)
+    at: [0, 0, 0]
+    features:
+      - {type: hole, diameter: 6, position: {along_length: 30_from_end, along_width: center}}   # дюбель вверху
+      - {type: hole, diameter: 6, position: {along_length: 110, along_width: center}}           # дюбель ниже уголка
+  - id: reach_arm
+    name: Горизонтальный вылет
+    stock: strip40
+    length: 300
+    orient: YXZ                     # L от стены (Y), ширина по X, толщина 3 по Z
+    at: [0, 3, 0]
+    features:
+      - {type: hole, diameter: 6, position: {along_length: 20_from_end, along_width: center}}   # под карабин
+  - id: corner
+    name: Уголок крепёжный 70×70×55×2
+    purchased: true
+    profile: angle
+    wall: 2
+    length: 55                      # вдоль X
+    width: 70                       # полка на вылете (по Y)
+    thickness: 70                   # полка на вертикальной полосе (по Z)
+    material: galvanized
+    orient: XYZ
+    at: [-7.5, 3, 3]
+  - id: chain
+    name: Цепь для кашпо
+    stock: chain3
+    length: 400
+
+joints:
+  - {id: corner_to_mount, type: bolt, part_a: corner, part_b: mount_arm, fastener: {type: bolt, diameter: 6}, count: 1}
+  - {id: corner_to_reach, type: bolt, part_a: corner, part_b: reach_arm, fastener: {type: bolt, diameter: 6}, count: 1}
+  - {id: reach_on_mount, type: rest, part_a: reach_arm, part_b: mount_arm}
+  - {id: chain_hang, type: hang, part_a: chain, part_b: reach_arm}
+
+hardware:
+  - {id: wall_dowels, type: wall_dowel, qty: 2, mounts: [mount_arm], screws_per_unit: 0, name: "Дюбель 6×30 с шурупом", sku: "687547"}
+  - {id: carabiner, type: carabiner, qty: 1, mounts: [reach_arm], name: "Карабин пружинный d4", sku: "128610"}
+
+finishes:
+  - {id: paint, type: enamel_aerosol, parts: [mount_arm, reach_arm, corner], coats: 2}
+
+steps:
+  - {title: "Полосы 250 и 300 мм, отверстия", add: [mount_arm, reach_arm], joints: [reach_on_mount]}
+  - {title: "Уголок на болтах М6", add: [corner], joints: [corner_to_mount, corner_to_reach]}
+  - {title: "На стену, цепь с кашпо", add: [chain], joints: [chain_hang]}
+
+claims:
+  - {kind: part_dim, target: reach_arm, value: [300], source: "шапка текста (вылет 300 мм)", tolerance: 5}
+
+ambiguities:
+  - "Диаметр отверстия под карабин не назван — принято 6 мм."
+  - "Число дюбелей не названо — принято 2 (выше и ниже уголка)."
+  - "Горизонтальный вылет в модели снизу, уголок во внутреннем углу сверху; в тексте расположение не уточнено."
+
+constraints: {budget: 3000}

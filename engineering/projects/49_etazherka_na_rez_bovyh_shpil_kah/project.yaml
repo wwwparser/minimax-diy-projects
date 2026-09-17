@@ -1,0 +1,78 @@
+# 49. Этажерка на резьбовых шпильках: 3 полки 300х300 из фанеры 12мм нанизаны на 3 шпильки М8х1000,
+# расставленные по 3 из 4 углов квадрата 300х300 (4-й угол свободен), зажаты гайками+шайбами сверху/снизу.
+project:
+  id: 49_etazherka_na_rez_bovyh_shpil_kah
+  name: "Этажерка на резьбовых шпильках"
+  category: wood+metal
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Из двух листов фанеры 505х505 выпилить 3 квадрата 300х300, углы скруглить. Сложить полки стопкой,
+    просверлить сразу все отверстия 8 мм в трёх углах. Нанизать полки на шпильки, каждую зажать гайками
+    с шайбами сверху и снизу. Выставить уровень, покрыть лаком.
+
+stock:
+  - {id: ply12, name: "Фанера 12х505х505", material: birch_plywood, type: sheet, thickness: 12, length: 505, width: 505, grain: any, kerf: 1.5, sku: "634466"}
+  - {id: rod8, name: "Шпилька М8х1000", material: galvanized, type: threaded_rod, diameter: 8, length: 1000, kerf: 1.5, sku: "665878"}
+
+parts:
+  - id: shelf
+    name: Полка
+    stock: ply12
+    length: 300
+    width: 300
+    orient: XYZ
+    qty: 3
+    instances:
+      - {at: [0, 0, 94],  orient: XYZ}   # нижняя полка, центр ~100 мм
+      - {at: [0, 0, 491], orient: XYZ}   # средняя полка, центр ~497 мм
+      - {at: [0, 0, 888], orient: XYZ}   # верхняя полка, верх заподлицо с 900 мм
+    features:
+      - {type: hole, diameter: 8, position: {along_length: 20, along_width: 20}}
+      - {type: hole, diameter: 8, position: {along_length: 280, along_width: 20}}
+      - {type: hole, diameter: 8, position: {along_length: 20, along_width: 280}}
+
+  - id: rod
+    name: Шпилька М8х1000
+    stock: rod8
+    length: 1000
+    orient: ZXY
+    qty: 3
+    instances:
+      - {at: [16, 16, 0],  orient: ZXY}   # угол (20,20)
+      - {at: [276, 16, 0], orient: ZXY}   # угол (280,20)
+      - {at: [16, 276, 0], orient: ZXY}   # угол (20,280); 4-й угол (280,280) свободен
+
+joints:
+  - {id: ins_s1_r1, type: inserted, part_a: "shelf#1", part_b: "rod#1"}
+  - {id: ins_s1_r2, type: inserted, part_a: "shelf#1", part_b: "rod#2"}
+  - {id: ins_s1_r3, type: inserted, part_a: "shelf#1", part_b: "rod#3"}
+  - {id: ins_s2_r1, type: inserted, part_a: "shelf#2", part_b: "rod#1"}
+  - {id: ins_s2_r2, type: inserted, part_a: "shelf#2", part_b: "rod#2"}
+  - {id: ins_s2_r3, type: inserted, part_a: "shelf#2", part_b: "rod#3"}
+  - {id: ins_s3_r1, type: inserted, part_a: "shelf#3", part_b: "rod#1"}
+  - {id: ins_s3_r2, type: inserted, part_a: "shelf#3", part_b: "rod#2"}
+  - {id: ins_s3_r3, type: inserted, part_a: "shelf#3", part_b: "rod#3"}
+
+hardware:
+  - {id: nuts_m8, type: nut, qty: 18, mounts: ["rod#1", "rod#2", "rod#3"], name: "Гайка М8 DIN 934", sku: "101746"}
+  - {id: washers_m8, type: washer, qty: 18, mounts: ["rod#1", "rod#2", "rod#3"], name: "Шайба 8х16 DIN 125А", sku: "109300"}
+
+finishes:
+  - {id: varnish, type: varnish_aerosol, parts: [shelf], coats: 1}
+
+steps:
+  - {title: "Выпилить полки 300х300, просверлить отверстия 8 мм в трёх углах", add: [shelf], joints: []}
+  - {title: "Нанизать полки на шпильки, зажать гайками с шайбами", add: [rod], joints: [ins_s1_r1, ins_s1_r2, ins_s1_r3, ins_s2_r1, ins_s2_r2, ins_s2_r3, ins_s3_r1, ins_s3_r2, ins_s3_r3]}
+
+claims:
+  - {kind: overall, value: [300, 300, 900], source: "шапка текста: «3 полки 300х300, высота 900»", tolerance: 5}
+
+ambiguities:
+  - "Скругление углов полок («углы скруглить») декоративное — в модели полки оставлены прямоугольными 300х300, на несущую схему и расстановку крепежа это не влияет."
+  - "Точные отметки высот полок в тексте не заданы, кроме итоговой высоты 900 мм — приняты: нижняя полка ~100 мм, средняя ~497 мм, верхняя вплотную к 900 мм (верх верхней полки на отметке 900 мм)."
+  - "Схема расстановки шпилек — 3 из 4 углов квадрата 300х300 (4-й угол свободен), с отступом отверстий 20 мм от края (в тексте отступ не назван)."
+  - "Шпилька 1000 мм длиннее итоговой высоты 900 мм — нижний конец (~94 мм) служит опорой-ножкой на гайках, верхний остаток (~100 мм) выступает над верхней полкой (в тексте не уточнено, обрезается ли излишек)."
+  - "Гайки и шайбы посчитаны по 2 комплекта (сверху и снизу) на каждую полку на каждой шпильке: 3 полки х 3 шпильки х 2 = 18 гаек и 18 шайб — совпадает с ручной сметой (2 упак. гаек по 10 шт., 1 упак. шайб на 20 шт.)."
+
+constraints: {budget: 3000}
