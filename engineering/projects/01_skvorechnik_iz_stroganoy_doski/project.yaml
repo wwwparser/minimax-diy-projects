@@ -6,9 +6,9 @@ project:
   units: mm
   tool_profile: cordless_12v_36nm
   source_text: >
-    Нарезать доску 20×145 в стусле: перед/зад 300, бока 280, дно 110, крыша 200 мм. Коронкой 50 мм
+    Нарезать доску 20×145 в стусле: перед/зад 300, бока 280, дно 145 (распустить по ширине до 105), крыша 200 мм. Коронкой 50 мм
     высверлить леток в передней стенке на 5 см ниже верха, ниже — отверстие 8 мм под жёрдочку.
-    Собрать короб на саморезы 32 мм, предварительно засверлив 3 мм. Крышу посадить на карточную
+    Собрать короб на саморезы 3,5×41 мм, предварительно засверлив 3 мм. Крышу посадить на карточную
     петлю. Повесить на высоте 3-5 м летком на восток или юг.
 
 stock:
@@ -53,17 +53,17 @@ parts:
     at: [0, -15, 300]
 
 joints:
-  - {id: bottom_left,  type: screw, part_a: "side#1", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
-  - {id: bottom_right, type: screw, part_a: "side#2", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5, length: 32}}
-  - {id: front_left,   type: screw, part_a: front, part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
-  - {id: front_right,  type: screw, part_a: front, part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
-  - {id: back_left,    type: screw, part_a: back,  part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
-  - {id: back_right,   type: screw, part_a: back,  part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}}
+  - {id: bottom_left,  type: screw, part_a: "side#1", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: bottom_right, type: screw, part_a: "side#2", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: front_left,   type: screw, part_a: front, part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: front_right,  type: screw, part_a: front, part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: back_left,    type: screw, part_a: back,  part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: back_right,   type: screw, part_a: back,  part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5}}
   - {id: roof_rest,    type: rest,  part_a: roof,  part_b: front}
-  - {id: roof_hinge,   type: hinge, part_a: roof,  part_b: back, hardware: roof_hinge}
+  - {id: roof_hinge,   type: hinge, part_a: roof,  part_b: back, hardware: roof_hinge, hardware_count: 2}
 
 hardware:
-  - {id: roof_hinge, type: butt_hinge, size: "25", qty: 1}
+  - {id: roof_hinge, type: butt_hinge, size: "25", qty: 2, screws: {type: wood_screw, diameter: 3.5, length: 16}}
 
 steps:
   - {title: "Боковины и дно", add: [side, bottom], joints: [bottom_left, bottom_right]}
@@ -72,13 +72,11 @@ steps:
   - {title: "Крыша на петле", add: [roof], joints: [roof_rest, roof_hinge]}
 
 claims:
-  - {kind: overall, value: [150, 150, 300], source: "шапка текста", tolerance: 5}
-  - {kind: part_dim, target: bottom, value: [145, 110], source: "шаги текста"}
+  - {kind: overall, value: [145, 200, 320], source: "исправленная шапка: 145×200×320 мм", tolerance: 5}
+  - {kind: part_dim, target: bottom, value: [145, 105], source: "исправленные шаги: дно 105×145"}
 
 ambiguities:
-  - "Шапка текста заявляет дно 150×150, но доска 20×145 после сборки короба (две боковины по 20 мм) даёт дно максимум 105×145 мм — размер из шапки физически не влезает в ширину доски."
-  - "В шагах указано «дно 110 мм» — тоже не совпадает с реально влезающими 105 мм (145-2×20); оставлено как конфликт в claims, а не подогнано."
-  - "Жёрдочка (шкант под леток) в тексте не описана как отдельная деталь — отверстие 8 мм сделано, сама жёрдочка не смоделирована (нет круглого шканта в каталоге)."
-  - "Саморезы 51 мм из сметы предназначены для навески скворечника на столб — это не часть сборки короба, поэтому в joints не участвуют."
+  - "Жёрдочка под летком (шкант d8) не смоделирована отдельной деталью — только отверстие 8 мм."
+  - "Саморезы 51 мм из сметы — для навески на столб, в сборке короба не участвуют."
 
 constraints: {budget: 3000}

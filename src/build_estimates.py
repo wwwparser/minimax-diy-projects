@@ -10,13 +10,42 @@ from openpyxl.styles import Font, Alignment, PatternFill
 
 ROOT = Path(__file__).resolve().parent.parent
 BUDGET = 3000
-KIND_ORDER = ["материал", "крепёж", "отделка", "оснастка", "расходник"]
+KIND_ORDER = ["материал", "крепёж", "фурнитура", "отделка", "оснастка", "расходник"]
+
+
+def engineering_override(p):
+    """Если проект прошёл diy-project-engineer: текст из engineering/corrections.yaml, смета — закупка движка."""
+    import yaml
+    corr = (yaml.safe_load((ROOT / "engineering" / "corrections.yaml").read_text(encoding="utf-8")) or {}).get(p["id"], {})
+    src = next(iter(sorted((ROOT / "engineering" / "build").glob(f"{p['id']:02d}_*/html_data.json"))), None)
+    if not src:
+        return None
+    d = json.loads(src.read_text(encoding="utf-8"))
+    lines = []
+    for l in d["bom_purchase"]:
+        if l.get("sum") is None:
+            continue
+        lines.append({"code": int(l["sku"]) if str(l.get("sku") or "").isdigit() else l.get("sku"), "qty": l["qty"],
+                      "kind": l["kind"], "for": l.get("note") or "", "title": l["name"], "price": l["price"],
+                      "unit": l.get("unit") or "шт", "sum": l["sum"], "url": l.get("url") or ""})
+    lines.sort(key=lambda l: KIND_ORDER.index(l["kind"]) if l["kind"] in KIND_ORDER else 9)
+    q = {k: v for k, v in p.items() if k != "bom"}
+    for k in ("size", "summary", "steps"):
+        if corr.get(k):
+            q[k] = corr[k]
+    q.update(bom=lines, total=round(d["total"]), tools_total=round(d["tools_total"]), engineered=True,
+             fixes=corr.get("fixes", []))
+    return q
 
 def main():
     con = sqlite3.connect(ROOT / "data" / "catalog.sqlite3")
     projects = json.loads((ROOT / "data" / "projects.json").read_text(encoding="utf-8"))
     out, problems = [], []
     for p in projects:
+        eng = engineering_override(p)
+        if eng:
+            out.append(eng)
+            continue
         lines, total = [], 0
         for it in p["bom"]:
             row = con.execute("select title,price,unit,url,image from products where code=?", (it["code"],)).fetchone()

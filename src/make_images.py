@@ -52,7 +52,7 @@ def project(gpt: G.ChatGPT, item):
 
 
 if __name__ == "__main__":
-    gpt = G.ChatGPT(session=SESSION, log=log, rate_per_hour=12, shots_dir=OUT / "blocks")
+    gpt = G.ChatGPT(session=SESSION, log=log, shots_dir=OUT / "blocks")   # темп и опрос — бережные умолчания модуля
     items = json.loads((OUT / "prompts.json").read_text(encoding="utf-8"))
     only = {int(x) for x in sys.argv[1:] if x.isdigit()}
     gpt.ensure_tab()
@@ -61,7 +61,10 @@ if __name__ == "__main__":
             continue
         for attempt in range(4):
             try:
+                todo = any(not (OUT / f"{it['id']:02d}_{k}.png").exists() for k in KINDS)
                 project(gpt, it)
+                if todo:
+                    time.sleep(240)          # пауза между чатами: блок приходит сразу после нового чата
                 break
             except G.WrongTab as e:
                 sys.exit(f"СТОП: {e}")

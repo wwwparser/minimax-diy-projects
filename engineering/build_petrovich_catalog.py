@@ -297,6 +297,11 @@ def _clamp(m, t):
     return {"kind": "tool", "tool": {"type": "clamp"}}
 
 
+@rule("Ключ комбинированный рожково-накидной%", r"(\d+) мм")
+def _wrench(m, t):
+    return {"kind": "tool", "tool": {"type": "wrench", "diameter": float(m[1])}}
+
+
 def build():
     con = sqlite3.connect(ROOT / "data" / "catalog.sqlite3")
     items, seen = [], set()

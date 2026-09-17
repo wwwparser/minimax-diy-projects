@@ -1,5 +1,8 @@
-# Табурет-стремянка: 2 боковины (каждая из 2 склеенных досок 20х145), 2 ступени (по 2 доски на ступень)
-# на опорных планках бруска 40х40, задняя горизонтальная распорка.
+# Табурет-стремянка 400×435×450: две ступени лесенкой.
+# Каждая боковина — три доски 20×145 на клею: передняя короче (225 мм) — нижняя ступень,
+# средняя и задняя во всю высоту (450) — верхняя ступень-сиденье. Ступени лежат на опорных
+# брусках 40×40, прикрученных к боковинам изнутри. Сзади внизу — распорка из бруска.
+# X — ширина (боковины x 0..20 и 380..400), Y — глубина (перед y=0), Z — вверх.
 project:
   id: 35_taburet_stremyanka
   name: "Табурет-стремянка"
@@ -7,124 +10,116 @@ project:
   units: mm
   tool_profile: cordless_12v_36nm
   source_text: >
-    Боковины: из доски 20х145 склеить 2 пакета по 2 доски, разметить лесенку и выпилить ножовкой.
-    Ступени 400 мм из доски 20х145 по 2 на ступень. Под ступени прикрутить опорные планки из бруска 40х40.
-    Собрать на клей и конструкционные саморезы, сзади - диагональная распорка. Лак в 2 слоя,
-    на ступени - антискользящие полосы.
+    Боковины: из доски 20×145 склеить по три доски (передняя 225 мм, средняя и задняя 450 мм) — получится
+    лесенка. Нижняя ступень — одна доска 360 мм на высоте 225, верхняя — две доски 360 мм на высоте 450.
+    Под ступени изнутри боковин прикрутить опорные бруски 40×40. Сзади внизу — распорка из бруска 40×40.
+    Собрать на клей и конструкционные саморезы, лак в 2 слоя.
 
 stock:
-  - id: board145
-    name: "Доска сухая строганая 20х145х2000"
-    material: pine
-    type: board
-    section: 20x145
-    length: 2000
-    kerf: 1.5
-    sku: "102355"
-  - id: bar4040
-    name: "Брусок сухой строганый 40х40х2000 профилированный"
-    material: pine
-    type: bar
-    section: 40x40
-    length: 2000
-    kerf: 1.5
-    sku: "1092607"
+  - {id: board145, name: "Доска 20×145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+  - {id: bar4040, name: "Брусок 40×40", material: pine, type: bar, section: 40x40, length: 2000, kerf: 1.5, sku: "1092607"}
 
 parts:
-  - id: panel
-    name: "Боковина (доска, склеенная в пакет по 2)"
+  - id: side_front
+    name: Боковина, передняя доска (225)
     stock: board145
-    qty: 4
+    qty: 2
+    length: 225
+    instances:
+      - {at: [0, 0, 0], orient: ZYX}
+      - {at: [380, 0, 0], orient: ZYX}
+  - id: side_mid
+    name: Боковина, средняя доска (450)
+    stock: board145
+    qty: 2
     length: 450
     instances:
-      # левая боковина: 2 доски встык по глубине (0..145 и 145..290), правая - симметрично на x=380..400
-      - {at: [0, 0, 0], orient: ZYX}
       - {at: [0, 145, 0], orient: ZYX}
-      - {at: [380, 0, 0], orient: ZYX}
       - {at: [380, 145, 0], orient: ZYX}
+  - id: side_back
+    name: Боковина, задняя доска (450)
+    stock: board145
+    qty: 2
+    length: 450
+    instances:
+      - {at: [0, 290, 0], orient: ZYX}
+      - {at: [380, 290, 0], orient: ZYX}
   - id: cleat_lo
-    name: "Опорная планка под ступень 1 (нижнюю)"
+    name: Опорный брусок нижней ступени
     stock: bar4040
     qty: 2
-    length: 290
+    length: 145
     instances:
-      - {at: [20, 0, 90], orient: YXZ}     # ступень 1, левая боковина
-      - {at: [340, 0, 90], orient: YXZ}    # ступень 1, правая боковина
+      - {at: [20, 0, 165], orient: YXZ}
+      - {at: [340, 0, 165], orient: YXZ}
   - id: cleat_hi
-    name: "Опорная планка под ступень 2 (верхнюю)"
+    name: Опорный брусок верхней ступени
     stock: bar4040
     qty: 2
     length: 290
     instances:
-      - {at: [20, 0, 240], orient: YXZ}    # ступень 2, левая боковина
-      - {at: [340, 0, 240], orient: YXZ}   # ступень 2, правая боковина
+      - {at: [20, 145, 390], orient: YXZ}
+      - {at: [340, 145, 390], orient: YXZ}
   - id: tread_lo
-    name: "Доска ступени 1 (нижней)"
+    name: Нижняя ступень
     stock: board145
-    qty: 2
     length: 360
-    instances:
-      - {at: [20, 0, 130], orient: XYZ}    # ступень 1, доска а (перед)
-      - {at: [20, 145, 130], orient: XYZ}  # ступень 1, доска б (зад)
+    orient: XYZ
+    at: [20, 0, 205]
   - id: tread_hi
-    name: "Доска ступени 2 (верхней)"
+    name: Верхняя ступень-сиденье
     stock: board145
     qty: 2
     length: 360
     instances:
-      - {at: [20, 0, 280], orient: XYZ}    # ступень 2, доска а
-      - {at: [20, 145, 280], orient: XYZ}  # ступень 2, доска б
+      - {at: [20, 145, 430], orient: XYZ}
+      - {at: [20, 290, 430], orient: XYZ}
   - id: brace
-    name: "Диагональная распорка сзади (упрощена до горизонтальной)"
+    name: Задняя распорка
     stock: bar4040
     length: 360
-    orient: XZY
-    at: [20, 250, 180]
+    orient: XYZ
+    at: [20, 395, 0]
 
 joints:
-  - {id: glue_left, type: glue, part_a: "panel#1", part_b: "panel#2"}
-  - {id: glue_right, type: glue, part_a: "panel#3", part_b: "panel#4"}
-
-  - {id: cleat_lo1_panel1, type: screw, part_a: "panel#1", part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_lo1_panel2, type: screw, part_a: "panel#2", part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_lo2_panel3, type: screw, part_a: "panel#3", part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_lo2_panel4, type: screw, part_a: "panel#4", part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_hi1_panel1, type: screw, part_a: "panel#1", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_hi1_panel2, type: screw, part_a: "panel#2", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_hi2_panel3, type: screw, part_a: "panel#3", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-  - {id: cleat_hi2_panel4, type: screw, part_a: "panel#4", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 3.5, length: 51}, glue: true}
-
-  - {id: tread_lo1_cleat1, type: screw, part_a: "tread_lo#1", part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_lo1_cleat2, type: screw, part_a: "tread_lo#1", part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_lo2_cleat1, type: screw, part_a: "tread_lo#2", part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_lo2_cleat2, type: screw, part_a: "tread_lo#2", part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_hi1_cleat1, type: screw, part_a: "tread_hi#1", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_hi1_cleat2, type: screw, part_a: "tread_hi#1", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_hi2_cleat1, type: screw, part_a: "tread_hi#2", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: tread_hi2_cleat2, type: screw, part_a: "tread_hi#2", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-
-  - {id: brace_left, type: screw, part_a: "panel#2", part_b: brace, fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
-  - {id: brace_right, type: screw, part_a: "panel#4", part_b: brace, fastener: {type: wood_screw, diameter: 4.0, length: 40}, glue: true}
+  # боковины склеены из досок
+  - {id: glue_l_fm, type: glue, part_a: "side_front#1", part_b: "side_mid#1"}
+  - {id: glue_l_mb, type: glue, part_a: "side_mid#1", part_b: "side_back#1"}
+  - {id: glue_r_fm, type: glue, part_a: "side_front#2", part_b: "side_mid#2"}
+  - {id: glue_r_mb, type: glue, part_a: "side_mid#2", part_b: "side_back#2"}
+  # опорные бруски — через боковину в брусок
+  - {id: cl_lo_l, type: screw, part_a: "side_front#1", part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: cl_lo_r, type: screw, part_a: "side_front#2", part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: cl_hi_lm, type: screw, part_a: "side_mid#1", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: cl_hi_lb, type: screw, part_a: "side_back#1", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: cl_hi_rm, type: screw, part_a: "side_mid#2", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: cl_hi_rb, type: screw, part_a: "side_back#2", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  # ступени — сверху в опорные бруски
+  - {id: tr_lo_l, type: screw, part_a: tread_lo, part_b: "cleat_lo#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: tr_lo_r, type: screw, part_a: tread_lo, part_b: "cleat_lo#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: tr_hi1_l, type: screw, part_a: "tread_hi#1", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: tr_hi1_r, type: screw, part_a: "tread_hi#1", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: tr_hi2_l, type: screw, part_a: "tread_hi#2", part_b: "cleat_hi#1", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: tr_hi2_r, type: screw, part_a: "tread_hi#2", part_b: "cleat_hi#2", fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  # распорка — через заднюю доску боковины в торец бруска
+  - {id: brace_l, type: screw, part_a: "side_back#1", part_b: brace, fastener: {type: wood_screw, diameter: 4.0}, glue: true}
+  - {id: brace_r, type: screw, part_a: "side_back#2", part_b: brace, fastener: {type: wood_screw, diameter: 4.0}, glue: true}
 
 finishes:
-  - {id: f1, type: varnish, parts: [panel, tread_lo, tread_hi, cleat_lo, cleat_hi, brace], coats: 2}
+  - {id: f1, type: varnish, parts: all, coats: 2}
 
 steps:
-  - {title: "Боковины: склейка пакетов из 2 досок", add: [panel], joints: [glue_left, glue_right]}
-  - {title: "Опорные планки и ступень 1", add: [cleat_lo, tread_lo], joints: [cleat_lo1_panel1, cleat_lo1_panel2, cleat_lo2_panel3, cleat_lo2_panel4, tread_lo1_cleat1, tread_lo1_cleat2, tread_lo2_cleat1, tread_lo2_cleat2]}
-  - {title: "Опорные планки и ступень 2", add: [cleat_hi, tread_hi], joints: [cleat_hi1_panel1, cleat_hi1_panel2, cleat_hi2_panel3, cleat_hi2_panel4, tread_hi1_cleat1, tread_hi1_cleat2, tread_hi2_cleat1, tread_hi2_cleat2]}
-  - {title: "Задняя распорка", add: [brace], joints: [brace_left, brace_right]}
+  - {title: "Склеить боковины из трёх досок", add: [side_front, side_mid, side_back], joints: [glue_l_fm, glue_l_mb, glue_r_fm, glue_r_mb]}
+  - {title: "Опорные бруски изнутри боковин", add: [cleat_lo, cleat_hi], joints: [cl_lo_l, cl_lo_r, cl_hi_lm, cl_hi_lb, cl_hi_rm, cl_hi_rb]}
+  - {title: "Задняя распорка", add: [brace], joints: [brace_l, brace_r]}
+  - {title: "Ступени на клей и саморезы", add: [tread_lo, tread_hi], joints: [tr_lo_l, tr_lo_r, tr_hi1_l, tr_hi1_r, tr_hi2_l, tr_hi2_r]}
 
 claims:
-  - {kind: overall, value: [400, 350, 450], source: "шапка текста: 400×350, две ступени, высота 450 мм", tolerance: 5}
-  - {kind: part_dim, target: tread_lo, value: [400], source: "шаги текста: ступени 400 мм"}
+  - {kind: overall, value: [400, 435, 450], source: "исправленная шапка: 400×435×450 мм", tolerance: 5}
+  - {kind: part_dim, target: tread_lo, value: [360, 145], source: "исправленные шаги: ступень 360 мм"}
 
 ambiguities:
-  - "Ширина боковины в шапке текста (350 мм) не сходится с моделью: боковина физически состоит из 2 досок по 145 мм (склеенный пакет) = 290 мм, а не 350 мм. Ширина/глубина ступени взята равной этим же 290 мм (2 доски по 145). Конфликт оставлен в claims."
-  - "Явная длина ступени 400 мм из текста конфликтует с моделью (360 мм): при длине 400 мм ступень физически проходит сквозь боковины (панели без вырезов), поэтому в модели ступень укорочена до просвета между боковинами (360 мм). Конфликт оставлен в claims как spec.conflict_part."
-  - "Точная форма «лесенки» (силуэт ступенчатого выреза боковины) в тексте не описана размерами - в модели боковина сделана прямоугольной (без выреза); реальный проект предполагает фигурный пропил ножовкой, который не меняет несущую геометрию."
-  - "«Диагональная распорка сзади» в тексте не имеет размеров и угла - инженерный движок не строит наклонные детали, поэтому распорка смоделирована как горизонтальная перекладина между боковинами на высоте ~180-220 мм, эквивалентная по функции."
-  - "Высоты ступеней (150 и 300 мм от пола) и положение опорных планок в тексте не заданы - взяты равномерно от 0 до 450 мм."
-  - "Антискользящие полосы на ступенях - расходник/декор, в модель как геометрия не включён."
+  - "Антискользящие полосы на ступенях — расходник, в модели не показаны."
+  - "Нагрузка на стремянку не рассчитывалась: конструкция на клею и конструкционных саморезах, для взрослого — проверить на устойчивость."
 
 constraints: {budget: 3000}

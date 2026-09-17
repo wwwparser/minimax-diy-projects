@@ -2,14 +2,14 @@
 # между торцами - ручка из бруска 20х45. Клей + саморезы 32мм, лак.
 # Оси: X - длина короба (0..500), Y - глубина (0..145), Z - высота (дно 0..20, борт/торец от 20 вверх).
 project:
-  id: yaschik_dlya_instrumentov_s_ruchkoy_027
+  id: 27_yaschik_dlya_instrumentov_s_ruchkoy
   name: "Ящик для инструментов с ручкой"
   category: woodworking
   units: mm
   tool_profile: cordless_12v_36nm
   source_text: >
     Нарезать доску 20х145: дно 500, 2 борта 500, 2 торца 250 мм (верх торцов — «домиком» в стусле).
-    Собрать короб на клей и саморезы 32 мм. Между торцами прикрутить ручку из бруска 20х45 длиной 540 мм.
+    Собрать короб на клей и саморезы 3,5×41 мм (дно к торцам — 3,5×51). Между торцами прикрутить ручку из бруска 20х45 длиной 540 мм.
     Скруглить ручку шкуркой. Покрыть лаком.
 
 stock:
@@ -64,14 +64,14 @@ parts:
     at: [-20, 50, 270]
 
 joints:
-  - {id: side1_end1, type: screw, part_a: "side#1", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: side1_end2, type: screw, part_a: "side#1", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: side2_end1, type: screw, part_a: "side#2", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: side2_end2, type: screw, part_a: "side#2", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: bottom_side1, type: screw, part_a: bottom, part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: bottom_end1, type: screw, part_a: bottom, part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5, length: 32}, glue: true}
-  - {id: handle_end1, type: screw, part_a: handle, part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5}}
-  - {id: handle_end2, type: screw, part_a: handle, part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: side1_end1, type: screw, part_a: "side#1", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: side1_end2, type: screw, part_a: "side#1", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: side2_end1, type: screw, part_a: "side#2", part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: side2_end2, type: screw, part_a: "side#2", part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: bottom_side1, type: screw, part_a: bottom, part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: bottom_end1, type: screw, part_a: bottom, part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: handle_end1, type: screw, part_a: handle, part_b: "end#1", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
+  - {id: handle_end2, type: screw, part_a: handle, part_b: "end#2", fastener: {type: wood_screw, diameter: 3.5}, glue: true}
 
 finishes:
   - {id: f1, type: varnish_aerosol, parts: all, coats: 1, sku: "1098186"}
@@ -83,12 +83,10 @@ steps:
   - {title: "Скруглить ручку шкуркой, покрыть лаком", add: [], joints: []}
 
 claims:
-  - {kind: overall, value: [500, 200, 250], source: "шапка текста", tolerance: 5}
+  - {kind: overall, value: [540, 145, 290], source: "исправленная шапка: 540×145×290 мм (с ручкой)", tolerance: 5}
 
 ambiguities:
-  - "Шапка текста заявляет габарит 500×200×250. Глубина короба по модели 145 мм (ширина доски 20×145), а не 200 — конфликт оставлен в claims. Высота торцов (домиком) 250 мм совпадает с моделью, но общая высота изделия с ручкой поверху больше (дно 20 + торец 250 + ручка 45 = 315 мм)."
-  - "Торцы «домиком» смоделированы как пятиугольник (прямоугольная нижняя часть + треугольный скат) с шириной 105 мм (роспуск из доски 145 мм) — ширина ската текстом не задана числом, скат принят симметричным с пиком по центру."
-  - "Ручка длиной 540 мм длиннее короба (500 мм) на 40 мм — выступает по 20 мм за каждый торец; текст это не поясняет явно, принято как выступающие концы ручки."
-  - "Засверловка/направление саморезов между ручкой и пиком торца — упрощено: ручка крепится к верхней (пиковой) кромке торца."
+  - "Торцы «домиком»: скат симметричный, пик по центру; ширина торца 105 мм — роспуск доски 145."
+  - "Ручка 540 мм выступает за торцы на 20 мм с каждой стороны — удобнее браться."
 
 constraints: {budget: 3000}

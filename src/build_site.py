@@ -89,6 +89,10 @@ ul.issues li{background:var(--card);border:1px solid var(--line);border-left:4px
 ul.issues li.error{border-left-color:#c0392b}
 ul.issues small{display:block;color:var(--muted);margin-top:3px}
 .dl a{margin-right:14px}
+ul.issues li.fixed{border-left-color:#2f8f5b}
+details.assume{margin:14px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+details.assume summary{cursor:pointer;font-weight:700;color:var(--muted)}
+details.assume li{margin:6px 0;color:var(--muted)}
 """
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -157,6 +161,33 @@ def eng_assets(pid: int):
     return data
 
 
+ENG_FIXES = {}
+try:
+    import yaml as _yaml
+    ENG_FIXES = {int(k): (v or {}).get("fixes", []) for k, v in (_yaml.safe_load(
+        (ROOT / "engineering" / "corrections.yaml").read_text(encoding="utf-8")) or {}).items()}
+except FileNotFoundError:
+    pass
+
+
+def group_issues(items):
+    """Одинаковые по сути замечания (код + совет) — одной строкой с числом мест, без технических id."""
+    import re
+    groups = {}
+    for i in items:
+        key = (i["severity"], i["code"], i.get("suggestion") or "")
+        groups.setdefault(key, []).append(i)
+    out = []
+    for (sev, code, sug), g in groups.items():
+        first = dict(g[0])
+        msg = re.sub(r"^[\w#]+: ", "", first["message"])
+        if len(g) > 1:
+            msg = f"{msg} (так в {len(g)} соединениях)"
+        first["message"] = msg
+        out.append(first)
+    return out
+
+
 def eng_section(pid: int) -> str:
     d = eng_assets(pid)
     if not d:
@@ -168,9 +199,13 @@ def eng_section(pid: int) -> str:
               f'exposure="1.05" camera-orbit="-35deg 65deg auto" alt="3D-модель"></model-viewer>') if f.get("glb") else ""
     figs = "".join(f'<figure{" class=wide" if n.startswith("cut_") else ""}><a href="../eng/{pid:02d}/{n}" target="_blank"><img src="../eng/{pid:02d}/{n}" loading="lazy" alt="{E(c)}"></a>'
                    f'<figcaption>{E(c)}</figcaption></figure>' for n, c in f["images"])
-    fr = "".join(f"<tr><td>{E(x['joint'])}</td><td>{E(x['fastener'])}</td><td class='num'>{x['count']}</td>"
+    def jname(x):
+        if x.get("part_a_name") and x.get("part_b_name"):
+            return f"{x['part_a_name']} → {x['part_b_name']}"
+        return x.get("part_a_name") or x["joint"]
+    fr = "".join(f"<tr><td>{E(jname(x))}</td><td>{E(x['fastener'])}</td><td class='num'>{x['count']}</td>"
                  f"<td class='num'>{'' if x['penetration'] is None else f'{x['penetration']:g} мм'}</td>"
-                 f"<td class='num'>{'' if not x['pilot'] else f'⌀{x['pilot']:g}'}</td></tr>" for x in d["fasteners"])
+                 f"<td class='num'>{'' if not x['pilot'] else f'сверло {x['pilot']:g} мм'}</td></tr>" for x in d["fasteners"])
     pr = []
     for l in d["bom_purchase"]:
         name = E(l.get("name") or "")
@@ -182,17 +217,9 @@ def eng_section(pid: int) -> str:
     used_lines = [f"{m['name']}: {m['qty']:g} {m['unit']}" for m in used["materials"]] + \
                  [f"{m['name']}: {m['qty']} {m['unit']}" for m in used["fasteners"] + used["hardware"]] + \
                  [f"{m['name']}: ≈{m['qty']:g} {m['unit']}" for m in used["consumables"]]
-    raw_iss = [i for i in d["issues"] if i["severity"] in ("error", "warning") and not i["code"].startswith("bom.")]
-    groups = {}
-    for i in raw_iss:                        # одинаковые замечания по разным соединениям — одной строкой
-        groups.setdefault((i["severity"], i["code"], i["message"].split(": ", 1)[-1]), []).append(i)
-    iss = []
-    for (sev, code, msg), items in groups.items():
-        first = dict(items[0])
-        if len(items) > 1:
-            names = ", ".join(x.get("joint") or ", ".join(x.get("parts") or []) for x in items)
-            first["message"] = f"{msg} — {len(items)} места: {names}"
-        iss.append(first)
+    iss = group_issues([i for i in d["issues"] if i["severity"] in ("error", "warning") and not i["code"].startswith("bom.")])
+    assumptions = [i["message"].split(": ", 1)[-1] for i in d["issues"] if i["code"] == "spec.ambiguity"]
+    fixes = ENG_FIXES.get(pid, [])
     il = "".join(f'<li class="{i["severity"]}"><b>{"Ошибка" if i["severity"] == "error" else "Внимание"}:</b> {E(i["message"])}'
                  + (f'<small>Как исправить: {E(i["suggestion"])}</small>' if i.get("suggestion") else "") + "</li>" for i in iss[:14])
     dl = " ".join(x for x in (f'<a href="../eng/{pid:02d}/model.step" download>STEP для FreeCAD</a>' if f.get("step") else "",
@@ -204,10 +231,12 @@ def eng_section(pid: int) -> str:
 Прочность не рассчитывалась.</p>
 {viewer}
 <div class="eng-grid" style="margin-top:16px">{figs}</div>
-{('<h3>Проверка проекта</h3><ul class="issues">' + il + '</ul>') if il else '<p class="note">Ошибок и предупреждений нет.</p>'}
-<h3>Крепёж по соединениям</h3><div class="tablewrap"><table><thead><tr><th>Соединение</th><th>Крепёж</th><th>Шт.</th><th>Заход</th><th>Пилот</th></tr></thead><tbody>{fr}</tbody></table></div>
+{('<h3>Проверка проекта</h3><ul class="issues">' + il + '</ul>') if il else '<p class="note">Проверка пройдена: ошибок и предупреждений нет.</p>'}
+{('<h3>Что исправлено в исходной инструкции</h3><ul class="issues">' + ''.join(f'<li class="fixed">{E(x)}</li>' for x in fixes) + '</ul>') if fixes else ''}
+{('<details class="assume"><summary>Допущения модели (' + str(len(assumptions)) + ')</summary><ul>' + ''.join(f'<li>{E(a)}</li>' for a in assumptions) + '</ul></details>') if assumptions else ''}
+<h3>Крепёж по соединениям</h3><div class="tablewrap"><table><thead><tr><th>Соединение</th><th>Крепёж</th><th>Шт.</th><th>Заход</th><th>Засверловка</th></tr></thead><tbody>{fr}</tbody></table></div>
 <h3>Фактический расход</h3><p class="note">{'<br>'.join(E(x) for x in used_lines)}</p>
-<h3>Закупка по инженерной модели — {d['total']:.0f} ₽</h3><div class="tablewrap"><table><thead><tr><th>Тип</th><th>Позиция</th><th>Кол-во</th><th>Сумма</th></tr></thead><tbody>{''.join(pr)}</tbody></table></div>
+<p class="note">Смета «Что купить в Петровиче» выше посчитана этой же моделью: упаковки, замены и оснастка.</p>
 <p class="dl" style="margin-top:12px">{dl}</p></section>"""
 
 
@@ -273,7 +302,7 @@ function apply(){{const s=q.value.trim().toLowerCase();let n=0;
         rows, groups = [], {}
         for l in p["bom"]:
             groups.setdefault(l["kind"], []).append(l)
-        for kind in ("материал", "крепёж", "отделка", "расходник", "оснастка"):
+        for kind in ("материал", "крепёж", "фурнитура", "отделка", "расходник", "оснастка"):
             if kind not in groups:
                 continue
             rows.append(f'<tr class="group"><td colspan="5">{kind}</td></tr>')
