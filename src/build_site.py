@@ -13,8 +13,9 @@ from steps4 import STEPS4
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 IMG_SRC = ROOT / "out" / "images"
-SIZES = {"illustration": 1400, "poster": 1200, "howto": 1200}
-KIND_RU = {"illustration": "Иллюстрация", "poster": "Плакат", "howto": "Как сделать"}
+SIZES = {"illustration": 1400, "poster": 1200, "howto": 1200, "howto2": 1200, "poster_b": 1200, "howto_b": 1200}
+KIND_RU = {"illustration": "Иллюстрация", "poster": "Плакат", "howto": "Как сделать",
+           "howto2": "Как сделать: сборка", "poster_b": "Плакат: вариант Б", "howto_b": "Как сделать: вариант Б"}
 E = html.escape
 
 CSS = """
@@ -80,6 +81,10 @@ tr.sum td{font-weight:800}
 .badge{display:inline-block;border-radius:999px;padding:4px 12px;font:700 13px Manrope,sans-serif;margin-left:8px;vertical-align:middle}
 .badge.ok{background:#d9efe4;color:#1f5c43}.badge.warning{background:#f7ead0;color:#7a5410}.badge.error{background:#f6d7d2;color:#8a2a1c}
 model-viewer{width:100%;height:440px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.instr{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;margin:10px 0 8px}
+.instr figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.instr figcaption{padding:10px 14px;font-size:15px;line-height:1.45}
+@media (max-width:480px){.instr{grid-template-columns:1fr}}
 .eng-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
 .eng-grid figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .eng-grid figcaption{padding:8px 12px;font-size:14px;color:#555}
@@ -145,8 +150,10 @@ def eng_assets(src: Path, sub: str):
         shutil.copy(b / "model.glb", dst / "model.glb"); files["glb"] = "model.glb"
     if (b / "model.step").exists():
         shutil.copy(b / "model.step", dst / "model.step"); files["step"] = "model.step"
+    instr = data["files"].get("instructions") or []          # картинки к шагам инструкции — заменяют авто-шаги
     imgs = [("assembly.png", "Сборка"), ("exploded.png", "Разнесённый вид"), ("cut_linear.png", "Раскрой погонажа"),
-            ("cut_sheets.png", "Раскрой листа")] + [(f, f"Шаг {n}") for n, f in enumerate(data["files"].get("steps_png", []), 1)]
+            ("cut_sheets.png", "Раскрой листа")] + ([] if instr else
+                                                    [(f, f"Шаг {n}") for n, f in enumerate(data["files"].get("steps_png", []), 1)])
     files["images"] = []
     for name, cap in imgs:
         if (b / name).exists():
@@ -154,6 +161,13 @@ def eng_assets(src: Path, sub: str):
             if not out.exists() or out.stat().st_mtime < (b / name).stat().st_mtime:
                 im = Image.open(b / name).convert("RGB"); im.thumbnail((1400, 1400)); im.save(out, "WEBP", quality=85)
             files["images"].append((out.name, cap))
+    files["instr"] = []
+    for it in instr:
+        if (b / it["file"]).exists():
+            out = dst / (Path(it["file"]).stem + ".webp")
+            if not out.exists() or out.stat().st_mtime < (b / it["file"]).stat().st_mtime:
+                im = Image.open(b / it["file"]).convert("RGB"); im.thumbnail((1100, 1400)); im.save(out, "WEBP", quality=84)
+            files["instr"].append((out.name, it["title"], it["text"]))
     data["_site"] = files
     return data
 
@@ -191,6 +205,22 @@ try:
                          for k, v in ((c or {}).get("variant_steps") or {}).items()}
 except Exception:
     pass
+
+
+def instr_html(sub, items):
+    """Шаги с CAD-картинками: рисунок уже содержит подпись, в HTML — номер и заголовок шага."""
+    return '<div class="instr">' + "".join(
+        f'<figure><a href="../eng/{sub}/{fn}" target="_blank"><img src="../eng/{sub}/{fn}" loading="lazy" alt="{E(t)}: {E(x)}"></a>'
+        f'<figcaption><b>{k}. {E(t)}</b></figcaption></figure>' for k, (fn, t, x) in enumerate(items, 1)) + '</div>'
+
+
+def main_instr(pid: int) -> str:
+    """Картинки шагов первого варианта для раздела «Как сделать подробно» (если движок их построил)."""
+    srcs = sorted(ENG_BUILD.glob(f"{pid:02d}_*/html_data.json"))
+    if not srcs:
+        return ""
+    d = eng_assets(srcs[0], f"{pid:02d}")
+    return instr_html(f"{pid:02d}", d["_site"]["instr"]) if d["_site"]["instr"] else ""
 
 
 def eng_section(pid: int) -> str:
@@ -241,7 +271,12 @@ def _eng_variant(pid: int, src: Path, sub: str, n: int, total: int) -> str:
     ov = d["overall_mm"]
     title = "Инженерная проработка" if total == 1 else f"Вариант {'АБВГ'[n]}: {d['name']}"
     fixes = fixes if n == 0 else []
-    steps_html = ('<h3>Порядок сборки</h3><ol class="steps">' + ''.join(f'<li>{E(x)}</li>' for x in vsteps) + '</ol>') if vsteps else ''
+    if f["instr"] and n == 0:
+        steps_html = '<p class="note">Сборка по шагам с картинками — в разделе «Как сделать подробно» выше.</p>'
+    elif f["instr"]:
+        steps_html = '<h3>Сборка по шагам</h3>' + instr_html(sub, f["instr"])
+    else:
+        steps_html = ('<h3>Порядок сборки</h3><ol class="steps">' + ''.join(f'<li>{E(x)}</li>' for x in vsteps) + '</ol>') if vsteps else ''
     return f"""<section class="eng"><h2>{E(title)} <span class="badge {st}">{label}</span></h2>
 <p class="lead" style="font-size:16px">Параметрическая 3D-модель с настоящими отверстиями, крепёж расставлен по правилам (Eurocode 5, упрощённо для DIY),
 раскрой с учётом пропила, закупка упаковками. Габарит модели {ov[0]:.0f}×{ov[1]:.0f}×{ov[2]:.0f} мм, масса ≈{d['mass_kg']:g} кг.
@@ -332,7 +367,7 @@ function apply(){{const s=q.value.trim().toLowerCase();let n=0;
 <td>{E(l.get('for', ''))}</td><td class="num">{l['qty']} {E(l['unit'])}</td><td class="num">{l['price']:.0f} ₽</td><td class="num">{l['sum']:.0f} ₽</td></tr>""")
         rows.append(f'<tr class="sum"><td colspan="4">Итого, включая оснастку {p["tools_total"]} ₽</td><td class="num">{p["total"]} ₽</td></tr>')
         gal = "".join(f'<figure><a href="../img/{p["id"]:02d}_{k}.webp" target="_blank"><img src="../img/{p["id"]:02d}_{k}.webp" alt="{KIND_RU[k]}: {E(p["name"])}" loading="lazy"></a><figcaption>{KIND_RU[k]}</figcaption></figure>'
-                      for k in ("poster", "howto") if k in have.get(p["id"], ()))
+                      for k in ("poster", "howto", "howto2", "poster_b", "howto_b") if k in have.get(p["id"], ()))
         prev_p = by_id[order[i - 1]] if i else None
         next_p = by_id[order[i + 1]] if i + 1 < len(order) else None
         body = f"""<div class="wrap"><div class="crumbs"><a href="../index.html">← Все проекты</a></div>
@@ -343,7 +378,7 @@ function apply(){{const s=q.value.trim().toLowerCase();let n=0;
 <div class="total"><b>{p['total']} ₽</b><span>смета с оснасткой</span></div>
 <ol class="steps">{''.join(f'<li>{E(s)}</li>' for s in STEPS4[p['id']])}</ol></div></div>
 {('<h2>Плакат и инструкция</h2><div class="gallery">' + gal + '</div>') if gal else ''}
-<h2>Как сделать подробно</h2><ol class="steps">{''.join(f'<li>{E(s)}</li>' for s in p['steps'])}</ol>
+<h2>Как сделать подробно</h2>{main_instr(p['id']) or ('<ol class="steps">' + ''.join(f'<li>{E(s)}</li>' for s in p['steps']) + '</ol>')}
 <h2>Что купить в «Петровиче»</h2><div class="tablewrap"><table><thead><tr><th>Позиция</th><th>Зачем</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
 <p class="note" style="margin-top:18px">Источник идеи: <a href="{E(p['source'])}" target="_blank" rel="noopener">{E(p['source'][:90])}</a>.

@@ -105,3 +105,169 @@ ambiguities:
   - "Чертежи статьи с точными размерами на сайте недоступны (картинки удалены) — высота 280 мм принята по фото «Эконом» 30×14 см."
 
 constraints: {budget: 3000}
+
+# Картинки к 10 шагам инструкции: движок рисует их по модели, размеры — в осях деталей.
+illustrations:
+  - title: "Раскрой"
+    text: "Из доски 20×145×2000 напилить: переднюю, заднюю стенки и две боковины по 280 мм, крышу 220 мм, дно 145 мм (распустить до 105). Из бруска 40×40 — планку 600 мм."
+    mode: flat
+    parts: [front, back, side, roof, bottom, batten]
+    blank: [front, back, side, roof, bottom, batten]
+    gap: 70
+    extra:
+      - {type: box, part: bottom, lo: [0, 105, 0], hi: [145, 145, 20], color: cut, move: [0, 12, 0]}
+    dims:
+      - {part: front,    a: [0, 0, 20], b: [280, 0, 20], text: "Передняя стенка 280", offset: [0, -28, 0]}
+      - {part: back,     a: [0, 0, 20], b: [280, 0, 20], text: "Задняя стенка 280", offset: [0, -28, 0]}
+      - {part: "side#1", a: [0, 0, 20], b: [280, 0, 20], text: "Боковина 280", offset: [0, -28, 0]}
+      - {part: "side#2", a: [0, 0, 20], b: [280, 0, 20], text: "Боковина 280", offset: [0, -28, 0]}
+      - {part: roof,     a: [0, 0, 20], b: [220, 0, 20], text: "Крыша 220", offset: [0, -28, 0]}
+      - {part: bottom,   a: [0, 0, 20], b: [145, 0, 20], text: "Дно 145, распустить до 105", offset: [0, -28, 0]}
+      - {part: batten,   a: [0, 0, 40], b: [600, 0, 40], text: "Планка 600 (брусок 40×40)", offset: [0, -28, 0]}
+    view: {azim: -4, elev: 70}
+
+  - title: "Шлифовка и насечки"
+    text: "Шлифовка кромок P120; внутреннюю сторону передней стенки не шлифовать — сделать насечки для птенцов."
+    mode: flat
+    parts: [front]
+    blank: [front]
+    extra:
+      - {type: box, part: front, lo: [30, 18, 19.4], hi: [32.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [42, 18, 19.4], hi: [44.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [54, 18, 19.4], hi: [56.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [66, 18, 19.4], hi: [68.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [78, 18, 19.4], hi: [80.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [90, 18, 19.4], hi: [92.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [102, 18, 19.4], hi: [104.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [114, 18, 19.4], hi: [116.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [126, 18, 19.4], hi: [128.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [138, 18, 19.4], hi: [140.5, 127, 20.6], color: dark}
+      - {type: box, part: front, lo: [150, 18, 19.4], hi: [152.5, 127, 20.6], color: dark}
+    labels:
+      - {part: front, at: [85, 110, 20], text: "насечки через 12 мм — внутренняя сторона", dx: 60, dy: -90}
+      - {part: front, at: [240, 0, 10], text: "кромки — шкурка P120", dx: 20, dy: 60}
+    dims:
+      - {part: front, a: [0, 0, 20], b: [280, 0, 20], text: "280: низ слева, верх справа", offset: [0, -30, 0]}
+    view: {azim: -15, elev: 58}
+
+  - title: "Леток ⌀45"
+    text: "Леток ⌀45, как в статье: центр на оси передней стенки в 100 мм от верха (треть высоты). Коронкой с двух сторон до середины."
+    mode: flat
+    parts: [front]
+    holes: features
+    lines:
+      - {part: front, a: [0, 72.5, 20], b: [280, 72.5, 20]}
+    extra:
+      - {type: cylinder, part: front, center: [180, 72.5, 70], axis: Z, radius: 22.5, height: 40, color: steel}
+      - {type: cylinder, part: front, center: [180, 72.5, 110], axis: Z, radius: 5, height: 70, color: steel}
+    dims:
+      - {part: front, a: [180, 72.5, 20], b: [280, 72.5, 20], text: "100", offset: [0, 105, 0]}
+      - {part: front, a: [60, 0, 20], b: [60, 72.5, 20], text: "72,5"}
+      - {part: front, a: [0, 0, 20], b: [280, 0, 20], text: "280", offset: [0, -30, 0]}
+    labels:
+      - {part: front, at: [180, 95, 20], text: "коронка ⌀45, с двух сторон", dx: 80, dy: 70}
+      - {part: front, at: [20, 72.5, 20], text: "ось посередине", dx: -40, dy: -70}
+    view: {azim: -15, elev: 55}
+
+  - title: "Жёрдочка"
+    text: "Жёрдочка: гнездо ⌀12 глубиной 15 мм на 15 мм ниже летка (центр в 142,5 мм от низа), шкант 12×50 на ПВА."
+    mode: flat
+    parts: [front]
+    holes: features
+    face: {front: bottom}
+    extra:
+      - {type: cylinder, part: front, center: [142.5, 72.5, -85], axis: Z, radius: 6, height: 50, color: [0.87, 0.76, 0.56]}
+    arrows:
+      - {part: front, a: [142.5, 20, -80], b: [142.5, 20, -10]}
+    dims:
+      - {part: front, a: [0, 145, 0], b: [142.5, 145, 0], text: "142,5", offset: [0, -40, 0]}
+      - {part: front, a: [142.5, 145, 0], b: [157.5, 145, 0], text: "15", offset: [0, -40, 0]}
+    labels:
+      - {part: front, at: [142.5, 72.5, 0], text: "гнездо ⌀12, глубина 15", dx: -60, dy: 110}
+      - {part: front, at: [142.5, 72.5, -60], text: "шкант 12×50 на ПВА", dx: 90, dy: -40}
+    view: {azim: -15, elev: 42}
+
+  - title: "Отверстия под саморезы"
+    text: "Отверстия под саморезы — в 10 мм от кромок передней и задней стенок (в статье 9 мм — половина толщины доски), по 3 на сторону, сверлом 3 мм с зенкером."
+    mode: flat
+    parts: [front, back]
+    face: {front: bottom}
+    gap: 110
+    lines:
+      - {part: front, a: [0, 10, 0], b: [280, 10, 0]}
+      - {part: front, a: [0, 135, 0], b: [280, 135, 0]}
+      - {part: back, a: [0, 10, 20], b: [280, 10, 20]}
+      - {part: back, a: [0, 135, 20], b: [280, 135, 20]}
+    dims:
+      - {part: front, a: [0, 135, 0], b: [25, 135, 0], text: "25", offset: [0, -35, 0]}
+      - {part: front, a: [255, 135, 0], b: [280, 135, 0], text: "25", offset: [0, -35, 0]}
+      - {part: front, a: [280, 145, 0], b: [280, 135, 0], text: "10", offset: [40, 0, 0]}
+      - {part: back, a: [0, 0, 20], b: [25, 0, 20], text: "25", offset: [0, -35, 0]}
+      - {part: back, a: [255, 0, 20], b: [280, 0, 20], text: "25", offset: [0, -35, 0]}
+    labels:
+      - {part: front, at: [140, 135, 0], text: "сверло 3 мм с зенкером, насквозь", dx: 80, dy: -60}
+    view: {azim: -12, elev: 60}
+
+  - title: "Планка"
+    text: "Планку 40×40×600 изнутри прикрутить к задней стенке тремя саморезами 3,5×41 до сборки короба."
+    parts: [back, batten]
+    joints: [back_batten]
+    highlight: [batten]
+    dims:
+      - {a: [0, 165, -150], b: [0, 165, 0], text: "150", offset: [-40, 0, 0]}
+      - {a: [0, 165, 280], b: [0, 165, 450], text: "170", offset: [-40, 0, 0]}
+    labels:
+      - {at: [72.5, 165, 140], text: "3 самореза 3,5×41 изнутри", dx: 110, dy: -30}
+    view: {azim: -30, elev: 20}
+
+  - title: "Сборка короба"
+    text: "Дно между боковинами — по два самореза 3,5×41 через каждую боковину. Затем передняя и задняя стенки — по три самореза с каждой стороны, выравнивая по низу."
+    parts: [side, bottom, front, perch, back, batten]
+    joints: [bottom_left, bottom_right, front_left, front_right, back_left, back_right, back_batten]
+    highlight: [front, perch]
+    move: {front: [0, -90, 0], perch: [0, -90, 0]}
+    arrows:
+      - {a: [-20, -90, 60], b: [-20, -10, 60]}
+    labels:
+      - {at: [10, -90, 140], text: "по 3 самореза 3,5×41 с каждой стороны", dx: 60, dy: -210}
+      - {at: [0, 92, 10], text: "дно: по 2 самореза через боковину", dx: -60, dy: 110}
+    view: {azim: -38, elev: 22}
+
+  - title: "Крыша на 4 самореза"
+    text: "Крыша, как в статье: выровнять по задней стенке, спереди свес 35 мм. Просверлить в крыше 4 отверстия с зенковкой: 2 в 10 мм от заднего края и 2 в 45 мм от переднего — над серединой передней стенки. Прикрутить саморезами 3,5×51: в торец стенки нужен заход длиннее, чем 41."
+    parts: all
+    joints: all
+    highlight: [roof]
+    dims:
+      - {a: [145, -35, 300], b: [145, 0, 300], text: "35", offset: [40, 0, 0]}
+      - {a: [145, -35, 300], b: [145, 10, 300], text: "45", offset: [85, 0, 0]}
+      - {a: [145, 175, 300], b: [145, 185, 300], text: "10", offset: [40, 0, 0]}
+    labels:
+      - {at: [25, 175, 300], text: "4 самореза 3,5×51 с зенковкой", dx: -20, dy: -80}
+    view: {azim: -38, elev: 40}
+
+  - title: "Чистка"
+    text: "Для чистки раз в год выкрутить 4 самореза и снять крышу."
+    parts: all
+    joints: all
+    highlight: [roof]
+    move: {roof: [0, 0, 140]}
+    arrows:
+      - {a: [72.5, 75, 330], b: [72.5, 75, 420]}
+    labels:
+      - {at: [72.5, 75, 440], text: "выкрутить 4 самореза, снять крышу", dx: -60, dy: -60}
+    view: {azim: -38, elev: 30}
+
+  - title: "Установка"
+    text: "Повесить на 3–5 м, летком на восток или юг, с небольшим наклоном вперёд."
+    parts: all
+    joints: all
+    extra:
+      - {type: cylinder, center: [72.5, 335, -300], axis: Z, radius: 110, height: 950, color: bark}
+      - {type: cylinder, center: [72.5, 335, -80], axis: Z, radius: 113, height: 8, color: wire}
+      - {type: cylinder, center: [72.5, 335, 380], axis: Z, radius: 113, height: 8, color: wire}
+    labels:
+      - {at: [72.5, 225, 380], text: "проволока вокруг ствола", dx: 80, dy: -60}
+      - {at: [72.5, 0, 180], text: "леток — на восток или юг", dx: -80, dy: -140}
+      - {at: [72.5, 225, -250], text: "высота 3–5 м, наклон чуть вперёд", dx: -120, dy: 40}
+    view: {azim: -50, elev: 15}

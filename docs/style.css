@@ -61,6 +61,10 @@ tr.sum td{font-weight:800}
 .badge{display:inline-block;border-radius:999px;padding:4px 12px;font:700 13px Manrope,sans-serif;margin-left:8px;vertical-align:middle}
 .badge.ok{background:#d9efe4;color:#1f5c43}.badge.warning{background:#f7ead0;color:#7a5410}.badge.error{background:#f6d7d2;color:#8a2a1c}
 model-viewer{width:100%;height:440px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.instr{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;margin:10px 0 8px}
+.instr figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.instr figcaption{padding:10px 14px;font-size:15px;line-height:1.45}
+@media (max-width:480px){.instr{grid-template-columns:1fr}}
 .eng-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
 .eng-grid figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .eng-grid figcaption{padding:8px 12px;font-size:14px;color:#555}

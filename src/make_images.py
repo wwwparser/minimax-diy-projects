@@ -11,6 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, r"C:/Users/Yuri/.claude/skills/browser-bridge")
 import chatgpt as G
+from image_prompts_custom import CUSTOM
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out" / "images"
@@ -26,17 +27,36 @@ def log(msg):
         f.write(line + "\n")
 
 
+def chats(item):
+    """Чаты проекта: [(вложение, {вид: промпт})]. Свой набор из image_prompts_custom — или три стандартные."""
+    if item["id"] in CUSTOM:
+        return [(ROOT / c["attach"] if c.get("attach") else None, c["images"]) for c in CUSTOM[item["id"]]]
+    return [(None, {k: item[k] for k in KINDS})]
+
+
+def pending(item):
+    return [k for _, imgs in chats(item) for k in imgs if not (OUT / f"{item['id']:02d}_{k}.png").exists()]
+
+
 def project(gpt: G.ChatGPT, item):
-    todo = [k for k in KINDS if not (OUT / f"{item['id']:02d}_{k}.png").exists()]
-    if not todo:
-        return
-    log(f"[{item['id']}] {item['name']}: {', '.join(todo)}")
-    gpt.new_chat()
-    for kind in todo:
+    for n, (attach, imgs) in enumerate(chats(item)):
+        todo = [k for k in imgs if not (OUT / f"{item['id']:02d}_{k}.png").exists()]
+        if not todo:
+            continue
+        log(f"[{item['id']}] {item['name']}: {', '.join(todo)}" + (f" (образец {attach.name})" if attach else ""))
+        gpt.new_chat()
+        _chat(gpt, item, todo, imgs, attach)
+        if n + 1 < len(chats(item)):
+            time.sleep(240)
+
+
+def _chat(gpt, item, todo, imgs, attach):
+    for i, kind in enumerate(todo):
         fn = OUT / f"{item['id']:02d}_{kind}.png"
-        prompt = item[kind]
+        prompt = imgs[kind]
+        att = attach if i == 0 else None          # образец — с первым сообщением чата
         for attempt in range(3):
-            res = gpt.generate_image(prompt)
+            res = gpt.generate_image(prompt, attach=att)
             if res.ok:
                 fn.write_bytes(res.data)
                 log(f"  OK {fn.name} {len(res.data) // 1024} КБ")
@@ -44,11 +64,14 @@ def project(gpt: G.ChatGPT, item):
             log(f"  нет картинки ({kind}), попытка {attempt + 1}: {res.reason} {res.text[:120]!r}")
             if res.reason == "content_policy":
                 gpt.new_chat()
-                prompt = item[kind].replace("руки мастера выполняют шаг", "показан результат шага")
+                att = attach
+                prompt = imgs[kind].replace("руки мастера выполняют шаг", "показан результат шага")
             elif res.reason == "text_answer":
-                prompt = "Нужна именно картинка, без текста в ответе. Сгенерируй изображение по описанию: " + item[kind]
+                prompt = "Нужна именно картинка, без текста в ответе. Сгенерируй изображение по описанию: " + imgs[kind]
+                att = None
             else:
                 gpt.new_chat()
+                att = attach
 
 
 if __name__ == "__main__":
@@ -61,7 +84,7 @@ if __name__ == "__main__":
             continue
         for attempt in range(4):
             try:
-                todo = any(not (OUT / f"{it['id']:02d}_{k}.png").exists() for k in KINDS)
+                todo = bool(pending(it))
                 project(gpt, it)
                 if todo:
                     time.sleep(240)          # пауза между чатами: блок приходит сразу после нового чата
