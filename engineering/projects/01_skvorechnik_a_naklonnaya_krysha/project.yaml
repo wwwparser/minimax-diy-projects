@@ -1,0 +1,111 @@
+# Скворечник, вариант А: односкатная крыша с козырьком вперёд (как на плакате ChatGPT и «Эконом» из статьи
+# usadbamasterov.ru), задняя стенка выше передней, боковины-трапеции, крыша откидывается назад на двух петлях,
+# сзади планка-брусок для крепления к дереву/столбу, под летком жёрдочка-шкант.
+# X — ширина (145), Y — глубина (перед y=0, зад y=185), Z — вверх.
+project:
+  id: 01_skvorechnik_a_naklonnaya_krysha
+  name: "Скворечник с наклонной крышей"
+  category: woodworking
+  units: mm
+  tool_profile: cordless_12v_36nm
+  source_text: >
+    Доска 20×145: перед 260, зад 304, две боковины 305 со скошенным верхом (спереди 265, сзади 304), дно 145
+    (распустить до 105), крыша 240. Леток ⌀50 коронкой, центр на 85 мм ниже верха передней стенки; на 15 мм ниже
+    летка — гнездо ⌀12 под жёрдочку-шкант. Сначала к задней стенке изнутри прикрутить брусок 40×40×600 — планку
+    для крепления. Собрать короб на саморезы 3,5×41, засверливая 3 мм. Крышу с уклоном ~15° посадить на две
+    карточные петли сзади, козырёк 40 мм над летком.
+
+stock:
+  - {id: board145, name: "Доска сосна 20×145", material: pine, type: board, section: 20x145, length: 2000, kerf: 1.5, sku: "102355"}
+  - {id: bar40, name: "Брусок 40×40", material: pine, type: bar, section: 40x40, length: 2000, kerf: 1.5, sku: "1092607"}
+
+parts:
+  - id: front
+    name: Передняя стенка
+    stock: board145
+    length: 260
+    orient: ZXY
+    at: [0, 0, 0]
+    features:
+      - {type: hole_saw, diameter: 50, position: {along_length: 85_from_end, along_width: center}}
+      - {type: hole, diameter: 12, depth: 15, face: bottom, position: {along_length: 135, along_width: center}}
+  - id: back
+    name: Задняя стенка
+    stock: board145
+    length: 304
+    orient: ZXY
+    at: [0, 165, 0]
+  - id: side
+    name: Боковина со скосом
+    stock: board145
+    qty: 2
+    length: 305
+    shape: {type: polygon, points: [[0, 0], [265, 0], [305, 145], [0, 145]]}
+    instances:
+      - {at: [0, 20, 0], orient: ZYX}
+      - {at: [125, 20, 0], orient: ZYX}
+  - id: bottom
+    name: Дно
+    stock: board145
+    length: 145
+    width: 105
+    orient: YXZ
+    at: [20, 20, 0]
+  - id: roof
+    name: Крыша с козырьком
+    stock: board145
+    length: 240
+    orient: YXZ
+    at: [0, -40, 249.2]
+    rotate: [{axis: X, angle: 15.12, pivot: min}]
+  - id: batten
+    name: Планка для крепления к дереву
+    stock: bar40
+    length: 600
+    orient: ZXY
+    at: [52.5, 185, -150]
+  - id: perch
+    name: Жёрдочка (шкант 12×50)
+    purchased: true
+    profile: rod
+    material: birch
+    length: 50
+    width: 12
+    thickness: 12
+    orient: YXZ
+    at: [66.5, -35, 129]
+
+joints:
+  - {id: back_batten,  type: screw, part_a: back,     part_b: batten, fastener: {type: wood_screw, diameter: 3.5}, count: 3}
+  - {id: bottom_left,  type: screw, part_a: "side#1", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: bottom_right, type: screw, part_a: "side#2", part_b: bottom, fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: front_left,   type: screw, part_a: front,    part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: front_right,  type: screw, part_a: front,    part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: back_left,    type: screw, part_a: back,     part_b: "side#1", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: back_right,   type: screw, part_a: back,     part_b: "side#2", fastener: {type: wood_screw, diameter: 3.5}}
+  - {id: roof_hinge,   type: hinge, part_a: roof,     part_b: back, hardware: hinges, hardware_count: 2,
+     line: {axis: X, point: [72.5, 185, 306], outward: "+Y", span: [0, 145]}}
+  - {id: perch_in,     type: inserted, part_a: perch, part_b: front, glue: true}
+
+hardware:
+  - {id: hinges, type: butt_hinge, size: "25", qty: 2, screws: {type: wood_screw, diameter: 3.5, length: 16}}
+  - {id: perch_pin, type: dowel_pin, size: "12x50", qty: 1, sku: "640685", screws_per_unit: 0}
+
+steps:
+  - {title: "Планка к задней стенке (изнутри, пока короб не собран)", add: [back, batten], joints: [back_batten]}
+  - {title: "Боковины и дно", add: [side, bottom], joints: [bottom_left, bottom_right]}
+  - {title: "Передняя стенка с летком и жёрдочкой", add: [front, perch], joints: [front_left, front_right, perch_in]}
+  - {title: "Задняя стенка к боковинам", add: [], joints: [back_left, back_right]}
+  - {title: "Крыша на двух петлях", add: [roof], joints: [roof_hinge]}
+
+claims:
+  - {kind: overall, value: [145, 270, 600], source: "габарит: высота по планке 600, глубина с козырьком 270", tolerance: 10}
+
+consumables:
+  - {type: sandpaper, grits: [120]}
+
+ambiguities:
+  - "Размеры подогнаны под доску 20×145: дно внутри 105×145 мм (в статье короб 14 см шириной)."
+  - "Планка — брусок 40×40, в статье — деревянная планка на торце; к дереву привязывается проволокой или крепится саморезами."
+
+constraints: {budget: 3000}

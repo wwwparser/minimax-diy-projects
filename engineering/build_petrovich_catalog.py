@@ -302,6 +302,11 @@ def _wrench(m, t):
     return {"kind": "tool", "tool": {"type": "wrench", "diameter": float(m[1])}}
 
 
+@rule("Шкант мебельный%", r"(\d+)х(\d+) мм")
+def _dowel_pin(m, t):
+    return {"kind": "hardware", "pack": pack_of(t), "hardware": {"type": "dowel_pin", "size": f"{m[1]}x{m[2]}"}}
+
+
 def build():
     con = sqlite3.connect(ROOT / "data" / "catalog.sqlite3")
     items, seen = [], set()

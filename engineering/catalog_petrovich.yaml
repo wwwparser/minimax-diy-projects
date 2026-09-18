@@ -6888,3 +6888,93 @@ items:
   tool:
     type: wrench
     diameter: 23.0
+- sku: '640681'
+  name: Шкант мебельный 10х30 мм (40 шт.)
+  price: 78.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640681/
+  kind: hardware
+  pack: 40
+  hardware:
+    type: dowel_pin
+    size: 10x30
+- sku: '640682'
+  name: Шкант мебельный 10х40 мм (35 шт.)
+  price: 78.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640682/
+  kind: hardware
+  pack: 35
+  hardware:
+    type: dowel_pin
+    size: 10x40
+- sku: '640683'
+  name: Шкант мебельный 10х50 мм (30 шт.)
+  price: 80.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640683/
+  kind: hardware
+  pack: 30
+  hardware:
+    type: dowel_pin
+    size: 10x50
+- sku: '640684'
+  name: Шкант мебельный 12х40 мм (25 шт.)
+  price: 88.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640684/
+  kind: hardware
+  pack: 25
+  hardware:
+    type: dowel_pin
+    size: 12x40
+- sku: '640685'
+  name: Шкант мебельный 12х50 мм (20 шт.)
+  price: 61.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640685/
+  kind: hardware
+  pack: 20
+  hardware:
+    type: dowel_pin
+    size: 12x50
+- sku: '640686'
+  name: Шкант мебельный 6х30 мм (50 шт.)
+  price: 67.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640686/
+  kind: hardware
+  pack: 50
+  hardware:
+    type: dowel_pin
+    size: 6x30
+- sku: '640687'
+  name: Шкант мебельный 8х30 мм (45 шт.)
+  price: 61.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640687/
+  kind: hardware
+  pack: 45
+  hardware:
+    type: dowel_pin
+    size: 8x30
+- sku: '640688'
+  name: Шкант мебельный 8х35 мм (40 шт.)
+  price: 19.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640688/
+  kind: hardware
+  pack: 40
+  hardware:
+    type: dowel_pin
+    size: 8x35
+- sku: '640689'
+  name: Шкант мебельный 8х40 мм (40 шт.)
+  price: 67.0
+  unit: упак
+  url: https://moscow.petrovich.ru/product/640689/
+  kind: hardware
+  pack: 40
+  hardware:
+    type: dowel_pin
+    size: 8x40

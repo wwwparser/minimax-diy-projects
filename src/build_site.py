@@ -134,13 +134,10 @@ KIND_ENG = {"материал": "материал", "крепёж": "крепё�
             "расходник": "расходник", "оснастка": "оснастка"}
 
 
-def eng_assets(pid: int):
-    """Копирует результаты diy-project-engineer в docs/eng/NN и возвращает данные для страницы."""
-    src = next(iter(sorted(ENG_BUILD.glob(f"{pid:02d}_*/html_data.json"))), None)
-    if not src:
-        return None
+def eng_assets(src: Path, sub: str):
+    """Копирует результаты diy-project-engineer в docs/eng/<sub> и возвращает данные для страницы."""
     data = json.loads(src.read_text(encoding="utf-8"))
-    dst = DOCS / "eng" / f"{pid:02d}"
+    dst = DOCS / "eng" / sub
     dst.mkdir(parents=True, exist_ok=True)
     files = {}
     b = src.parent
@@ -188,16 +185,33 @@ def group_issues(items):
     return out
 
 
+ENG_VARIANT_STEPS = {}
+try:
+    ENG_VARIANT_STEPS = {k: v for c in (_yaml.safe_load((ROOT / "engineering" / "corrections.yaml").read_text(encoding="utf-8")) or {}).values()
+                         for k, v in ((c or {}).get("variant_steps") or {}).items()}
+except Exception:
+    pass
+
+
 def eng_section(pid: int) -> str:
-    d = eng_assets(pid)
-    if not d:
-        return ""
+    """Инженерный раздел; если у проекта несколько вариантов — по разделу на каждый."""
+    srcs = sorted(ENG_BUILD.glob(f"{pid:02d}_*/html_data.json"))
+    out = []
+    for n, src in enumerate(srcs):
+        sub = f"{pid:02d}" if n == 0 else f"{pid:02d}-{n + 1}"
+        out.append(_eng_variant(pid, src, sub, n, len(srcs)))
+    return "".join(out)
+
+
+def _eng_variant(pid: int, src: Path, sub: str, n: int, total: int) -> str:
+    d = eng_assets(src, sub)
     f = d["_site"]
+    vsteps = ENG_VARIANT_STEPS.get(src.parent.name, [])
     st = d["status"]
     label = {"ok": "проверено", "warning": "есть предупреждения", "error": "есть ошибки"}[st]
-    viewer = (f'<model-viewer src="../eng/{pid:02d}/model.glb" camera-controls touch-action="pan-y" shadow-intensity="0.6" '
+    viewer = (f'<model-viewer src="../eng/{sub}/model.glb" camera-controls touch-action="pan-y" shadow-intensity="0.6" '
               f'exposure="1.05" camera-orbit="-35deg 65deg auto" alt="3D-модель"></model-viewer>') if f.get("glb") else ""
-    figs = "".join(f'<figure{" class=wide" if n.startswith("cut_") else ""}><a href="../eng/{pid:02d}/{n}" target="_blank"><img src="../eng/{pid:02d}/{n}" loading="lazy" alt="{E(c)}"></a>'
+    figs = "".join(f'<figure{" class=wide" if n.startswith("cut_") else ""}><a href="../eng/{sub}/{n}" target="_blank"><img src="../eng/{sub}/{n}" loading="lazy" alt="{E(c)}"></a>'
                    f'<figcaption>{E(c)}</figcaption></figure>' for n, c in f["images"])
     def jname(x):
         if x.get("part_a_name") and x.get("part_b_name"):
@@ -222,15 +236,19 @@ def eng_section(pid: int) -> str:
     fixes = ENG_FIXES.get(pid, [])
     il = "".join(f'<li class="{i["severity"]}"><b>{"Ошибка" if i["severity"] == "error" else "Внимание"}:</b> {E(i["message"])}'
                  + (f'<small>Как исправить: {E(i["suggestion"])}</small>' if i.get("suggestion") else "") + "</li>" for i in iss[:14])
-    dl = " ".join(x for x in (f'<a href="../eng/{pid:02d}/model.step" download>STEP для FreeCAD</a>' if f.get("step") else "",
-                              f'<a href="../eng/{pid:02d}/model.glb" download>GLB</a>' if f.get("glb") else "") if x)
+    dl = " ".join(x for x in (f'<a href="../eng/{sub}/model.step" download>STEP для FreeCAD</a>' if f.get("step") else "",
+                              f'<a href="../eng/{sub}/model.glb" download>GLB</a>' if f.get("glb") else "") if x)
     ov = d["overall_mm"]
-    return f"""<section class="eng"><h2>Инженерная проработка <span class="badge {st}">{label}</span></h2>
+    title = "Инженерная проработка" if total == 1 else f"Вариант {'АБВГ'[n]}: {d['name']}"
+    fixes = fixes if n == 0 else []
+    steps_html = ('<h3>Порядок сборки</h3><ol class="steps">' + ''.join(f'<li>{E(x)}</li>' for x in vsteps) + '</ol>') if vsteps else ''
+    return f"""<section class="eng"><h2>{E(title)} <span class="badge {st}">{label}</span></h2>
 <p class="lead" style="font-size:16px">Параметрическая 3D-модель с настоящими отверстиями, крепёж расставлен по правилам (Eurocode 5, упрощённо для DIY),
 раскрой с учётом пропила, закупка упаковками. Габарит модели {ov[0]:.0f}×{ov[1]:.0f}×{ov[2]:.0f} мм, масса ≈{d['mass_kg']:g} кг.
 Прочность не рассчитывалась.</p>
 {viewer}
 <div class="eng-grid" style="margin-top:16px">{figs}</div>
+{steps_html}
 {('<h3>Проверка проекта</h3><ul class="issues">' + il + '</ul>') if il else '<p class="note">Проверка пройдена: ошибок и предупреждений нет.</p>'}
 {('<h3>Что исправлено в исходной инструкции</h3><ul class="issues">' + ''.join(f'<li class="fixed">{E(x)}</li>' for x in fixes) + '</ul>') if fixes else ''}
 {('<details class="assume"><summary>Допущения модели (' + str(len(assumptions)) + ')</summary><ul>' + ''.join(f'<li>{E(a)}</li>' for a in assumptions) + '</ul></details>') if assumptions else ''}
@@ -244,6 +262,9 @@ def ph(p, have, pre, cls="", thumb=False):
     if "illustration" in have.get(p["id"], ()):
         f = f"{p['id']:02d}_thumb.webp" if thumb else f"{p['id']:02d}_illustration.webp"
         return f'<img src="{pre}img/{f}" alt="{E(p["name"])}" loading="lazy">'
+    eng = DOCS / "eng" / f"{p['id']:02d}" / "assembly.webp"      # пока нет иллюстрации — 3D-рендер модели
+    if eng.exists():
+        return f'<img src="{pre}eng/{p["id"]:02d}/assembly.webp" alt="{E(p["name"])}" loading="lazy" style="object-fit:contain;background:#fff">'
     return f'<div class="placeholder">{E(p["name"])}</div>'
 
 
